@@ -1,0 +1,16 @@
+{
+//  "compileOnSave": false,
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["es6", "dom"],
+    "skipDefaultLibCheck": true,
+    "skipLibCheck": true,
+    "strictNullChecks": true,
+    "declaration": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "sourceMap": false,
+    "typeRoots": ["../node_modules/@types"]
+  }
+}

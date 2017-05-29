@@ -1,0 +1,6 @@
+ml-card {width: 100%; align-items: center}
+.chart-title {text-align: center; font-size: large; font-variant: small-caps; color: rgba(255, 173, 70, 0.92)}
+.rt-data-container {margin-top: 5px; float: right; font-size: x-small}
+.rt-data-title {color: #05b33c}
+.rt-data {color: cornflowerblue}
+.menu-btn {color: cornflowerblue}

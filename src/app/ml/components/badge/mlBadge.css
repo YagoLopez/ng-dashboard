@@ -1,0 +1,47 @@
+.mdl-badge {position: relative; white-space: nowrap;  margin-right: 24px}
+.mdl-badge:not([data-badge]) {margin-right: auto}
+.mdl-badge[data-badge]:after {
+  content: attr(data-badge);
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: absolute;
+  top: -11px;
+  right: -24px;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: rgb(255,64,129);
+  color: rgb(255,255,255)}
+.mdl-button .mdl-badge[data-badge]:after {top: -10px; right: -5px}
+.mdl-badge.mdl-badge--no-background[data-badge]:after {
+  color: rgb(255,64,129);
+  background: rgba(255,255,255,0.2);
+  box-shadow: 0 0 1px gray}
+.mdl-badge.mdl-badge--overlap {margin-right: 10px}
+.mdl-badge.mdl-badge--overlap:after {right: -10px}
+/* modificaciones */
+.mdl-badge-icon {
+  vertical-align: top;
+  color:grey;
+  font-size: 32px !important;}
+/* fin modificaciones */
+

@@ -1,0 +1,22 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "project": {
+    "name": "Ng_Dashboard"
+  },
+  "apps": [
+    {
+      "root": "src",
+      "outDir": "dist",
+      "assets": ["assets", "favicon.ico"],
+      "index": "index.html",
+      "main": "main.ts",
+      "polyfills": "polyfills.ts",
+      "tsconfig": "tsconfig.json",
+      "prefix": "ml",
+      "styles": [],
+      "scripts": []
+    }
+  ],
+  "lint": [{"project": "src/tsconfig.json"}],
+  "defaults": {"styleExt": "css", "component": {}}
+}

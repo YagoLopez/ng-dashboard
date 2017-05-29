@@ -1,0 +1,120 @@
+.mdl-textfield {
+  position: relative;
+  font-size: 16px;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 300px;
+  max-width: 100%;
+  margin: 0;
+  padding: 20px 0; }
+  .mdl-textfield .mdl-button { position: absolute; bottom: 20px; }
+
+.mdl-textfield--align-right { text-align: right; }
+.mdl-textfield--full-width { width: 100%; }
+.mdl-textfield--expandable { min-width: 32px; width: auto; min-height: 32px; }
+/*.mdl-textfield--expandable .mdl-button--icon { top: 16px; }*/
+
+.mdl-textfield__input {
+  border: none;
+  border-bottom: 1px solid rgba(0,0,0, 0.12);
+  display: block;
+  font-size: 16px;
+  font-family: "Helvetica", "Arial", sans-serif;
+  margin: 0;
+  padding: 4px 0;
+  width: 100%;
+  background: none;
+  text-align: left;
+  color: inherit; }
+  .mdl-textfield__input[type="number"] {
+    -moz-appearance: textfield; }
+
+  .mdl-textfield__input[type="number"]
+  ::-webkit-inner-spin-button, .mdl-textfield__input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;  margin:0 }
+  .mdl-textfield.is-focused .mdl-textfield__input { outline: none; }
+  .mdl-textfield.is-invalid .mdl-textfield__input { border-color: rgb(213,0,0); box-shadow: none; }
+  fieldset[disabled] .mdl-textfield .mdl-textfield__input,
+  .mdl-textfield.is-disabled .mdl-textfield__input {
+    background-color: transparent;
+    border-bottom: 1px dotted rgba(0,0,0, 0.12);
+    color: rgba(0,0,0, 0.26); }
+
+.mdl-textfield textarea.mdl-textfield__input { display: block; }
+
+.mdl-textfield__label {
+  bottom: 0;
+  color: rgba(0,0,0, 0.26);
+  font-size: 16px;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+  position: absolute;
+  display: block;
+  top: 24px;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: left; }
+  .mdl-textfield.is-dirty .mdl-textfield__label,
+  .mdl-textfield.has-placeholder .mdl-textfield__label { visibility: hidden; }
+  .mdl-textfield--floating-label .mdl-textfield__label {
+    transition-duration: 0.2s;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+  .mdl-textfield--floating-label.has-placeholder .mdl-textfield__label { transition: none; }
+  fieldset[disabled] .mdl-textfield .mdl-textfield__label,
+  .mdl-textfield.is-disabled.is-disabled .mdl-textfield__label { color: rgba(0,0,0, 0.26); }
+  .mdl-textfield--floating-label.is-focused .mdl-textfield__label,
+  .mdl-textfield--floating-label.is-dirty .mdl-textfield__label,
+  .mdl-textfield--floating-label.has-placeholder .mdl-textfield__label {
+    color: rgb(63,81,181);
+    font-size: 12px;
+    top: 4px;
+    visibility: visible; }
+  .mdl-textfield--floating-label.is-focused .mdl-textfield__expandable-holder .mdl-textfield__label,
+  .mdl-textfield--floating-label.is-dirty .mdl-textfield__expandable-holder .mdl-textfield__label,
+  .mdl-textfield--floating-label.has-placeholder .mdl-textfield__expandable-holder .mdl-textfield__label {
+    top: -16px; }
+  .mdl-textfield--floating-label.is-invalid .mdl-textfield__label { color: rgb(213,0,0); font-size: 12px; }
+  .mdl-textfield__label:after {
+    background-color: rgb(63,81,181);
+    bottom: 20px;
+    content: '';
+    height: 2px;
+    left: 45%;
+    position: absolute;
+    transition-duration: 0.2s;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    visibility: hidden;
+    width: 10px; }
+  .mdl-textfield.is-focused .mdl-textfield__label:after { left: 0; visibility: visible; width: 100%; }
+  .mdl-textfield.is-invalid .mdl-textfield__label:after { background-color: rgb(213,0,0); }
+
+.mdl-textfield__error {
+  color: rgb(213,0,0);
+  position: absolute;
+  /*position: relative;*/
+  font-size: 12px;
+  margin-top: 3px;
+  /*modificaciones*/
+  display: block; }
+  .mdl-textfield.is-invalid .mdl-textfield__error { visibility: visible; }
+
+.mdl-textfield__expandable-holder {
+  display: inline-block;
+  position: relative;
+  margin-left: 32px;
+  transition-duration: 0.2s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  max-width: 0.1px; }
+  .mdl-textfield.is-focused .mdl-textfield__expandable-holder, .mdl-textfield.is-dirty .mdl-textfield__expandable-holder {
+    max-width: 600px; }
+  .mdl-textfield__expandable-holder .mdl-textfield__label:after { bottom: 0; }
+
+/* modificaciones */
+.mdl-textfield-expand-error {
+  position: relative;
+  font-size: 12px;
+  color: red;
+  margin-left: 31px;
+}

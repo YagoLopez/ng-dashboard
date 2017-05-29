@@ -1,0 +1,20 @@
+body {background: cornflowerblue; color: white}
+.loading-text{
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 40%;
+  bottom: 0;
+  text-align: center;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-size: 17px}
+.loading-logo {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 44%;
+  bottom: 0;
+  width: 200px;
+  text-align: center}

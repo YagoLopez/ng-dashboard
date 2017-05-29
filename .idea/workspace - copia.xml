@@ -1,0 +1,826 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="ANALYZE_TEST_SOURCES" value="false" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="32bcf61c-7ec2-4c3f-adba-52113071d92e" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/live-server.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/ml/components/controls/selectfield/mdl_menu.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/ml/components/controls/selectfield/mdl_textfield.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/ml/components/controls/selectfield/ml_menu.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/ml/components/controls/selectfield/ml_selectfield.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/ml/components/controls/selectfield/ml_textfield.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/page-selectfield.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/pages/page-selectfield.ts" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/app.root.js" afterPath="$PROJECT_DIR$/src/app/app.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/app.root.js.map" afterPath="$PROJECT_DIR$/src/app/app.js.map" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/app.root.ts" afterPath="$PROJECT_DIR$/src/app/app.ts" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/main.js" afterPath="$PROJECT_DIR$/backup/main.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/main.js.map" afterPath="$PROJECT_DIR$/backup/main.js.map" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/main.ts" afterPath="$PROJECT_DIR$/backup/main.ts" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/pages/app.pages.list.js" afterPath="$PROJECT_DIR$/src/app/pages/pages-list.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/pages/app.pages.list.js.map" afterPath="$PROJECT_DIR$/src/app/pages/pages-list.js.map" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/pages/app.pages.list.ts" afterPath="$PROJECT_DIR$/src/app/pages/pages-list.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/typescript-compiler.xml" afterPath="$PROJECT_DIR$/.idea/typescript-compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iframe/iframe.html" afterPath="$PROJECT_DIR$/iframe/iframe.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/app.module.js" afterPath="$PROJECT_DIR$/src/app/app.module.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/app.module.ts" afterPath="$PROJECT_DIR$/src/app/app.module.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/app.routes.js" afterPath="$PROJECT_DIR$/src/app/app.routes.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/app.routes.ts" afterPath="$PROJECT_DIR$/src/app/app.routes.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/ml/components/badge/ml_badge.js" afterPath="$PROJECT_DIR$/src/app/ml/components/badge/ml_badge.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/ml/components/card/ml_card.js" afterPath="$PROJECT_DIR$/src/app/ml/components/card/ml_card.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/ml/components/chip/ml_chip.js" afterPath="$PROJECT_DIR$/src/app/ml/components/chip/ml_chip.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/ml/components/chip/ml_chip_button.js" afterPath="$PROJECT_DIR$/src/app/ml/components/chip/ml_chip_button.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/ml/components/controls/button/mdl_button.js" afterPath="$PROJECT_DIR$/src/app/ml/components/controls/button/mdl_button.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/ml/components/controls/button/ml_button.js" afterPath="$PROJECT_DIR$/src/app/ml/components/controls/button/ml_button.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/ml/components/controls/button/ml_button_submit.js" afterPath="$PROJECT_DIR$/src/app/ml/components/controls/button/ml_button_submit.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/ml/components/controls/checkbox/mdl_checkbox.js" afterPath="$PROJECT_DIR$/src/app/ml/components/controls/checkbox/mdl_checkbox.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/ml/components/controls/checkbox/ml_checkbox.js" afterPath="$PROJECT_DIR$/src/app/ml/components/controls/checkbox/ml_checkbox.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/ml/components/controls/error/ml_error.js" afterPath="$PROJECT_DIR$/src/app/ml/components/controls/error/ml_error.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/ml/components/controls/radio/mdl_radio.js" afterPath="$PROJECT_DIR$/src/app/ml/components/controls/radio/mdl_radio.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/ml/components/controls/radio/ml_radio.js" afterPath="$PROJECT_DIR$/src/app/ml/components/controls/radio/ml_radio.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/ml/components/controls/slider/mdl_slider.js" afterPath="$PROJECT_DIR$/src/app/ml/components/controls/slider/mdl_slider.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/ml/components/controls/slider/ml_slider.js" afterPath="$PROJECT_DIR$/src/app/ml/components/controls/slider/ml_slider.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/ml/components/controls/switch/mdl_switch.js" afterPath="$PROJECT_DIR$/src/app/ml/components/controls/switch/mdl_switch.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/ml/components/controls/switch/ml_switch.js" afterPath="$PROJECT_DIR$/src/app/ml/components/controls/switch/ml_switch.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/ml/components/controls/textfield/mdl_textfield.js" afterPath="$PROJECT_DIR$/src/app/ml/components/controls/textfield/mdl_textfield.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/ml/components/controls/textfield/ml_textfield.js" afterPath="$PROJECT_DIR$/src/app/ml/components/controls/textfield/ml_textfield.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/ml/components/controls/textfield/ml_textfield_area.js" afterPath="$PROJECT_DIR$/src/app/ml/components/controls/textfield/ml_textfield_area.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/ml/components/controls/textfield/ml_textfield_expand.js" afterPath="$PROJECT_DIR$/src/app/ml/components/controls/textfield/ml_textfield_expand.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/ml/components/controls/textfield/ml_textfield_label.js" afterPath="$PROJECT_DIR$/src/app/ml/components/controls/textfield/ml_textfield_label.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/ml/components/controls/toggle/mdl_toggle.js" afterPath="$PROJECT_DIR$/src/app/ml/components/controls/toggle/mdl_toggle.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/ml/components/controls/toggle/ml_toggle.js" afterPath="$PROJECT_DIR$/src/app/ml/components/controls/toggle/ml_toggle.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/ml/components/dialog/ml_dialog.js" afterPath="$PROJECT_DIR$/src/app/ml/components/dialog/ml_dialog.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/ml/components/element/mdl_element.js" afterPath="$PROJECT_DIR$/src/app/ml/components/element/mdl_element.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/ml/components/grid/ml_grid.js" afterPath="$PROJECT_DIR$/src/app/ml/components/grid/ml_grid.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/ml/components/icon/ml_icon.js" afterPath="$PROJECT_DIR$/src/app/ml/components/icon/ml_icon.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/ml/components/layout/mdl_layout.js" afterPath="$PROJECT_DIR$/src/app/ml/components/layout/mdl_layout.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/ml/components/layout/ml_layout.js" afterPath="$PROJECT_DIR$/src/app/ml/components/layout/ml_layout.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/ml/components/list/ml_list.js" afterPath="$PROJECT_DIR$/src/app/ml/components/list/ml_list.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/ml/components/menu/mdl_menu.js" afterPath="$PROJECT_DIR$/src/app/ml/components/menu/mdl_menu.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/ml/components/menu/ml_menu.js" afterPath="$PROJECT_DIR$/src/app/ml/components/menu/ml_menu.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/ml/components/menu/ml_menu.ts" afterPath="$PROJECT_DIR$/src/app/ml/components/menu/ml_menu.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/ml/components/ml_components_list.js" afterPath="$PROJECT_DIR$/src/app/ml/components/ml_components_list.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/ml/components/ml_components_list.js.map" afterPath="$PROJECT_DIR$/src/app/ml/components/ml_components_list.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/ml/components/ml_components_list.ts" afterPath="$PROJECT_DIR$/src/app/ml/components/ml_components_list.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/ml/components/progressbar/mdl_progress.js" afterPath="$PROJECT_DIR$/src/app/ml/components/progressbar/mdl_progress.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/ml/components/progressbar/ml_progressbar.js" afterPath="$PROJECT_DIR$/src/app/ml/components/progressbar/ml_progressbar.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/ml/components/ripple/mdl_ripple.js" afterPath="$PROJECT_DIR$/src/app/ml/components/ripple/mdl_ripple.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/ml/components/ripple/ml_ripple.js" afterPath="$PROJECT_DIR$/src/app/ml/components/ripple/ml_ripple.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/ml/components/snackbar/mdl_snackbar.js" afterPath="$PROJECT_DIR$/src/app/ml/components/snackbar/mdl_snackbar.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/ml/components/snackbar/ml_snackbar.js" afterPath="$PROJECT_DIR$/src/app/ml/components/snackbar/ml_snackbar.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/ml/components/spinner/mdl_spinner.js" afterPath="$PROJECT_DIR$/src/app/ml/components/spinner/mdl_spinner.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/ml/components/spinner/ml_spinner.js" afterPath="$PROJECT_DIR$/src/app/ml/components/spinner/ml_spinner.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/ml/components/table/ml_table.js" afterPath="$PROJECT_DIR$/src/app/ml/components/table/ml_table.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/ml/components/tabs/mdl_tabs.js" afterPath="$PROJECT_DIR$/src/app/ml/components/tabs/mdl_tabs.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/ml/components/tabs/ml_tabs.js" afterPath="$PROJECT_DIR$/src/app/ml/components/tabs/ml_tabs.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/ml/components/title/ml_title.js" afterPath="$PROJECT_DIR$/src/app/ml/components/title/ml_title.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/ml/components/tooltip/mdl_tooltip.js" afterPath="$PROJECT_DIR$/src/app/ml/components/tooltip/mdl_tooltip.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/ml/components/tooltip/ml_tooltip.js" afterPath="$PROJECT_DIR$/src/app/ml/components/tooltip/ml_tooltip.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/ml/lib/debug_form/debug_form.js" afterPath="$PROJECT_DIR$/src/app/ml/lib/debug_form/debug_form.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/ml/lib/ml_lib.js" afterPath="$PROJECT_DIR$/src/app/ml/lib/ml_lib.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/ml/ml_module.js" afterPath="$PROJECT_DIR$/src/app/ml/ml_module.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/ml/ml_module.js.map" afterPath="$PROJECT_DIR$/src/app/ml/ml_module.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/ml/ml_module.ts" afterPath="$PROJECT_DIR$/src/app/ml/ml_module.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/pages/page-badge.js" afterPath="$PROJECT_DIR$/src/app/pages/page-badge.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/pages/page-button.js" afterPath="$PROJECT_DIR$/src/app/pages/page-button.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/pages/page-card.js" afterPath="$PROJECT_DIR$/src/app/pages/page-card.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/pages/page-checkbox.js" afterPath="$PROJECT_DIR$/src/app/pages/page-checkbox.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/pages/page-chip.js" afterPath="$PROJECT_DIR$/src/app/pages/page-chip.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/pages/page-dialog.js" afterPath="$PROJECT_DIR$/src/app/pages/page-dialog.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/pages/page-grid.js" afterPath="$PROJECT_DIR$/src/app/pages/page-grid.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/pages/page-list.js" afterPath="$PROJECT_DIR$/src/app/pages/page-list.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/pages/page-menu.js" afterPath="$PROJECT_DIR$/src/app/pages/page-menu.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/pages/page-progressbar.js" afterPath="$PROJECT_DIR$/src/app/pages/page-progressbar.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/pages/page-radio.js" afterPath="$PROJECT_DIR$/src/app/pages/page-radio.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/pages/page-slider.js" afterPath="$PROJECT_DIR$/src/app/pages/page-slider.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/pages/page-snackbar.js" afterPath="$PROJECT_DIR$/src/app/pages/page-snackbar.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/pages/page-spinner.js" afterPath="$PROJECT_DIR$/src/app/pages/page-spinner.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/pages/page-switch.js" afterPath="$PROJECT_DIR$/src/app/pages/page-switch.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/pages/page-table.js" afterPath="$PROJECT_DIR$/src/app/pages/page-table.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/pages/page-tabs.js" afterPath="$PROJECT_DIR$/src/app/pages/page-tabs.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/pages/page-textfield.js" afterPath="$PROJECT_DIR$/src/app/pages/page-textfield.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/pages/page-toggle.js" afterPath="$PROJECT_DIR$/src/app/pages/page-toggle.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/pages/page-tooltip.js" afterPath="$PROJECT_DIR$/src/app/pages/page-tooltip.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main.js" afterPath="$PROJECT_DIR$/src/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tsconfig.json" afterPath="$PROJECT_DIR$/src/tsconfig.json" />
+    </list>
+    <ignored path="test-webpack.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="test-webpack" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/app/ml/components/ml_components_list.ts" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/app/ml/components/layout/ml_layout.ts" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/app/ml/components/layout/ml_layout.css" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/package.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/app/pages/page-card.ts" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/app/ml/components/layout/ml_icon.css" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/angular-cli.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main.ts" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/tsconfig.json" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/index-systemjs.html" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/systemjs.config.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/index.html" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backup/webpack.config.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/typing.d.ts" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/polyfills.ts" />
+        <option value="$PROJECT_DIR$/src/app/mdl/components/card/ml_card.ts" />
+        <option value="$PROJECT_DIR$/src/app/mdl/components/layout/ml_layout.ts" />
+        <option value="$PROJECT_DIR$/src/app/mdl/components/badge/ml_badge.ts" />
+        <option value="$PROJECT_DIR$/src/typing.d.ts" />
+        <option value="$PROJECT_DIR$/src/app/ml/components/table/ml_table.css" />
+        <option value="$PROJECT_DIR$/src/app/ml/components/badge/ml_badge.ts" />
+        <option value="$PROJECT_DIR$/src/app/pages/page-card.ts" />
+        <option value="$PROJECT_DIR$/src/app/pages/page-chip.ts" />
+        <option value="$PROJECT_DIR$/src/app/pages/page-tooltip.ts" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/systemjs.config.js" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/app/ml/components/controls/radio/mdl_radio.ts" />
+        <option value="$PROJECT_DIR$/src/app/app.root.ts" />
+        <option value="$PROJECT_DIR$/src/assets/fonts/fonts.css" />
+        <option value="$PROJECT_DIR$/src/assets/fonts/material-icons.css" />
+        <option value="$PROJECT_DIR$/src/app/ml/components/layout/fonts/fonts.css" />
+        <option value="$PROJECT_DIR$/src/app/ml/components/icon/ml_icon.ts" />
+        <option value="$PROJECT_DIR$/src/app/ml/components/controls/radio/ml_radio.ts" />
+        <option value="$PROJECT_DIR$/src/app/pages/page-radio.ts" />
+        <option value="$PROJECT_DIR$/iframe/iframe.html" />
+        <option value="$PROJECT_DIR$/src/main.ts" />
+        <option value="$PROJECT_DIR$/src/app/app.routes.ts" />
+        <option value="$PROJECT_DIR$/src/app/app.module.ts" />
+        <option value="$PROJECT_DIR$/src/index-systemjs.html" />
+        <option value="$PROJECT_DIR$/src/app/ml/components/card/ml_card.ts" />
+        <option value="$PROJECT_DIR$/dist/service-worker.js" />
+        <option value="$PROJECT_DIR$/dist/ml-service-worker.js" />
+        <option value="$PROJECT_DIR$/angular-cli.json" />
+        <option value="$PROJECT_DIR$/src/app/ml/components/layout/ml_layout.css" />
+        <option value="$PROJECT_DIR$/src/app/ml/components/layout/ml_icon.css" />
+        <option value="$PROJECT_DIR$/src/app/ml/components/dialog/ml_dialog.ts" />
+        <option value="$PROJECT_DIR$/src/app/ml/components/element/mdl_element.ts" />
+        <option value="$PROJECT_DIR$/src/app/ml/components/grid/ml_grid.ts" />
+        <option value="$PROJECT_DIR$/src/app/ml/components/list/ml_list.ts" />
+        <option value="$PROJECT_DIR$/src/app/pages/page-list.ts" />
+        <option value="$PROJECT_DIR$/src/app/ml/components/menu/ml_menu.ts" />
+        <option value="$PROJECT_DIR$/src/app/ml/components/table/ml_table.ts" />
+        <option value="$PROJECT_DIR$/src/app/pages/page-table.ts" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/src/app/ml/components/tabs/ml_tabs.ts" />
+        <option value="$PROJECT_DIR$/src/app/ml/components/layout/ml_layout.ts" />
+        <option value="$PROJECT_DIR$/src/index.html" />
+        <option value="$PROJECT_DIR$/dist/index.html" />
+        <option value="$PROJECT_DIR$/dist/sw.js" />
+        <option value="$PROJECT_DIR$/src/app/ml/components/controls/error/ml_error.ts" />
+        <option value="$PROJECT_DIR$/backup/sw.js" />
+        <option value="$PROJECT_DIR$/src/tsconfig.json" />
+        <option value="$PROJECT_DIR$/src/app/ml/ml_module.ts" />
+        <option value="$PROJECT_DIR$/src/app/ml/components/ml_components_list.ts" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBowerSettings">
+    <exe-path>$USER_HOME$/AppData/Roaming/npm/bower.cmd</exe-path>
+    <config-path />
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER">
+    <package-json value="$PROJECT_DIR$/package.json" />
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-4" />
+    <option name="y" value="-4" />
+    <option name="width" value="1288" />
+    <option name="height" value="688" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>CSS</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+    <entry key="Project Default (copy)">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>CSS</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+    <entry key="temporal">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>CSS</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="material-light" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="material-light" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="material-light" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="settings.nodejs" />
+    <property name="settings.editor.splitter.proportion" value="0.2397541" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../yagolopez.github.io" />
+    <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
+    <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
+    <property name="SearchEverywhereHistoryKey" value="json&#9;FILE&#9;file://C:/Users/Yago/WebstormProjects/material-light/package.json&#10;angular-cli.json&#9;FILE&#9;file://C:/Users/Yago/WebstormProjects/material-light/angular-cli.json&#10;typings&#9;FILE&#9;file://C:/Users/Yago/WebstormProjects/test-webpack/node_modules/reflect-metadata/typings.d.ts&#10;pollyfills.ts.js&#9;null&#9;null&#10;production&#9;null&#9;null&#10;webpack.config&#9;FILE&#9;file://C:/Users/Yago/WebstormProjects/test-webpack/node_modules/webpack-dev-server/client/webpack.config.js" />
+    <property name="JavaScriptPreferStrict" value="false" />
+    <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
+    <property name="js.eslint.eslintPackage" value="" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Yago\WebstormProjects\material-light\dist" />
+      <recent name="C:\Users\Yago\WebstormProjects\material-light\backup" />
+      <recent name="C:\Users\Yago\WebstormProjects\material-light\dist\assets\fonts" />
+      <recent name="C:\Users\Yago\WebstormProjects\material-light" />
+      <recent name="C:\Users\Yago\WebstormProjects\material-light\src\app\ml\components\layout" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Yago\WebstormProjects\material-light\dist" />
+      <recent name="C:\Users\Yago\WebstormProjects\material-light\src\assets" />
+      <recent name="C:\Users\Yago\WebstormProjects\material-light\src\app\ml\components\layout\fonts" />
+      <recent name="C:\Users\Yago\WebstormProjects\material-light\src\app\ml\components\layout" />
+      <recent name="C:\Users\Yago\WebstormProjects\material-light\backup" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Node.js.Systemjs">
+    <configuration default="false" name="index.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/material-light/dist/index.html">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory />
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui>bdd</ui>
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
+    <configuration default="false" name="Localhost:4200" type="JavascriptDebugType" factoryName="JavaScript Debug" uri="http://localhost:4200">
+      <method />
+    </configuration>
+    <configuration default="false" name="Systemjs" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" path-to-js-file="$USER_HOME$/AppData/Roaming/npm/node_modules/live-server/live-server.js" application-parameters="--ignore='/node_modules/,/dist/,/backup/,/e2e/' --open=/src/index-systemjs.html --watch=src" working-dir="$PROJECT_DIR$/">
+      <method />
+    </configuration>
+    <configuration default="false" name="Serve Dist" type="NodeJSConfigurationType" factoryName="Node.js" singleton="false" path-to-node="project" path-to-js-file="$USER_HOME$/AppData/Roaming/npm/node_modules/live-server/live-server.js" working-dir="$PROJECT_DIR$/dist">
+      <method />
+    </configuration>
+    <configuration default="false" name="Build prod" type="js.build_tools.npm" factoryName="npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run-script" />
+      <scripts>
+        <script value="build_prod" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="Serve in memory" type="js.build_tools.npm" factoryName="npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run-script" />
+      <scripts>
+        <script value="serve" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <list size="6">
+      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.Localhost:4200" />
+      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
+      <item index="2" class="java.lang.String" itemvalue="Node.js.Systemjs" />
+      <item index="3" class="java.lang.String" itemvalue="Node.js.Serve Dist" />
+      <item index="4" class="java.lang.String" itemvalue="npm.Build prod" />
+      <item index="5" class="java.lang.String" itemvalue="npm.Serve in memory" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-4" y="-4" width="1288" height="688" extended-state="7" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25972995" sideWeight="0.496614" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="TypeScript Compiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21174377" sideWeight="0.49722" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21174377" sideWeight="0.50277996" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25972995" sideWeight="0.503386" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20996441" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2925532" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962668" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291815" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291815" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.66903913" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="initial commit" />
+    <MESSAGE value="fixed fonts and icons relative paths. when using module loader and relative paths you must prefix it with './'" />
+    <MESSAGE value="modificacion de readme" />
+    <MESSAGE value="sw-workers" />
+    <MESSAGE value="refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="5" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/app/ml/components/badge/ml_badge.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-68">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/ml/components/icon/ml_icon.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/app.root.ts" />
+    <entry file="file://$PROJECT_DIR$/src/app/ml/components/layout/ml_layout.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46546">
+          <caret line="2853" column="15" selection-start-line="2853" selection-start-column="15" selection-end-line="2853" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/ml/components/layout/ml_icon.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/ml/components/card/ml_card.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/ml/components/dialog/ml_dialog.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/ml/components/chip/ml_chip.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-195">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/ml/components/chip/ml_chip_button.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/ml/components/element/mdl_element.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="75" selection-start-line="2" selection-start-column="75" selection-end-line="2" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index-systemjs.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/ml/components/grid/ml_grid.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-654">
+          <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/ml/components/list/ml_list.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="25" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/pages/page-list.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="47" column="21" selection-start-line="47" selection-start-column="21" selection-end-line="47" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/ml/components/menu/ml_menu.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-510">
+          <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/ml/components/progressbar/ml_progressbar.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-549">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/ml/components/snackbar/ml_snackbar.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-93">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/ml/components/spinner/ml_spinner.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-311">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-cli.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="27" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/pages/page-table.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-25">
+          <caret line="7" column="38" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/ml/components/table/ml_table.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="50" column="28" selection-start-line="50" selection-start-column="28" selection-end-line="50" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/ml/components/layout/mdl_layout.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backup/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="18" column="7" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/ml/components/tabs/ml_tabs.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/index.html" />
+    <entry file="file://$PROJECT_DIR$/src/app/ml/components/controls/button/ml_button.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/ml/components/controls/button/ml_button_submit.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/ml/components/controls/checkbox/ml_checkbox.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-161">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/ml/components/controls/error/ml_error.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/ml/components/controls/radio/ml_radio.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/ml/components/controls/slider/ml_slider.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/ml/components/controls/switch/ml_switch.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-25">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/ml/components/controls/textfield/ml_textfield.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1419">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/ml/components/controls/textfield/ml_textfield_area.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-365">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/ml/components/controls/textfield/ml_textfield_expand.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1215">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/ml/components/controls/textfield/ml_textfield_label.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backup/sw.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/sw.js" />
+    <entry file="file://$PROJECT_DIR$/node_modules/@angular/common/src/directives/ng_class.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="479">
+          <caret line="45" column="33" selection-start-line="45" selection-start-column="33" selection-end-line="45" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/rxjs/Observable.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="9" column="65" selection-start-line="9" selection-start-column="65" selection-end-line="9" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/ml/components/controls/textfield/ml_textfield.d.ts" />
+    <entry file="file://$PROJECT_DIR$/src/typing.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tsconfig.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="33" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/ml/components/layout/ml_layout.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-85">
+          <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/ml/ml_module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26">
+          <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/ml/components/ml_components_list.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="808">
+          <caret line="77" column="0" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="16" column="9" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/pages/app.pages.list.ts" />
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

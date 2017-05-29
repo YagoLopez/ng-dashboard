@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="TypeScriptCompiler">
+    <option name="isCompilerEnabled" value="true" />
+    <option name="typeScriptServiceDirectory" value="C:\Users\UsuarioAurora\Documents\WebstormProjects\material-light\node_modules\typescript\lib" />
+    <option name="generateSourceMap" value="false" />
+    <option name="mainFilePath" value="C:\Users\Yago\WebstormProjects\material-light\src\main.ts" />
+    <option name="useMainFile" value="true" />
+    <option name="useConfig" value="true" />
+    <option name="showAllErrors" value="true" />
+    <option name="versionType" value="SERVICE_DIRECTORY" />
+  </component>
+</project>

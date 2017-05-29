@@ -1,0 +1,108 @@
+.mdl-tabs {
+  display: block;
+  width: 100%; }
+
+.mdl-tabs__tab-bar {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-content: space-between;
+      -ms-flex-line-pack: justify;
+          align-content: space-between;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  height: 48px;
+  padding: 0 0 0 0;
+  margin: 0;
+  border-bottom: 1px solid rgb(224,224,224); }
+
+.mdl-tabs__tab {
+  margin: 0;
+  border: none;
+  padding: 0 24px 0 24px;
+  float: left;
+  position: relative;
+  display: block;
+  text-decoration: none;
+  height: 48px;
+  line-height: 48px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: rgba(0,0,0, 0.54);
+  overflow: hidden; }
+  .mdl-tabs.is-upgraded .mdl-tabs__tab.is-active {
+    color: rgba(0,0,0, 0.87); }
+  .mdl-tabs.is-upgraded .mdl-tabs__tab.is-active:after {
+    height: 2px;
+    width: 100%;
+    display: block;
+    content: " ";
+    bottom: 0px;
+    left: 0px;
+    position: absolute;
+    background: rgb(63,81,181);
+    -webkit-animation: border-expand 0.2s cubic-bezier(0.4, 0, 0.4, 1) 0.01s alternate forwards;
+            animation: border-expand 0.2s cubic-bezier(0.4, 0, 0.4, 1) 0.01s alternate forwards;
+    transition: all 1s cubic-bezier(0.4, 0, 1, 1); }
+
+/* modificaciones */
+
+/*  .mdl-tabs__tab .mdl-tabs__ripple-container {
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+    overflow: hidden; }
+    .mdl-tabs__tab .mdl-tabs__ripple-container .mdl-ripple {
+      background: rgb(63,81,181); }*/
+
+
+  .mdl-tabs__ripple-container {
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+    overflow: hidden; }
+    .mdl-tabs__ripple-container .mdl-ripple {
+      background: rgb(63,81,181); }
+
+
+/* fin modificaciones */
+
+.mdl-tabs__panel {
+  display: block; }
+  .mdl-tabs.is-upgraded .mdl-tabs__panel {
+    display: none; }
+  .mdl-tabs.is-upgraded .mdl-tabs__panel.is-active {
+    display: block; }
+
+@-webkit-keyframes border-expand {
+  0% {
+    opacity: 0;
+    width: 0; }
+  100% {
+    opacity: 1;
+    width: 100%; } }
+
+@keyframes border-expand {
+  0% {
+    opacity: 0;
+    width: 0; }
+  100% {
+    opacity: 1;
+    width: 100%; } }
