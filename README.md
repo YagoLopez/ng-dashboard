@@ -12,8 +12,12 @@
 
 ## Demo
 
-<!-- - <a href="http://mobt.me/Xf27" target="_blank">Mobile Simulator (For Desktop)</a> -->
+- <a href="http://mobt.me/ZPt4" target="_blank">Mobile Simulator (For Desktop)</a>
 - <a href="https://yagolopez.github.io/ng-dashboard/dist/" target="_blank">Full Screen (For Mobile)</a>
+
+** Warning **:
+When cross domain content is used in iframes some javascript features are disabled for
+security reasons (i. e. alert dialogs). Run the desktop version for full features.
 
 ##  Requierements
 
@@ -34,20 +38,24 @@ folder and import `NgLMapDir` in your own component
 
 ## MetricsGraphics Chart Component API
 
-`<mg-graphic [urlData]="urlDataString" [config]="configObject [preprocess-fn]="preprocessFn"></mg-graphic>`
+```HTML
+<mg-graphic [urlData]="urlDataString" [config]="configObject [preprocess-fn]="preprocessFn"></mg-graphic>
+```
 
-- [urlData]: ulr of local or remote json file with data (pay attention to CORS restrictions)
-- [config]: Javascript object with configuration valuers for MetricsGraphics. (Check their webpacke for more information)
-- [preprocess-Fn]: Applies Javascript transformation to incoming data (for example for format dates, etc.)
+- *urlData*: ulr of local or remote json file with data (pay attention to CORS restrictions)
+- *config*: Javascript object with configuration valuers for MetricsGraphics. (Check their webpacke for more information)
+- *preprocess-Fn*: Applies Javascript transformation to incoming data (for example for format dates, etc.)
 
 
 ## Leaflet Map Directive API
 
-`<div l-map [l-center]="center" [l-zoom]="zoom"></div>
-`
-- [l-center]: Tuple with this type `[number, number]` with the coordinates of the map center in latitude and logitude
-- [l-zoom]: Number with initial zoom
-- [l-options]: Javascript object with the other options configurations. Check Leaflet documentation for more information on map options
+```HTML
+<div l-map [l-center]="center" [l-zoom]="zoom"></div>
+```
+
+- *l-center*: Tuple with this type `[number, number]` with the coordinates of the map center in latitude and logitude
+- *l-zoom*: Number with initial zoom
+- *l-options*: Javascript object with the other options configurations. Check Leaflet documentation for more information on map options
 
 ## Testing
 
