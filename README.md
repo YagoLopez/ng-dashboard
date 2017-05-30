@@ -38,24 +38,24 @@ folder and import `NgLMapDir` in your own component
 
 ## MetricsGraphics Chart Component API
 
-```HTML
+```XML
 <mg-graphic [urlData]="urlDataString" [config]="configObject [preprocess-fn]="preprocessFn"></mg-graphic>
 ```
 
-- *urlData*: ulr of local or remote json file with data (pay attention to CORS restrictions)
-- *config*: Javascript object with configuration valuers for MetricsGraphics. (Check their webpacke for more information)
-- *preprocess-Fn*: Applies Javascript transformation to incoming data (for example for format dates, etc.)
+- **urlData**: ulr of local or remote json file with data (pay attention to CORS restrictions)
+- **config**: Javascript object with configuration valuers for MetricsGraphics. (Check their webpacke for more information)
+- **preprocess-Fn**: Applies Javascript transformation to incoming data (for example for format dates, etc.)
 
 
 ## Leaflet Map Directive API
 
-```HTML
+```XML
 <div l-map [l-center]="center" [l-zoom]="zoom"></div>
 ```
 
-- *l-center*: Tuple with this type `[number, number]` with the coordinates of the map center in latitude and logitude
-- *l-zoom*: Number with initial zoom
-- *l-options*: Javascript object with the other options configurations. Check Leaflet documentation for more information on map options
+- **l-center**: Tuple with this type `[number, number]` with the coordinates of the map center in latitude and logitude
+- **l-zoom**: Number with initial zoom
+- **l-options**: Javascript object with the other options configurations. Check Leaflet documentation for more information on map options
 
 ## Testing
 

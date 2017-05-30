@@ -1,4 +1,6 @@
 //todo: arreglar ml-card-actions (igual que ml-card-title)
+//todo: intentar mejorar el estado 'loading' chart en pagLinearChart
+//todo: añadir animaciones en transiciones de estado/pagina
 
 import {NgModule} from "@angular/core";
 import {BrowserModule} from "@angular/platform-browser";

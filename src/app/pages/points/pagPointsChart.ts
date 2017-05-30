@@ -15,9 +15,9 @@ template:`
   </ml-card-text>
   <ml-card-menu>
     <ml-card-menu>
-      <ml-menu position="top-right" class="menu-btn" ripple>
-        <ml-menu-item ripple>item 1</ml-menu-item>
-        <ml-menu-item ripple>item 2</ml-menu-item>
+      <ml-menu position="top-right" class="menu-btn">
+        <ml-menu-item>item 1</ml-menu-item>
+        <ml-menu-item>item 2</ml-menu-item>
       </ml-menu>
     </ml-card-menu>
   </ml-card-menu>  
@@ -32,9 +32,9 @@ template:`
   </ml-card-text>
   <ml-card-menu>
     <ml-card-menu>
-      <ml-menu position="top-right" class="menu-btn" ripple>
-        <ml-menu-item ripple>item 1</ml-menu-item>
-        <ml-menu-item ripple>item 2</ml-menu-item>
+      <ml-menu position="top-right" class="menu-btn">
+        <ml-menu-item>item 1</ml-menu-item>
+        <ml-menu-item>item 2</ml-menu-item>
       </ml-menu>
     </ml-card-menu>
   </ml-card-menu>  
