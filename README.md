@@ -1,4 +1,4 @@
-<p align="center"><img src="src/assets/img/logo-dash5.png" style="margin: auto; width: 80px"></p>
+<p align="center"><img src="src/assets/img/logo-dash5.png" style="margin: auto; width: 90px"></p>
 
 <h1><p align="center">NG Dashboard</p></h1>
 
@@ -8,11 +8,11 @@
 
 - UI components based on <a href="https://github.com/YagoLopez/material-light" target="_blank">Material Light</a>
 - Charts based on <a href="http://metricsgraphicsjs.org" target="_blank">Metrics Graphics JS</a>
-- Maps based on <a href="http://metricsgraphicsjs.org" target="_blank">Metrics Graphics JS</a>
+- Maps based on <a href="http://leafletjs.com" target="_blank">Leaflet JS</a>
 
 ## Demo
 
-- <a href="http://mobt.me/Xf27" target="_blank">Mobile Simulator (For Desktop)</a>
+<!-- - <a href="http://mobt.me/Xf27" target="_blank">Mobile Simulator (For Desktop)</a> -->
 - <a href="https://yagolopez.github.io/ng-dashboard/dist/" target="_blank">Full Screen (For Mobile)</a>
 
 ##  Requierements
@@ -34,7 +34,7 @@ folder and import `NgLMapDir` in your own component
 
 ## MetricsGraphics Chart Component API
 
-`<mg-graphic [urlData]="urlDataString" [config]="configObject [preprocess-fn]=preprocessFn"></mg-graphic>`
+`<mg-graphic [urlData]="urlDataString" [config]="configObject [preprocess-fn]="preprocessFn"></mg-graphic>`
 
 - [urlData]: ulr of local or remote json file with data (pay attention to CORS restrictions)
 - [config]: Javascript object with configuration valuers for MetricsGraphics. (Check their webpacke for more information)
@@ -53,3 +53,5 @@ folder and import `NgLMapDir` in your own component
 
 <div>Tests with the colaboration of:</div>
 <a href="https://www.browserstack.com/" target="_blank"><img src="browserstack-logo.png" height="90px"></a>
+
+<a href="#">Back to top &UpArrow;</a>

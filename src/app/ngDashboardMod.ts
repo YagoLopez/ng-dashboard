@@ -7,6 +7,8 @@ import {HttpModule} from "@angular/http";
 import {MlPageLoaderMod} from "./ml/components/loader/mlContentLoaderMod";
 import {MlLayoutMod} from "./ml/components/layout/mlLayoutMod";
 import {MlMenuMod} from "./ml/components/menu/mlMenuMod";
+import {MlBadgeMod} from "./ml/components/badge/mlBadgeMod";
+import {MlTooltipMod} from "./ml/components/tooltip/mlTooltipMod";
 import {NgDashboardApp} from "./ngDashboardApp";
 
 const getUrlParameter = (name: string) => {
@@ -35,7 +37,7 @@ const APP_ROUTES: Routes = [
 ];
 
 @NgModule({
-  imports: [BrowserModule, HttpModule, MlPageLoaderMod, MlLayoutMod, MlMenuMod,
+  imports: [BrowserModule, HttpModule, MlPageLoaderMod, MlLayoutMod, MlMenuMod, MlBadgeMod, MlTooltipMod,
     RouterModule.forRoot(APP_ROUTES, {enableTracing: false,  useHash: true})],
   declarations: [NgDashboardApp], bootstrap: [NgDashboardApp]
 })

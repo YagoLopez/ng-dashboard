@@ -22,11 +22,11 @@ export class MlBadge{
     ml.setAttribute(this.host, 'data-badge', this.value, this.ren);
     ml.isDefined(this.background) && ml.setClass(this.host, 'mdl-badge--no-background', this.ren);
     ml.isDefined(this.overlap) && ml.setClass(this.host, 'mdl-badge--overlap', this.ren);
-
-    if(ml.isDefined(this.icon)){
-      ml.setClass(this.host, 'material-icons', this.ren);
-      ml.setClass(this.host, 'mdl-badge--overlap', this.ren);
-      this.host.nativeElement.querySelector('ml-icon').className = 'mdl-badge-icon';
-    }
+    //todo: borrar
+    // if(ml.isDefined(this.icon)){
+    //   ml.setClass(this.host, 'material-icons', this.ren);
+    //   ml.setClass(this.host, 'mdl-badge--overlap', this.ren);
+    //   this.host.nativeElement.querySelector('ml-icon').className = 'mdl-badge-icon';
+    // }
   }
 }

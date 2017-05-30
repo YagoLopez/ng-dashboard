@@ -1,4 +1,5 @@
 //todo: hacer componente: menu compartir
+//todo: usar animaciones
 
 import {Component} from '@angular/core';
 
@@ -18,8 +19,9 @@ template:`
   .drawer-text {color: white; text-align: center; font-weight: 500; position: relative; top: 35px}
   .drawer-bckgrd-img {background: url('assets/img/bg7.jpg') center; text-align: center; height: 160px}
   .drawer-logo {font-size: 52px; color: white; position: relative; top: 40px}
-  .header-icon {vertical-align: sub; padding-right: 6px}
-  .drawer-menu-item-icon {padding-right: 5px;}
+  .header-ico {vertical-align: text-top; color: white}
+  .header-ico-menu {vertical-align: sub; padding-right: 6px}
+  .drawer-menu-item-icon {padding-right: 5px}
   /*:host /deep/ .my-theme {background: cornflowerblue; color: darkblue}*/
 
   /* Responsive main content ------------------------------------------------------------- */
@@ -48,9 +50,14 @@ template:`
   <ml-header>
     <ml-header-row>
       <ml-title>
-        <ml-icon class="header-icon">assessment</ml-icon>NG Dashboard
+        <ml-icon class="header-ico-menu">assessment</ml-icon>NG Dashboard
       </ml-title>
       <ml-spacer></ml-spacer>
+      <a routerLink="#"><ml-icon class="header-ico" style="padding-right:10px">
+        account_circle</ml-icon></a>
+      <a routerLink="#" id="tooltip">
+        <ml-badge value="5" overlap="true"><ml-icon class="header-ico">email</ml-icon></ml-badge></a>
+      <ml-tooltip for="tooltip">New messages</ml-tooltip>
       <ml-menu icon="share" position="top-right">
         <ml-menu-item with-divider class="share-item-header">Share...</ml-menu-item>
         <ml-menu-item><a [href]="shareTwitter" target="_blank">Twitter</a></ml-menu-item>
