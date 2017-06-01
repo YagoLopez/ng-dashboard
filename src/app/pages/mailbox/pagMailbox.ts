@@ -39,7 +39,7 @@ template: `
   </ml-card-text>
 </ml-card>
 
-<p class="centered footer">Data operations are simulated an non permament</p>
+<p class="centered footer">Data operations are simulated and non permament</p>
 
 `//template
 }) export class PagMailbox{

@@ -24,7 +24,7 @@ template: `
 
 <table>
   <tr>
-    <td><img src="/src/assets/img/userprofile.png" class="img-profile"></td>
+    <td><img src="assets/img/userprofile.png" class="img-profile"></td>
     <td class="bg-lightgrey row-width"></td>
   </tr>
   <tr>
