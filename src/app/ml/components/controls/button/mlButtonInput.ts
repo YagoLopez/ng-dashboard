@@ -4,7 +4,7 @@
 import {Component, ElementRef, Input, Renderer2, ViewChild, ChangeDetectionStrategy,
   HostBinding} from "@angular/core";
 import MdlButton from "./mdlButtonClass";
-import * as ml from "../../../lib/ml_lib";
+import * as ml from "../../../lib/mlLib";
 
 // note: <input type="file, date, color, etc."> not cross-browser compatible
 const ML_BUTTON_INPUT_TYPES = ['submit', 'reset', 'button'];

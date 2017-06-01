@@ -1,5 +1,3 @@
-//todo: añadir icono de tuerca en cada ml-card
-
 import {Component} from '@angular/core';
 import {IMGConfig} from "../../mg/metricsGraphicsCmp";
 
@@ -37,7 +35,7 @@ template:`
 
 <br>
 
-<ml-card shadow="3">
+<ml-card shadow="3" class="margin-top">
   <ml-card-text>
     <div class="chart-title">Multi-linear Chart</div>
     <mg-graphic [config]="config2" [urlData]="urlData2" [preprocess-fn]="convertDateFn"></mg-graphic>

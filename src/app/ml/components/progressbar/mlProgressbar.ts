@@ -1,7 +1,7 @@
 //todo: (global) probar a sacar factor comun en una factoria a los constructores para evitar repetir tanto codigo
 import {Component, ElementRef, Input, Renderer2, ViewEncapsulation} from "@angular/core";
 import MdlProgress from "./mdlPprogressClass"
-import * as ml from "../../lib/ml_lib";
+import * as ml from "../../lib/mlLib";
 
 @Component({
 selector: 'ml-progressbar',

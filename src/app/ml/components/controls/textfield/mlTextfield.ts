@@ -12,7 +12,7 @@ import {Component, ViewEncapsulation, ElementRef, Renderer2, Input, forwardRef, 
   from "@angular/core";
 import {NG_VALUE_ACCESSOR, ControlValueAccessor, FormControl} from "@angular/forms";
 import MdlTextfield from "./mdlTextfieldClass";
-import * as ml from "../../../lib/ml_lib";
+import * as ml from "../../../lib/mlLib";
 
 // @Input.type must be restricted to the following values:
 const ML_TEXTFIELD_TYPES = ['text', 'password', 'date', 'datetime-local', 'month', 'time', 'week', 'url', 'tel',
@@ -62,7 +62,7 @@ template:`
     }
   }
   onFocus(){
-    this.formControl.markAsTouched(true);
+    this.formControl && this.formControl.markAsTouched(true);
     this.checkValidity();
   }
 

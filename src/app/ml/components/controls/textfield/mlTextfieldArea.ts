@@ -2,7 +2,7 @@ import {Component, ViewEncapsulation, ElementRef, Renderer2, Input, forwardRef,
   ChangeDetectionStrategy} from "@angular/core";
 import {NG_VALUE_ACCESSOR, ControlValueAccessor, FormControl} from "@angular/forms";
 import MdlTextfield from "./mdlTextfieldClass";
-import * as ml from "../../../lib/ml_lib";
+import * as ml from "../../../lib/mlLib";
 
 @Component({
 selector: 'ml-textfield-area',
@@ -50,7 +50,7 @@ export class MlTextfieldArea implements ControlValueAccessor{
   }
 
   onFocus(){
-    this.formControl.markAsTouched(true);
+    this.formControl && this.formControl.markAsTouched(true);
     this.checkValidity();
   }
   onKeyup(){

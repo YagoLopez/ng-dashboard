@@ -5,11 +5,11 @@
 import {Component, ElementRef, Renderer2, ViewEncapsulation, Input, Directive, ChangeDetectionStrategy}
   from "@angular/core";
 import MdlLayout from "./mdlLayoutClass";
-import * as ml from "../../lib/ml_lib";
+import * as ml from "../../lib/mlLib";
 
 @Component({
 selector: 'ml-layout',
-changeDetection: ChangeDetectionStrategy.OnPush,
+// changeDetection: ChangeDetectionStrategy.OnPush,
 styleUrls: ['mlLayout.css', '../ripple/mlRipple.css'],
 host: {class: 'mdl-layout mdl-layout__container'},
 encapsulation: ViewEncapsulation.None,

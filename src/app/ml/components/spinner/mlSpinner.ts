@@ -2,7 +2,7 @@
 //todo: [attributo]="valor". Si no hay valor puede que haya problemas
 import {Component, ElementRef, Input, Renderer2, ViewEncapsulation, ChangeDetectionStrategy} from "@angular/core";
 import MdlSpinner from "./mdlSpinnerClass";
-import * as ml from "../../lib/ml_lib";
+import * as ml from "../../lib/mlLib";
 
 @Component({
 selector: 'ml-spinner',

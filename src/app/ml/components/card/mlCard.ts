@@ -1,5 +1,5 @@
 import {Component, Directive, ElementRef, Input, Renderer2, ViewEncapsulation, ViewChild} from "@angular/core";
-import * as ml from "../../lib/ml_lib";
+import * as ml from "../../lib/mlLib";
 
 @Component({
 selector: 'ml-card',

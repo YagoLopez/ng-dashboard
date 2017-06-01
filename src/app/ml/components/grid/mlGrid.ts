@@ -1,5 +1,5 @@
 import {Component, Renderer2, ElementRef, Input, ViewEncapsulation} from '@angular/core';
-import * as ml from "../../lib/ml_lib";
+import * as ml from "../../lib/mlLib";
 
 @Component({
 selector: 'ml-grid',

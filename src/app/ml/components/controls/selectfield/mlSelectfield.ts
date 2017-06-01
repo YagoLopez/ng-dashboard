@@ -7,7 +7,7 @@ import {NG_VALUE_ACCESSOR, ControlValueAccessor, FormControl} from "@angular/for
 import {MlButton} from "../button/mlButton";
 import MdlMenu from "../../menu/mdlMenuClass";
 import MdlTextfield from "../textfield/mdlTextfieldClass";
-import * as ml from "../../../lib/ml_lib";
+import * as ml from "../../../lib/mlLib";
 
 @Component({
 selector: 'ml-selectfield',
@@ -49,6 +49,9 @@ template:`
   constructor(private ren: Renderer2, private host: ElementRef){}
 
   onItemSelected($event){
+    if(!this.formControl){
+      return;
+    }
     this.label.nativeElement.textContent = '';
     this.input.nativeElement.value = $event.target.textContent;
     this.formControl.setValue($event.target.textContent);

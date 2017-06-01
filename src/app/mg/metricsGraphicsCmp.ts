@@ -3,13 +3,10 @@
 //todo: arreglar lo de cargar d3.js desde el directorio /src/
 //todo: intentar que funcione this.data con observables para que se actualicen los valores automaticamente
 //      y poder hacer realtime
-//todo: hacer config.data un observable para obtener reactividad en tiempo real
 //todo: MG y d3 no deberian ser declarados en typing.ts
 //todo: poder ejecutar funciones arbitrarias para filtrar y arreglar los datos (de forma menos restrictiva que la actual)
 //todo: hacer about page
 //todo: hacer otro grafico de tipo barras con colores
-//todo: hacer tabla?
-//todo: poner en header icono con badge que apunte a una pagina con una tabla (ml-table) de mensajes (usar mobx?)
 //todo: quitar hasbang en url
 //todo: habria que hacer un @input para pasar un objeto al metodo http y poder configurar CORS
 

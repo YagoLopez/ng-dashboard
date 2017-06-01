@@ -1,5 +1,5 @@
 import {Component, Renderer2, ElementRef, ViewEncapsulation, Directive, Input} from '@angular/core';
-import * as ml from '../../lib/ml_lib'
+import * as ml from '../../lib/mlLib';
 
 // ---------------------------------------------------------------------------------------------------------------------
 @Component({
@@ -23,7 +23,7 @@ export class MlTable {
   }
 
   ngOnInit() {
-    ml.setClass(this.host, this.shadowClassName(this.shadow), this.ren);
+    ml.isDefined(this.shadow) && ml.setClass(this.host, this.shadowClassName(this.shadow), this.ren);
     ml.isDefined(this.selectable) && ml.setClass(this.host, 'mdl-data-table--selectable', this.ren);
     if (this.order === "asc"){
       ml.setClass(this.host, 'mdl-data-table__header--sorted-ascending', this.ren);

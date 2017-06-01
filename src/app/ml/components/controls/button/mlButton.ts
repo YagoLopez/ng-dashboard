@@ -2,7 +2,7 @@
 //todo: usar enums
 import {Component, ElementRef, Input, Renderer2, ViewEncapsulation} from "@angular/core";
 import MdlButton from "./mdlButtonClass";
-import * as ml from "../../../lib/ml_lib";
+import * as ml from "../../../lib/mlLib";
 
 const ML_BUTTON_ASPECTS = ['raised, colored, accent'];
 const ML_BUTTON_VARIANTS = ['fab', 'minifab', 'icon'];

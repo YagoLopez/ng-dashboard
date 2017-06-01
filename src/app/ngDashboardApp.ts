@@ -1,5 +1,7 @@
 //todo: hacer componente: menu compartir
 //todo: usar animaciones
+//todo: comprobar spinner
+//todo: hacer una directiva para contenido responsivo
 
 import {Component} from '@angular/core';
 
@@ -17,30 +19,13 @@ template:`
     {cursor: default; background-color: transparent !important; color: cornflowerblue; font-weight: 500}
   .active-route {background: #3193ea; color: white !important}
   .drawer-text {color: white; text-align: center; font-weight: 500; position: relative; top: 35px}
-  .drawer-bckgrd-img {background: url('assets/img/bg7.jpg') center; text-align: center; height: 160px}
+  .drawer-bg-img {background: url('assets/img/bg7.jpg') center; text-align: center; height: 160px}
   .drawer-logo {font-size: 52px; color: white; position: relative; top: 40px}
   .header-ico {vertical-align: text-top; color: white}
   .header-ico-menu {vertical-align: sub; padding-right: 6px}
   .drawer-menu-item-icon {padding-right: 5px}
+  .pad-right {padding-right:10px}
   /*:host /deep/ .my-theme {background: cornflowerblue; color: darkblue}*/
-
-  /* Responsive main content ------------------------------------------------------------- */
-  
-  @media (min-width: 700px){
-    ml-content{
-      padding: 0 100px;
-      background-color: ghostwhite}
-    ml-content-tabheader{
-      background-color: white;
-      margin: auto;
-      width: 60%;
-      padding: 25px 50px 50px;
-      border: 1px solid lightgrey;
-      box-shadow: 1px 1px 5px lightgrey}
-  }
-  @media(max-width: 700px){
-    ml-content{padding: 10px}
-  }  
 </style>
 
 <ml-layout> 
@@ -49,14 +34,11 @@ template:`
 
   <ml-header>
     <ml-header-row>
-      <ml-title>
-        <ml-icon class="header-ico-menu">assessment</ml-icon>NG Dashboard
-      </ml-title>
+      <ml-title><ml-icon class="header-ico-menu">assessment</ml-icon>NG Dashboard</ml-title>
       <ml-spacer></ml-spacer>
-      <a routerLink="#"><ml-icon class="header-ico" style="padding-right:10px">
-        account_circle</ml-icon></a>
-      <a routerLink="#" id="tooltip">
-        <ml-badge value="5" overlap="true"><ml-icon class="header-ico">email</ml-icon></ml-badge></a>
+      <a routerLink="profile"><ml-icon class="header-ico pad-right">account_circle</ml-icon></a>
+      <a routerLink="mailbox" id="tooltip">
+        <ml-badge id="mybadge" value="5" overlap="true"><ml-icon class="header-ico">email</ml-icon></ml-badge></a>
       <ml-tooltip for="tooltip">New messages</ml-tooltip>
       <ml-menu icon="share" position="top-right">
         <ml-menu-item with-divider class="share-item-header">Share...</ml-menu-item>
@@ -72,7 +54,7 @@ template:`
   <!-- Drawer ------------------------------------------------------------------------------------------------------ -->
   
   <ml-drawer fixed>
-    <div class="drawer-bckgrd-img">
+    <div class="drawer-bg-img">
       <i class="material-icons drawer-logo">assessment</i>
       <p class="drawer-text">NG Dashboard</p>
     </div>
@@ -93,10 +75,8 @@ template:`
   <!-- Content ----------------------------------------------------------------------------------------------------- -->
   
   <ml-content>
-    <!--<ml-content-loader spinner (onLoading)="onLoading($event)"></ml-content-loader>-->
-    <main [hidden]="isLoading">
-      <router-outlet></router-outlet>
-    </main>
+    <ml-content-loader spinner (onLoading)="onLoading($event)"></ml-content-loader>
+    <router-outlet></router-outlet>
   </ml-content>
     
   <!-- /Content ---------------------------------------------------------------------------------------------------- -->

@@ -1,5 +1,5 @@
 import {Component, ViewEncapsulation, ElementRef, Renderer2, ViewChild, Input, Directive} from '@angular/core';
-import * as ml from "../../lib/ml_lib";
+import * as ml from "../../lib/mlLib";
 
 @Component({
 selector: 'ml-list',
@@ -14,7 +14,7 @@ template: '<ul #ulElement class="mdl-list"><ng-content></ng-content></ul>'
 
   ngOnInit(){
     const hostCssClasses: string = this.host.nativeElement.className;
-    this.ulElement.nativeElement.classList.add(hostCssClasses);
+    hostCssClasses && this.ulElement.nativeElement.classList.add(hostCssClasses);
   }
 }
 // ---------------------------------------------------------------------------------------------------------------------
@@ -78,3 +78,7 @@ export class MlItemSubtitle {}
 @Component({selector: 'ml-item-desc',
 template: '<span class="mdl-list__item-text-body"><ng-content></ng-content></span>'})
 export class MlItemDesc {}
+// ---------------------------------------------------------------------------------------------------------------------
+@Directive({selector: '[ellipsis]',
+host: {style: 'white-space: nowrap; overflow: hidden; text-overflow: ellipsis'}
+}) export class MlEllipsis {}

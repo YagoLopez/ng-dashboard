@@ -1,6 +1,6 @@
 import {Component, ElementRef, ViewChild, Input, forwardRef} from "@angular/core";
 import {ControlValueAccessor, NG_VALUE_ACCESSOR} from "@angular/forms";
-import * as ml from "../../../lib/ml_lib";
+import * as ml from "../../../lib/mlLib";
 // ---------------------------------------------------------------------------------------------------------------------
 @Component({
 selector: 'ml-radio',

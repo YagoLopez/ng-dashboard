@@ -6,10 +6,21 @@ import {Router, NavigationStart, NavigationEnd, NavigationCancel, NavigationErro
 @Component({
 selector: 'ml-content-loader',
 template:`
-<div #divLoader *ngIf="isLoading" style="position:absolute;width:95%;top:40%;text-align:center">
+
+<style>
+  .container {display: block; margin: auto; position: absolute; width: 100%; 
+    height: 100%; background: white; z-index: 999}
+  .loader-ico {position:absolute; width:100%; height: 100%; color: black; margin:auto; 
+    top:40%; text-align:center; z-index: 1000}
+</style>
+
+<div *ngIf="isLoading" class="container">
+<div #divLoader class="loader-ico">
 <ml-spinner *ngIf="spinner === ''" single-color></ml-spinner>
 <div><ng-content></ng-content></div>
 </div>
+</div>
+
 `//template
 }) export class MlContentLoader {
   @ViewChild('divLoader') divLoader: ElementRef;

@@ -1,6 +1,6 @@
 import {Component, ElementRef, Input, Renderer2, ViewChild} from '@angular/core';
 import MdlTooltip from "./mdlTooltipClass";
-import * as ml from "../../lib/ml_lib";
+import * as ml from "../../lib/mlLib";
 
 @Component({
 selector: 'ml-tooltip',

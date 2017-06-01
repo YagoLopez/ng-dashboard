@@ -6,8 +6,8 @@ moduleId: module.id,
 styleUrls: ['./mlChip.css'],
 template:`
 
-<span *ngIf="visible" class="mdl-chip" 
-  [ngClass]="{'mdl-chip--contact': img || letter, 'mdl-chip--deletable': deletable}">
+<!--<span *ngIf="visible" class="mdl-chip" -->
+<span class="mdl-chip" [ngClass]="{'mdl-chip--contact': img || letter, 'mdl-chip--deletable': deletable}">
   <span *ngIf="letter" class="mdl-chip__contact" [style.color]="color" [style.background]="background">{{letter}}</span>
   <img *ngIf="img" class="mdl-chip__contact" [src]="img"/>
   <span class="mdl-chip__text"><ng-content></ng-content></span>

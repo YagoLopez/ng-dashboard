@@ -1,6 +1,6 @@
 import {Component, ElementRef, Renderer2, ViewEncapsulation, ChangeDetectionStrategy} from "@angular/core";
 import MdlSlider from "./mdlSliderClass";
-import * as ml from "../../../lib/ml_lib";
+import * as ml from "../../../lib/mlLib";
 
 @Component({
 selector: 'input.[ml-slider]',
