@@ -195,3 +195,5 @@ export class MlHeaderTabContent {}
 selector: '[active]',
 host: {class: 'is-active'}})
 export class MlHeaderTabActive {}
+// ---------------------------------------------------------------------------------------------------------------------
+

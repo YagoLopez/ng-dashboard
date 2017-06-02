@@ -1,6 +1,11 @@
-@media(min-width: 700px){ml-card {display: block; margin: auto; width: 80%; align-items: center}}
-@media(min-width: 700px){h5 {display: block; margin: 25px auto; width: 80%}}
-@media(max-width: 700px){ml-card {display: block; margin: auto; width: 100%; align-items: center}}
+@media(min-width: 700px){
+  h5 {width: 80%; display: block; margin: 25px auto}
+  ml-card {display: block; margin: auto; width: 80%; align-items: center}
+}
+@media(max-width: 700px){
+  h5 {width: 95%; display: block; margin: 15px auto}
+  ml-card {display: block; margin: auto; width: 95%; align-items: center}
+}
 .chart-title {text-align: center; font-size: large; font-variant: small-caps; color: rgba(255, 173, 70, 0.92)}
 .rt-data-container {margin-top: 5px; float: right; font-size: x-small}
 .rt-data-title {color: #05b33c}

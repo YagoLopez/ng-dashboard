@@ -1,12 +1,10 @@
-//todo: no caben el titulo y los iconos en la barra superior, arreglar con directiva "large-screen" o con directiva "MlEllipsis"
 //todo: crear un servicio para los mensajes
-//todo: chip deletable
 import {Component} from "@angular/core";
 import {Http} from "@angular/http";
 
 @Component({
 moduleId: module.id,
-styleUrls: ['../pagesStyles.css'],
+styleUrls: ['../pag-styles.css'],
 template: `
 
 <style>
@@ -39,7 +37,7 @@ template: `
   </ml-card-text>
 </ml-card>
 
-<p class="centered footer">Data operations are simulated and non permament</p>
+<p class="centered footer">Operations on data are simulated and non persistent</p>
 
 `//template
 }) export class PagMailbox{

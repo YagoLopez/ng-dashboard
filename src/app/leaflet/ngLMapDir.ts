@@ -1,7 +1,4 @@
 import {Directive, Input, ElementRef} from "@angular/core";
-// import "/node_modules/leaflet/dist/leaflet.js";
-
-//todo: comprobar que funciona aot sin require
 require('./leaflet.js');
 
 interface ILeafletMapConfig {

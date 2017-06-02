@@ -3,7 +3,7 @@ import {IMGConfig} from "../../mg/metricsGraphicsCmp";
 
 @Component({
 moduleId: module.id,
-styleUrls: ['../pagesStyles.css'],
+styleUrls: ['../pag-styles.css'],
 template:`
 
 <h5>Points Chart</h5>

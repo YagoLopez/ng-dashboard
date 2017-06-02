@@ -1,4 +1,3 @@
-//todo: realtime, añadir datos a this.data. Al ser observable debería reflejar los cambios automáticamente
 //todo: usar con mobx para probar a ver cambios en tiempo real
 //todo: arreglar lo de cargar d3.js desde el directorio /src/
 //todo: intentar que funcione this.data con observables para que se actualicen los valores automaticamente
@@ -7,14 +6,9 @@
 //todo: poder ejecutar funciones arbitrarias para filtrar y arreglar los datos (de forma menos restrictiva que la actual)
 //todo: hacer about page
 //todo: hacer otro grafico de tipo barras con colores
-//todo: quitar hasbang en url
-//todo: habria que hacer un @input para pasar un objeto al metodo http y poder configurar CORS
 
-import {
-  Component, ViewChild, ElementRef, ViewEncapsulation, HostListener, Input, NgZone,
-  ChangeDetectionStrategy,
-} from '@angular/core';
-import {Http} from "@angular/http";
+import {Component, ViewChild, ElementRef, ViewEncapsulation, HostListener, Input, NgZone} from '@angular/core';
+import {Http, RequestOptionsArgs} from "@angular/http";
 import './metricsgraphics.js';
 
 export interface IMGConfig {
@@ -64,6 +58,7 @@ export class MetricsGraphicsCmp {
   @Input() urlData: string;
   @Input() config: IMGConfig;
   @Input('preprocess-fn') preprocessFn: Function;
+  @Input('request-options') reqOptions: RequestOptionsArgs;
   isLoading: boolean = false;
   data: any;
 
@@ -79,8 +74,8 @@ export class MetricsGraphicsCmp {
   constructor(private http: Http, private zone: NgZone){}
 
   /**
-   * Run MetricGraphics outside Angular Change Detection to avoid
-   * unnecesary calculation when mouseover graphic
+   * Run MetricGraphics outside Angular Change Detection System to avoid
+   * unnecesary calculation and re-rendering when mouseover graphic
    */
   draw_MG_Graphic(config: IMGConfig){
     this.zone.runOutsideAngular( () => {
@@ -90,7 +85,7 @@ export class MetricsGraphicsCmp {
 
   ngOnInit(){
     if(this.urlData){
-      this.http.get(this.urlData).subscribe( response => {
+      this.http.get(this.urlData, this.reqOptions).subscribe( response => {
         this.data = response.json();
         this.preprocessFn && this.preprocessFn(this.data);
         this.config.data = this.data;

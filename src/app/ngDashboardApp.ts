@@ -34,7 +34,7 @@ template:`
 
   <ml-header>
     <ml-header-row>
-      <ml-title><ml-icon class="header-ico-menu">assessment</ml-icon>NG Dashboard</ml-title>
+      <ml-title><ml-icon large-screen-only class="header-ico-menu">assessment</ml-icon>NG Dashboard</ml-title>
       <ml-spacer></ml-spacer>
       <a routerLink="profile"><ml-icon class="header-ico pad-right">account_circle</ml-icon></a>
       <a routerLink="mailbox" id="tooltip">

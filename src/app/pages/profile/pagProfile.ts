@@ -15,7 +15,7 @@ template: `
   .row-width {width: 100%}
   .ico-pass {vertical-align: middle}
   @media (min-width: 700px) {table {width: 80%}}
-  table {border: 1px solid lightgrey; margin-top: 40px !important; display: block; 
+  table {border: 1px solid lightgrey; margin-top: 25px !important; display: block; 
     margin-left: auto; margin-right: auto}
   ml-textfield {width: 160px}
 </style>

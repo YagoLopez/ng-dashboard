@@ -3,7 +3,7 @@ import {NgLMapDir} from "../../leaflet/ngLMapDir";
 
 @Component({
 moduleId: module.id,
-styleUrls: ['../pagesStyles.css'],
+styleUrls: ['../pag-styles.css'],
 template:`
 
 <style>
