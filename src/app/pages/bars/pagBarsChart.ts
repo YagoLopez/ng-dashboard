@@ -6,39 +6,24 @@ moduleId: module.id,
 styleUrls: ['../pag-styles.css'],
 template:`
 
-<h5>Bars Charts</h5>
-
-<ml-card shadow="3">
-  <ml-card-text>
-    <div class="chart-title">Histogram</div>  
-    <mg-graphic [config]="config1" [urlData]="urlData1"></mg-graphic>
-  </ml-card-text>
-  <ml-card-menu>
+<div class="page-scaleUpDown">
+  <h5>Bars Charts</h5>
+  <ml-card shadow="3">
+    <ml-card-text>
+      <div class="chart-title">Histogram</div>  
+      <mg-graphic [config]="config1" [urlData]="urlData1"></mg-graphic>
+    </ml-card-text>
     <ml-card-menu>
-      <ml-menu position="top-right" class="menu-btn">
-        <ml-menu-item>item 1</ml-menu-item>
-        <ml-menu-item>item 2</ml-menu-item>
-      </ml-menu>
-    </ml-card-menu>
-  </ml-card-menu>  
-</ml-card>
-
-<br>
-
-<!--<ml-card shadow="3">
-  <ml-card-text>
-    <div class="chart-title">Line of the best fit</div>  
-    <mg-graphic [config]="config2" [urlData]="urlData2" [preprocess-fn]="convertDateFn"></mg-graphic>
-  </ml-card-text>
-  <ml-card-menu>
-    <ml-card-menu>
-      <ml-menu position="top-right" class="menu-btn">
-        <ml-menu-item>item 1</ml-menu-item>
-        <ml-menu-item>item 2</ml-menu-item>
-      </ml-menu>
-    </ml-card-menu>
-  </ml-card-menu>  
-</ml-card>-->
+      <ml-card-menu>
+        <ml-menu position="top-right" class="menu-btn">
+          <ml-menu-item>item 1</ml-menu-item>
+          <ml-menu-item>item 2</ml-menu-item>
+        </ml-menu>
+      </ml-card-menu>
+    </ml-card-menu>  
+  </ml-card>
+  <br>
+</div>
 
 `//template
 }) export class PagBarsChart {

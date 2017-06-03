@@ -9,33 +9,34 @@ template:`
 <style>
   :host /deep/ .map-popup .leaflet-popup-content-wrapper {border-radius: 3px}
   :host /deep/ .mdl-textfield__input {background: aliceblue}
+  :host /deep/ div.mdl-card__supporting-text {padding: 0; width: 100%}
+  :host /deep/ ml-card h2.mdl-card__title-text {display: block; width: 100%; text-align: center}
   .map-popup {width: 100%; height: 300px}
-  ml-selectfield {color:darkslategrey; padding-bottom: 200px; display: block; margin: auto}
+  .map-height {height: 350px}
 </style>
 
-<h5>Maps</h5>
+<div class="page-scaleUpDown">
 
-<ml-card shadow="3">
-  <ml-card-title>
-    <div class="chart-title">Leaflet Map Directive</div>  
-  </ml-card-title>
-  <ml-card-text>
-    <div l-map [l-center]="center" [l-zoom]="zoom" class="map-popup"></div>
-  </ml-card-text>
-  <ml-card-menu>
+  <h5>Maps</h5>
+  
+  <ml-card shadow="3">
+    <ml-card-title class="chart-title">
+      Leaflet Map Directive  
+    </ml-card-title>
+    <ml-card-text>
+      <div l-map [l-center]="center" [l-zoom]="zoom" class="map-height map-popup"></div>
+    </ml-card-text>
     <ml-card-menu>
-      <ml-menu icon="layers" position="top-right" class="menu-btn">
-        <ml-menu-item (click)="addMapLayer()">Street Layer</ml-menu-item>
-        <ml-menu-item (click)="removeMapLayer()">Satellite Layer</ml-menu-item>
-      </ml-menu>
-    </ml-card-menu>
-  </ml-card-menu>  
-</ml-card>
+      <ml-card-menu>
+        <ml-menu icon="layers" position="top-right" class="menu-btn">
+          <ml-menu-item (click)="addMapLayer()">Street Layer</ml-menu-item>
+          <ml-menu-item (click)="removeMapLayer()">Satellite Layer</ml-menu-item>
+        </ml-menu>
+      </ml-card-menu>
+    </ml-card-menu>  
+  </ml-card>
 
-<ml-selectfield label="Choose Layer..." ripple>
-  <ml-sf-item (click)="addMapLayer()" ripple>Street Layer</ml-sf-item>
-  <ml-sf-item (click)="removeMapLayer()" ripple>Satellite Layer</ml-sf-item>
-</ml-selectfield>
+</div>
 
 `//template
 }) export class PagMaps {

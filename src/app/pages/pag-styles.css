@@ -1,16 +1,43 @@
 @media(min-width: 700px){
-  h5 {width: 80%; display: block; margin: 25px auto}
+  h5 {width: 80%; display: block; margin: 25px auto !important;}
   ml-card {display: block; margin: auto; width: 80%; align-items: center}
 }
 @media(max-width: 700px){
-  h5 {width: 95%; display: block; margin: 15px auto}
-  ml-card {display: block; margin: auto; width: 95%; align-items: center}
+  h5 {width: 95%; display: block; margin: 15px auto !important;}
+  ml-card {display: block; margin: auto; width: 95%; align-items: center !important}
 }
 .chart-title {text-align: center; font-size: large; font-variant: small-caps; color: rgba(255, 173, 70, 0.92)}
 .rt-data-container {margin-top: 5px; float: right; font-size: x-small}
 .rt-data-title {color: #05b33c}
 .rt-data {color: cornflowerblue}
 .menu-btn {color: cornflowerblue}
-.centerd {text-align: center}
+.centered {text-align: center}
 .margin-top {margin-top: 10px}
+.vert-align {vertical-align: middle}
 
+/* ANIMATIONS */
+
+/* fade */
+.page-fade {-webkit-animation: fade .9s ease both; animation: fade .9s ease both}
+@-webkit-keyframes fade {from {opacity: 0.3 }to { opacity: 1}}
+@keyframes fade {from {opacity: 0.3 } to { opacity: 1}}
+
+/* scaleUpDown */
+.page-scaleUpDown {-webkit-animation: scaleUpDown .15s ease both; animation: scaleUpDown .15s ease both}
+@-webkit-keyframes scaleUpDown {from { opacity: 0; -webkit-transform: scale(1.2)}}
+@keyframes scaleUpDown {from { opacity: 0; -webkit-transform: scale(1.2); transform: scale(1.2)}}
+
+/* move from left */
+.page-moveFromLeft {-webkit-animation: moveFromLeft .3s ease both; animation: moveFromLeft .3s ease both}
+@-webkit-keyframes moveFromLeft {from { -webkit-transform: translateX(-100%)}}
+@keyframes moveFromLeft {from { -webkit-transform: translateX(-100%); transform: translateX(-100%)}}
+
+/* move from right */
+.page-moveFromRight {-webkit-animation: moveFromRight .3s ease both; animation: moveFromRight .3s ease both}
+@-webkit-keyframes moveFromRight {from { -webkit-transform: translateX(100%)}}
+@keyframes moveFromRight {from { -webkit-transform: translateX(100%); transform: translateX(100%)}}
+
+/* scale-up */
+.page-scaleUp {-webkit-animation: scaleUp .25s ease both; animation: scaleUp .25s ease both}
+@-webkit-keyframes scaleUp {from { opacity: 0; -webkit-transform: scale(.8)}}
+@keyframes scaleUp {from { opacity: 0; -webkit-transform: scale(.8); transform: scale(.8)}}

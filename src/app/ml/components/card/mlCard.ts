@@ -17,7 +17,7 @@ template:`
 <div class="mdl-card__supporting-text">
   <ng-content select="ml-card-text"></ng-content>
 </div>
-<div class="mdl-card__actions mdl-card--border">
+<div #cardActions class="mdl-card__actions mdl-card--border">
   <ng-content select="ml-card-actions"></ng-content>
 </div>
 <div class="mdl-card__menu">
@@ -31,12 +31,17 @@ template:`
   @Input() img: string;
   @ViewChild('cardTitle') cardTitle: ElementRef;
   @ViewChild('cardTitleHeader') cardTitleHeader: ElementRef;
+  @ViewChild('cardActions') cardActions: ElementRef;
   constructor(private host: ElementRef, private ren: Renderer2){}
 
   ngOnInit(){
     // If there is no <ml-card-title> content, delete it to avoid blank space in <ml-card>
     if(this.cardTitleHeader.nativeElement.children.length == 0){
       this.host.nativeElement.removeChild(this.cardTitle.nativeElement);
+    }
+    // If there is no <ml-card-actions> content, delete it to avoid blank space in <ml-card>
+    if(this.cardActions.nativeElement.children.length == 0){
+      this.host.nativeElement.removeChild(this.cardActions.nativeElement);
     }
     if(this.cardTitle){
       this.img && (this.cardTitle.nativeElement.style.background = `url('${this.img}')`);

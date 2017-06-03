@@ -1,7 +1,7 @@
-//todo: arreglar ml-card-actions (igual que ml-card-title)
-//todo: intentar mejorar el estado 'loading' chart en pagLinearChart
-//todo: añadir animaciones en transiciones de estado/pagina
+//todo: mejorar el estado 'loading' chart en pagLinearChart
 //todo: optimizar tamaño de imagen en drawer logo
+//todo: hacer componente: menu compartir
+//todo: hacer una directiva para contenido responsivo
 
 import {NgModule} from "@angular/core";
 import {BrowserModule} from "@angular/platform-browser";
@@ -12,7 +12,6 @@ import {MlLayoutMod} from "./ml/components/layout/mlLayoutMod";
 import {MlMenuMod} from "./ml/components/menu/mlMenuMod";
 import {MlBadgeMod} from "./ml/components/badge/mlBadgeMod";
 import {MlTooltipMod} from "./ml/components/tooltip/mlTooltipMod";
-import {MlProgressbarMod} from "./ml/components/progressbar/mlPgrogressbarMod";
 import {NgDashboardApp} from "./ngDashboardApp";
 
 const getUrlParameter = (name: string) => {
@@ -31,20 +30,20 @@ if(getUrlParameter('serve') === 'systemjs'){
 }
 
 const APP_ROUTES: Routes = [
-{path: '',           redirectTo: 'linear', pathMatch: 'full'},
+{path: '',           redirectTo: 'about', pathMatch: 'full'},
+{path: 'about',      loadChildren: basePath + 'about/pagAboutMod#PagAboutMod'},
 {path: 'linear',     loadChildren: basePath + 'linear/pagLinearChartMod#PagLinearChartMod'},
 {path: 'points',     loadChildren: basePath + 'points/pagPointsChartMod#PagPointsChartMod'},
 {path: 'bars',       loadChildren: basePath + 'bars/pagBarsChartMod#PagBarsChartMod'},
 {path: 'maps',       loadChildren: basePath + 'maps/pagMapsMod#PagMapsMod'},
 {path: 'mailbox',    loadChildren: basePath + 'mailbox/pagMailboxMod#PagMailboxMod'},
 {path: 'profile',    loadChildren: basePath + 'profile/pagProfileMod#PagProfileMod'},
-{path: 'about',      loadChildren: basePath + 'about/pagAboutMod#PagAboutMod'},
-{path: '**',         redirectTo: 'linear'}
+{path: '**',         redirectTo: 'about'}
 ];
 
 @NgModule({
   imports: [BrowserModule, HttpModule, MlPageLoaderMod, MlLayoutMod, MlMenuMod, MlBadgeMod, MlTooltipMod,
-    MlProgressbarMod, RouterModule.forRoot(APP_ROUTES, {enableTracing: false,  useHash: true})],
+    RouterModule.forRoot(APP_ROUTES, {enableTracing: false,  useHash: true})],
   declarations: [NgDashboardApp], bootstrap: [NgDashboardApp]
 })
 export class NgDashboardMod {}

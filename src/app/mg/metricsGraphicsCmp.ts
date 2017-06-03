@@ -1,10 +1,9 @@
-//todo: usar con mobx para probar a ver cambios en tiempo real
+//todo: usar mobx para probar a ver cambios en tiempo real
 //todo: arreglar lo de cargar d3.js desde el directorio /src/
 //todo: intentar que funcione this.data con observables para que se actualicen los valores automaticamente
 //      y poder hacer realtime
 //todo: MG y d3 no deberian ser declarados en typing.ts
 //todo: poder ejecutar funciones arbitrarias para filtrar y arreglar los datos (de forma menos restrictiva que la actual)
-//todo: hacer about page
 //todo: hacer otro grafico de tipo barras con colores
 
 import {Component, ViewChild, ElementRef, ViewEncapsulation, HostListener, Input, NgZone} from '@angular/core';

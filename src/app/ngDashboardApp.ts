@@ -1,8 +1,3 @@
-//todo: hacer componente: menu compartir
-//todo: usar animaciones
-//todo: comprobar spinner
-//todo: hacer una directiva para contenido responsivo
-
 import {Component} from '@angular/core';
 
 @Component({
@@ -19,7 +14,7 @@ template:`
     {cursor: default; background-color: transparent !important; color: cornflowerblue; font-weight: 500}
   .active-route {background: #3193ea; color: white !important}
   .drawer-text {color: white; text-align: center; font-weight: 500; position: relative; top: 35px}
-  .drawer-bg-img {background: url('assets/img/bg7.jpg') center; text-align: center; height: 160px}
+  .drawer-bg-img {background: url('assets/img/bg7-min.jpg') center; text-align: center; height: 160px}
   .drawer-logo {font-size: 52px; color: white; position: relative; top: 40px}
   .header-ico {vertical-align: text-top; color: white}
   .header-ico-menu {vertical-align: sub; padding-right: 6px}
@@ -59,6 +54,8 @@ template:`
       <p class="drawer-text">NG Dashboard</p>
     </div>
     <ml-nav>
+      <a nav-item routerLink="about" routerLinkActive="active-route">
+        <i class="material-icons drawer-menu-item-icon">info_outline</i> About</a>
       <a nav-item routerLink="linear" routerLinkActive="active-route">
         <i class="material-icons drawer-menu-item-icon">swap_calls</i> Linear Chart</a>
       <a nav-item routerLink="points" routerLinkActive="active-route">
@@ -67,8 +64,6 @@ template:`
         <i class="material-icons drawer-menu-item-icon">equalizer</i> Bars Chart</a>
       <a nav-item routerLink="maps" routerLinkActive="active-route">
         <i class="material-icons drawer-menu-item-">pin_drop</i> Maps</a>
-      <a nav-item routerLink="about" routerLinkActive="active-route">
-        <i class="material-icons drawer-menu-item-icon">info_outline</i> About</a>
     </ml-nav>
   </ml-drawer>
   

@@ -829,6 +829,11 @@ body{
 ::-webkit-scrollbar-corner {background-color: #999;}
 ::-webkit-resizer {background-color: #666;}
 
+/* HIDES CHROME ANDROID ADDRESS BAR ----------------------------------------------------- */
+
+html, body {overflow-y: auto; min-height: 100%}
+.mdl-layout {min-height: 100%}
+
 
 /* PAGE ANIMATIONS ---------------------------------------------------------------------- */
 
