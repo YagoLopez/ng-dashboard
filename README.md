@@ -1,6 +1,6 @@
 <h1><p align="center">NG Dashboard</p></h1>
 <p align="center"><img src="src/assets/img/about9.jpg" style="margin: auto; width: 90px"></p>
-<h4><p align="center">Dashboard for Angular (Versions 4 +)</p><h4>
+<p align="center">## Dashboard for Angular (Versions 4 +)</p>
 
 If you find this project useful and are going to use it, please **give a star in the repo** and credits to the author.
 
@@ -16,7 +16,7 @@ If you find this project useful and are going to use it, please **give a star in
 - <a href="http://mobt.me/ZPt4" target="_blank">Mobile Simulator (For Desktop)</a>
 - <a href="https://yagolopez.github.io/ng-dashboard/dist/" target="_blank">Full Screen (For Mobile)</a>
 
-<h5>Warning:</h5>
+<h4 style="color: red">Warning:</h4>
 When cross domain content is used in iframes, some javascript features are disabled for
 security reasons (i. e. alert dialogs). Run the desktop version for full features.
 
@@ -39,7 +39,8 @@ copy this folder to your `app` folder and import `MetricsGraphicsMod` in your ow
 folder and import `NgLMapDir` in your own component. IMPORTANT: `d3.js` must be in your root app directory. This is where
 metricsgraphics.js search for this file. Not due to this project design.
 
-2 - Whitout node: clone or download the repository and follow the same steps as before
+2 - Whitout node:
+- Clone or download the repository and follow the same steps as before
 
 ## MetricsGraphics Chart Component API
 
