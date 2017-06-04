@@ -38,7 +38,7 @@
             transform: translate(0, 0);
     pointer-events: auto;
     transition: -webkit-transform 0.25s cubic-bezier(0, 0, 0.2, 1);
-    transition: transform 0.25s cubic-bezier(0, 0, 0.2, 1);
+    /*transition: transform 0.25s cubic-bezier(0, 0, 0.2, 1);*/
     transition: transform 0.25s cubic-bezier(0, 0, 0.2, 1), -webkit-transform 0.25s cubic-bezier(0, 0, 0.2, 1); }
     @media (min-width: 480px) {
       .mdl-snackbar--active {
@@ -59,12 +59,11 @@
     font-family: "Roboto", "Helvetica", "Arial", sans-serif;
     font-size: 14px;
     font-weight: 500;
-    text-transform: uppercase;
     line-height: 1;
     letter-spacing: 0;
     overflow: hidden;
     outline: none;
-    opacity: 0;
+    /*opacity: 0;*/
     pointer-events: none;
     cursor: pointer;
     text-decoration: none;

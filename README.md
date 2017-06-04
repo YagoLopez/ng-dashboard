@@ -1,8 +1,8 @@
-<p align="center">
-  <h1>NG Dashboard</h1>
-  <img src="src/assets/img/about9.jpg" style="margin: auto; width: 90px">
-</p>
+<p align="center"><h1>NG Dashboard</h1></p>
+<p align="center"><img src="src/assets/img/about9.jpg" style="margin: auto; width: 90px"></p>
 <p align="center"><h4>Dashboard for Angular (Versions 4 +)<h4></p>
+
+If you find this project useful and are going to use it, please **give a star in the repo** and credits to the author.
 
 ## Features
 

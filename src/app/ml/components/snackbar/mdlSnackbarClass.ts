@@ -41,15 +41,12 @@ MdlSnackbar.prototype.CssClasses_ = {
 };
 MdlSnackbar.prototype.displaySnackbar_ = function () {
     this.element_.setAttribute('aria-hidden', 'true');
-    if (this.actionHandler_) {
-        this.actionElement_.textContent = this.actionText_;
-        this.actionElement_.addEventListener('click', this.actionHandler_);
-        this.setActionHidden_(false);
-    }
+    this.actionElement_.textContent = this.actionText_;
+    this.actionElement_.addEventListener('click', this.actionHandler_);
+    this.setActionHidden_(false);
     this.textElement_.textContent = this.message_;
     this.element_.classList.add(this.CssClasses_.ACTIVE);
     this.element_.setAttribute('aria-hidden', 'false');
-
     // modificaciones
     // setTimeout(this.cleanup_.bind(this), this.timeout_);
     this.snackbarTimer_ = setTimeout(this.cleanup_.bind(this), this.timeout_);

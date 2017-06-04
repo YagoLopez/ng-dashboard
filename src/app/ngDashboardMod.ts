@@ -2,6 +2,8 @@
 //todo: optimizar tamaño de imagen en drawer logo
 //todo: hacer componente: menu compartir
 //todo: hacer una directiva para contenido responsivo
+//todo: loading image en leaflet popup
+//todo: hacer mas parecido a material design la pagina profile usando ml-controls
 
 import {NgModule} from "@angular/core";
 import {BrowserModule} from "@angular/platform-browser";

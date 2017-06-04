@@ -3,6 +3,8 @@
 //todo: cambiar nombre de css animations
 import {Component, ViewChild, ElementRef, ViewRef, TemplateRef} from "@angular/core";
 import {Http} from "@angular/http";
+import {IConfigSnackbar, MlSnackbar} from "../../ml/components/snackbar/mlSnackbar";
+import {MlSnackbarMod} from "../../ml/components/snackbar/mlSnackbarMod";
 
 @Component({
 moduleId: module.id,
@@ -50,20 +52,18 @@ template: `
   <div #modal class="w3-modal modal-container">
     <div class="w3-modal-content page-scaleUpDown w3-card-4">
       <header class="w3-container w3-indigo" style="padding-top: 15px; padding-bottom: 15px;"> 
-        <span (click)="closeModal()" class="w3-button w3-display-topright">
-          <ml-icon>highlight_off</ml-icon>
-        </span>
+        <span (click)="closeModal()" class="w3-button w3-display-topright"><ml-icon>highlight_off</ml-icon></span>
         <div>&bull; From: {{ message?.from }}</div>
         <div>&bull; Subject: {{ message?.subject }}</div>
         <div>&bull; Sender email: {{ message?.email }}</div>
       </header>
-      <div class="w3-container" class="msg-body">
-        {{ message?.body }}<br>
-      </div>
+      <div class="w3-container" class="msg-body">{{ message?.body }}<br></div>
     </div>
   </div>
   
   <p class="centered footer">Operations on data are not persistent</p>
+  
+  <ml-snackbar #snackBar [config]="config" style="color: white"></ml-snackbar>
 
 </div>
 
@@ -71,9 +71,16 @@ template: `
 }) export class PagMailbox{
 
   @ViewChild('modal') modal: ElementRef;
+  @ViewChild(MlSnackbar) snackBar: MlSnackbar;
+
   messages: any[];
   message: any;
   mlBadge: HTMLElement = document.querySelector('ml-badge') as HTMLElement;
+  config: IConfigSnackbar = {
+    message: 'Message Deleted',
+    actionText: 'Close',
+    timeout: 1000
+  };
 
   constructor(private http: Http){}
 
@@ -98,6 +105,7 @@ template: `
         if ( window.confirm(`Confirm delete message from ${this.messages[index].from}`) ){
           this.messages.splice(index, 1);
           this.setBadgeCounter(this.messages.length);
+          this.snackBar.show();
         } else {
           liElement.style.background = 'white';
         }

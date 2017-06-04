@@ -831,81 +831,35 @@ body{
 
 /* HIDES CHROME ANDROID ADDRESS BAR ----------------------------------------------------- */
 
-html, body {overflow-y: auto; min-height: 100%}
-.mdl-layout {min-height: 100%}
+/*todo: revisar si usar o no*/
+/*.mdl-layout {
+  overflow: visible;
+}
+.mdl-layout__drawer {
+  position: fixed;
+}
+.mdl-layout__content {
+  display: block;
+  overflow: visible;
+  margin-top: 64px;
+}
+.is-small-screen .mdl-layout__content {
+  margin-top: 56px;
+}
+.mdl-layout__header {
+  position: fixed;
+}
+.mdl-layout__obfuscator {
+  position: fixed;
+}*/
 
+/* ---- */
 
-/* PAGE ANIMATIONS ---------------------------------------------------------------------- */
-
-/* scaleUpDown */
-/*
-.pt-page-scaleUpDown {
-    -webkit-animation: scaleUpDown .15s ease both;
-    animation: scaleUpDown .15s ease both;
+/*html, body {
+  overflow-y: auto;
+  min-height: 100%;
 }
 
-@-webkit-keyframes scaleUpDown {
-    from { opacity: 0; -webkit-transform: scale(1.2) }
-}
-@keyframes scaleUpDown {
-    from { opacity: 0; -webkit-transform: scale(1.2); transform: scale(1.2) }
-}
-*/
-
-/* fade */
-/*
-.pt-page-fade {
-    -webkit-animation: fade .15s ease both;
-    animation: fade .15s ease both;
-}
-@-webkit-keyframes fade {
-    from {opacity: 0.3 }
-    to { opacity: 1 }
-}
-@keyframes fade {
-    from {opacity: 0.3 }
-    to { opacity: 1 }
-}
-*/
-
-/* move from left */
-/*
-.pt-page-moveFromLeft {
-    -webkit-animation: moveFromLeft .3s ease both;
-    animation: moveFromLeft .3s ease both;
-}
-@-webkit-keyframes moveFromLeft {
-    from { -webkit-transform: translateX(-100%) }
-}
-@keyframes moveFromLeft {
-    from { -webkit-transform: translateX(-100%); transform: translateX(-100%) }
-}
-*/
-
-/* move from right */
-/*
-.pt-page-moveFromRight {
-    -webkit-animation: moveFromRight .3s ease both;
-    animation: moveFromRight .3s ease both;
-}
-@-webkit-keyframes moveFromRight {
-    from { -webkit-transform: translateX(100%) }
-}
-@keyframes moveFromRight {
-    from { -webkit-transform: translateX(100%); transform: translateX(100%) }
-}
-*/
-
-/* scale-up */
-/*
-.pt-page-scaleUp {
-    -webkit-animation: scaleUp .25s ease both;
-    animation: scaleUp .25s ease both;
-}
-@-webkit-keyframes scaleUp {
-    from { opacity: 0; -webkit-transform: scale(.8) }
-}
-@keyframes scaleUp {
-    from { opacity: 0; -webkit-transform: scale(.8); transform: scale(.8) }
-}
-*/
+mdl-layout {
+  min-height: 100%;
+}*/

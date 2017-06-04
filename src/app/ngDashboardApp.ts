@@ -87,7 +87,7 @@ template:`
     this.isLoading = $event;
   }
 
-  appName = `NG Dashboard. Chart component for Angular`;
+  appName = `NG Dashboard for Angular`;
   msgShare = `Link of interest shared from ${this.appName}: `;
   urlApp = 'https://github.com/YagoLopez/angular-dashboard';
   shareTwitter = `http://twitter.com/share?url=${this.urlApp}&text=${this.msgShare}`;
