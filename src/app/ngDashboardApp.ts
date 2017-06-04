@@ -89,7 +89,7 @@ template:`
 
   appName = `NG Dashboard for Angular`;
   msgShare = `Link of interest shared from ${this.appName}: `;
-  urlApp = 'https://github.com/YagoLopez/angular-dashboard';
+  urlApp = 'https://github.com/YagoLopez/ng-dashboard';
   shareTwitter = `http://twitter.com/share?url=${this.urlApp}&text=${this.msgShare}`;
   shareFB = `http://www.facebook.com/sharer/sharer.php?u=${this.urlApp}`;
   shareGPlus= `https://plus.google.com/share?url=${this.urlApp}`;

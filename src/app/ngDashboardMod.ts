@@ -1,3 +1,4 @@
+//todo: cargar css de material icons en index.html
 //todo: mejorar el estado 'loading' chart en pagLinearChart
 //todo: optimizar tamaño de imagen en drawer logo
 //todo: hacer componente: menu compartir
