@@ -16,11 +16,11 @@
 ## Demo
 
 - <a href="http://mobt.me/ZPt4" target="_blank">Mobile Simulator (For Desktop)</a>
-- <a href="https://yagolopez.github.io/ng-dashboard/dist/" target="_blank">Full Screen (For Mobile)</a>
+- <a href="https://yagolopez.github.io/ng-dashboard/dist" target="_blank">Full Screen (For Mobile)</a>
 
-<h4 style="color: red">Warning:</h4>
-When cross domain content is used in iframes, some javascript features are disabled for
-security reasons (i. e. alert dialogs). Run the desktop version for full features.
+<h4 style="color: red">Warning about Mobile Simulator:</h4>
+Content in cross domain iframes may have javascript restrictions for
+security reasons (i. e. alert dialogs). Run the full screen version for unrestricted features.
 
 ## Requierements
 
@@ -36,10 +36,10 @@ security reasons (i. e. alert dialogs). Run the desktop version for full feature
 - Run: `ng serve` from directory project
 - Metrics Graphics Chart Component is located in `mg` folder. If you want to use this component,
 copy this folder to your `app` folder and import `MetricsGraphicsMod` in your own module or import it directily from
-`/node_modules/ng-dashboard/src/app/mg/metricsGraphicsMod.ts`
+`/node_modules/ng-dashboard/src/app/mg/metricsGraphicsMod.ts`. IMPORTANT: `d3.js` must be in your root app directory. 
+This is where metricsgraphics.js search for this file. (Not due to this project design).
 - Leaflet Map Directive is located in `leaflet` folder. If you want to use this directive, copy this folder to your `app`
-folder and import `NgLMapDir` in your own component. IMPORTANT: `d3.js` must be in your root app directory. This is where
-metricsgraphics.js search for this file. Not due to this project design.
+folder and import `NgLMapDir` in your own component.
 
 2 - Whitout node:
 - Clone or download the repository and follow the same steps as before
@@ -54,7 +54,6 @@ metricsgraphics.js search for this file. Not due to this project design.
 - <b>config:</b> Javascript object with configuration values for MetricsGraphics. 
 (Check their <a href="https://github.com/mozilla/metrics-graphics/wiki/List-of-Options" target="_blank">webpage</a> for more information)
 - <b>preprocess-Fn:</b> Applies Javascript transformations to incoming data (for example format dates, etc.)
-
 
 ## Leaflet Map Directive API
 
