@@ -5,7 +5,7 @@
 
 <h2><p align="center">Dashboard for Angular (versions 4 +)</p></h2>
 
-**If you find this project useful and are going to use it, please **give a star in the repo** and credits to the author.**
+<strong><p align="center">If you find this project useful and are going to use it, <u>please give a star :star: in the repo</u> and credits to the author.</p></strong>
 
 ## Features
 
