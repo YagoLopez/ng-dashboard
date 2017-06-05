@@ -1,4 +1,5 @@
-<p align="center"><img src="src/assets/img/about9.jpg" style="margin: auto; width: 90px"></p>
+<!-- <p align="center"><img src="src/assets/img/about9.jpg" style="margin: auto; width: 90px"></p> -->
+<p align="center"><img src="src/assets/img/about9.jpg" style="width: 580px; height: 325px"></p>
 
 <h1><p align="center">NG Dashboard</p></h1>
 
