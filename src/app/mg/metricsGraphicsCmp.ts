@@ -5,10 +5,9 @@
 //todo: MG y d3 no deberian ser declarados en typing.ts
 //todo: poder ejecutar funciones arbitrarias para filtrar y arreglar los datos (de forma menos restrictiva que la actual)
 //todo: hacer otro grafico de tipo barras con colores
-
-import {Component, ViewChild, ElementRef, ViewEncapsulation, HostListener, Input, NgZone} from '@angular/core';
+import {Component, ViewChild, ElementRef, ViewEncapsulation, HostListener, Input, NgZone} from "@angular/core";
 import {Http, RequestOptionsArgs} from "@angular/http";
-import './metricsgraphics.js';
+import "./metricsgraphics.js";
 
 export interface IMGConfig {
   title?: string,

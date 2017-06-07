@@ -1,14 +1,13 @@
 //todo: crear un servicio para los mensajes
 //todo: directiva ellipsis, sacar de ml-list y exponer
 //todo: cambiar nombre de css animations
-import {Component, ViewChild, ElementRef, ViewRef, TemplateRef} from "@angular/core";
+import {Component, ViewChild, ElementRef} from "@angular/core";
 import {Http} from "@angular/http";
 import {IConfigSnackbar, MlSnackbar} from "../../ml/components/snackbar/mlSnackbar";
-import {MlSnackbarMod} from "../../ml/components/snackbar/mlSnackbarMod";
 
 @Component({
 moduleId: module.id,
-styleUrls: ['../pag-styles.css', 'w3.css'],
+styleUrls: ['../pag-styles.css'],
 template: `
 
 <style>
@@ -19,10 +18,28 @@ template: `
   :host /deep/ ml-item > li {border-bottom: 1px solid lightgrey}
   :host /deep/ ml-item > li:hover {background: lightgrey}
   ml-item-title {cursor: pointer}
-  @media (min-width: 1028px) {.modal-container {margin-left: 240px}}
-  @media (max-width: 700px) {.modal-container {margin-left: 0}}
-  @media (min-width: 700px) {.w3-modal-content {width: 600px !important; right: 100px; top: 100px}}
-  @media (max-width: 700px) {.w3-modal-content {top: 110px !important}}
+
+  .w3-card-4,.w3-hover-shadow:hover{box-shadow:0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19)}
+  .w3-container:after,.w3-container:before,.w3-panel:after,.w3-panel:before,.w3-row:after,.w3-row:before,.w3-row-padding:after,.w3-row-padding:before,
+  .w3-container,.w3-panel{padding:0.01em 16px}.w3-panel{margin-top:16px;margin-bottom:16px}
+  .w3-indigo,.w3-hover-indigo:hover{color:#fff!important;background-color:#3f51b5!important}
+  .w3-btn,.w3-button{border:none;display:inline-block;outline:0;padding:8px 16px;vertical-align:middle;overflow:hidden;text-decoration:none;color:inherit;background-color:inherit;text-align:center;cursor:pointer;white-space:nowrap}
+  .w3-btn,.w3-button{-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
+  .w3-disabled,.w3-btn:disabled,.w3-button:disabled{cursor:not-allowed;opacity:0.3}.w3-disabled *,:disabled *{pointer-events:none}
+  .w3-disabled,.w3-btn:disabled,.w3-button:disabled{cursor:not-allowed;opacity:0.3}.w3-disabled *,:disabled *{pointer-events:none}
+  .w3-dropdown-hover:hover > .w3-button:first-child,.w3-dropdown-click:hover > .w3-button:first-child{background-color:#ccc;color:#000}
+  .w3-bar-block .w3-dropdown-hover .w3-button,.w3-bar-block .w3-dropdown-click .w3-button{width:100%;text-align:left;padding:8px 16px}
+  .w3-bar .w3-button{white-space:normal}
+  .w3-button:hover{color:#000!important;background-color:#ccc!important}
+  .w3-display-topleft{position:absolute;left:0;top:0}.w3-display-topright{position:absolute;right:0;top:0}
+  .w3-modal{z-index:3;display:none;padding-top:100px;position:fixed;left:0;top:0;width:100%;height:100%;overflow:auto;background-color:rgb(0,0,0);background-color:rgba(0,0,0,0.4)}
+  .w3-modal-content{margin:auto;background-color:#fff;position:relative;padding:0;outline:0;width:600px}
+  
+  @media (min-width: 1028px)
+    {.w3-modal-content {margin-top: 100px !important; width: 500px !important}}
+  @media (max-width: 1028px)
+    {.w3-modal-content {margin: auto !important; margin-top: 10px !important; width: 90% !important}}
+
 </style>
 
 <div class="page-scaleUpDown">

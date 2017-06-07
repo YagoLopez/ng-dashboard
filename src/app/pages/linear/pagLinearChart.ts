@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component} from "@angular/core";
 import {IMGConfig} from "../../mg/metricsGraphicsCmp";
 
 @Component({

@@ -31,10 +31,11 @@ template:`
     <ml-header-row>
       <ml-title><ml-icon large-screen-only class="header-ico-menu">assessment</ml-icon>NG Dashboard</ml-title>
       <ml-spacer></ml-spacer>
-      <a routerLink="profile"><ml-icon class="header-ico pad-right">account_circle</ml-icon></a>
-      <a routerLink="mailbox" id="tooltip">
+      <yago-fullscreen id="fullscreen-ico" class="pad-right"></yago-fullscreen>
+      <ml-tooltip for="fullscreen-ico">Full Screen</ml-tooltip>
+      <a routerLink="mailbox" id="mailbox-ico">
         <ml-badge id="mybadge" value="5" overlap="true"><ml-icon class="header-ico">email</ml-icon></ml-badge></a>
-      <ml-tooltip for="tooltip">New messages</ml-tooltip>
+        <ml-tooltip for="mailbox-ico">New messages</ml-tooltip>
       <ml-menu icon="share" position="top-right">
         <ml-menu-item with-divider class="share-item-header">Share...</ml-menu-item>
         <ml-menu-item><a [href]="shareTwitter" target="_blank">Twitter</a></ml-menu-item>
@@ -63,7 +64,9 @@ template:`
       <a nav-item routerLink="bars" routerLinkActive="active-route">
         <i class="material-icons drawer-menu-item-icon">equalizer</i> Bars Chart</a>
       <a nav-item routerLink="maps" routerLinkActive="active-route">
-        <i class="material-icons drawer-menu-item-">pin_drop</i> Maps</a>
+        <i class="material-icons drawer-menu-item-icon">pin_drop</i> Maps</a>
+      <a nav-item routerLink="profile" routerLinkActive="active-route">
+        <i class="material-icons drawer-menu-item-icon">account_box</i> User Profile</a>
     </ml-nav>
   </ml-drawer>
   
@@ -83,7 +86,7 @@ template:`
 
   isLoading = false;
 
-  onLoading($event){
+  onLoading($event): void {
     this.isLoading = $event;
   }
 

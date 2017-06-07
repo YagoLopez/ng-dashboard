@@ -17,11 +17,10 @@
 ## Demo
 
 - <a href="http://mobt.me/ZPt4" target="_blank">Mobile Simulator (For Desktop)</a>
-- <a href="https://yagolopez.github.io/ng-dashboard/dist" target="_blank">Full Screen (For Mobile)</a>
-
-<h4 style="color: red">Warning about Mobile Simulator:</h4>
-Content in cross domain iframes may have javascript restrictions for
+<h4 style="color: red">Warning:</h4> Content in external iframes may have javascript restrictions for
 security reasons (i. e. alert dialogs). Run the full screen version for unrestricted features.
+
+- <a href="https://yagolopez.github.io/ng-dashboard/dist" target="_blank">Full Screen (For Mobile)</a>
 
 ## Requierements
 
@@ -62,7 +61,7 @@ folder and import `NgLMapDir` in your own component.
 <div l-map [l-center]="center" [l-zoom]="zoom" [l-options]="options"></div>
 ```
 
-- <b>l-center:</b> Tuple with type `[number, number]` with the coordinates of the map center (latitude and logitude)
+- <b>l-center:</b> Tuple with type `[number, number]` with the coordinates of the map center (latitude and longitude)
 - <b>l-zoom:</b> Number with initial zoom
 - <b>l-options:</b> (Optional) Javascript object with other configuration options. Check Leaflet documentation for more information on map options
 
