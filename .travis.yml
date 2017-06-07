@@ -11,11 +11,3 @@ before_script:
 
 script:
   - ng build --prod --aot --output-hashing none
-
-# language: node_js
-# node_js:
-#   - stable
-# install:
-#  - npm install
-# script:
-# - npm build_prod_aot
