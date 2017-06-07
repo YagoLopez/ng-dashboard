@@ -4,7 +4,7 @@
 <h1><p align="center">NG Dashboard</p></h1>
 <h2><p align="center">Dashboard for Angular (versions 4 +)</p></h2>
 
-If you find this project useful and are going to use it, please give a star :star: in the repo and credits to the author.
+<p align="center"><b>If you find this project useful and are going to use it, please give a star :star: in the repo and credits to the author.</b></p>
 
 ## Features
 
@@ -15,8 +15,8 @@ If you find this project useful and are going to use it, please give a star :sta
 
 ## Demo
 
-- <a href="http://mobt.me/ZPt4" target="_blank">Mobile Simulator (For Desktop)</a>
-<h4 style="color: red">Warning:</h4> Content in external iframes may have javascript restrictions for
+- <a href="http://mobt.me/ZPt4" target="_blank">Mobile Simulator (For Desktop).</a>
+<b style="color: red"> Warning:</b> Content in external iframes may have javascript restrictions for
 security reasons (i. e. alert dialogs). Run the full screen version for unrestricted features.
 
 - <a href="https://yagolopez.github.io/ng-dashboard/dist" target="_blank">Full Screen (For Mobile)</a>
