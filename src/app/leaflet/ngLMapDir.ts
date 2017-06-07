@@ -1,5 +1,5 @@
 import {Directive, Input, ElementRef} from "@angular/core";
-require('./leaflet.js');
+import L = require('./leaflet.js');
 
 interface ILeafletMapConfig {
   maxZoom?: number,
