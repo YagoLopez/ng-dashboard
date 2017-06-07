@@ -1,10 +1,21 @@
 language: node_js
-
 node_js:
-  - stable
+   - “7”
 
-install:
-  - npm install
+branches:
+   only:
+      - master
+
+before_script:
+   - npm install -g @angular/cli
 
 script:
-  - npm build_prod_aot
+  - ng build --prod --aot --output-hashing none
+
+# language: node_js
+# node_js:
+#   - stable
+# install:
+#  - npm install
+# script:
+# - npm build_prod_aot

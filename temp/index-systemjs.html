@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Ng Dashboard</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" href="assets/fonts/mlIcon.css" type="text/css">
+    <link rel="stylesheet" href="assets/styles/app-loader.css" type="text/css">
+    <link rel="icon" href="favicon.ico">
+  </head>
+  <body style="background: cornflowerblue">
+    <ng-dashboard-app>
+      <div class="loading-text">NG Dashboard<br><br>
+        <i class="material-icons" style="font-size: 80px">assessment</i>
+      </div>
+    </ng-dashboard-app>
+    <link rel="stylesheet" href="assets/styles/leaflet.css" type="text/css">
+    <script src="/node_modules/systemjs/dist/system.src.js"></script>
+    <script>
+      System.config({
+        // paths serve as alias
+        paths: {
+          'npm:': '/node_modules/'
+        },
+        // map tells the System loader where to look for things
+        map: {
+          app: '/src/',
+
+          // angular bundles
+          '@angular/core': 'npm:@angular/core/bundles/core.umd.js',
+          '@angular/common': 'npm:@angular/common/bundles/common.umd.js',
+          '@angular/compiler': 'npm:@angular/compiler/bundles/compiler.umd.js',
+          '@angular/platform-browser': 'npm:@angular/platform-browser/bundles/platform-browser.umd.js',
+          '@angular/platform-browser-dynamic': 'npm:@angular/platform-browser-dynamic/bundles/platform-browser-dynamic.umd.js',
+          '@angular/router': 'npm:@angular/router/bundles/router.umd.js',
+          '@angular/forms': 'npm:@angular/forms/bundles/forms.umd.js',
+          '@angular/http': 'npm:@angular/http/bundles/http.umd.js',
+
+          // other libraries
+          'rxjs': 'npm:rxjs',
+          'zone.js/dist/zone': 'npm:zone.js/dist/zone.js',
+          'core-js': 'npm:core-js'
+
+        },
+        // packages tells the System loader how to load when no filename and/or no extension
+        packages: {
+          app: {main: 'main.js', defaultExtension: 'js'},
+          rxjs: {defaultExtension: 'js'},
+          'core-js': {defaultExtension: 'js'}
+        }
+      });
+      System.import('app').catch(
+        function(err){console.error(err)}
+      )
+    </script>
+  </body>
+</html>
