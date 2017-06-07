@@ -1,5 +1,6 @@
 import {Component} from "@angular/core";
 import {IMGConfig} from "../../mg/metricsGraphicsCmp";
+declare var MG: any;
 
 @Component({
 moduleId: module.id,
