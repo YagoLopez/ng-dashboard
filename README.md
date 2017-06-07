@@ -2,10 +2,9 @@
 <p align="center"><img src="src/assets/img/about9.jpg" style="width: 580px; height: 325px"></p>
 
 <h1><p align="center">NG Dashboard</p></h1>
-
 <h2><p align="center">Dashboard for Angular (versions 4 +)</p></h2>
 
-<p align="center"><b>If you find this project useful and are going to use it, please give a star :star: in the repo and credits to the author.</b></p>
+If you find this project useful and are going to use it, please give a star :star: in the repo and credits to the author.
 
 ## Features
 
