@@ -4,7 +4,7 @@
 <h1><p align="center">NG Dashboard</p></h1>
 <h2><p align="center">Dashboard for Angular (versions 4 +)</p></h2>
 
-<p align="center"><b>If you find this project useful and are going to use it, please give a star :star: in the repo and credits to the author.</b></p>
+<p align="center"><b>If you find this project useful and are going to use it, please give a star in the repo and credits to the author.</b></p>
 
 ## Features
 
