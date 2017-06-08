@@ -15,8 +15,7 @@
 
 ## Demo
 
-<!-- - <a href="http://mobt.me/ZPt4" target="_blank">Mobile Simulator (For Desktop).</a> -->
-- <a href="/iframe/iframe.html" target="_blank">Mobile Simulator (For Desktop).</a>
+- <a href="http://mobt.me/ZPt4" target="_blank">Mobile Simulator (For Desktop).</a>
 <b style="color: red"> Warning:</b> Content in iframes may have javascript restrictions for
 security reasons (i. e. alert dialogs). Run the full screen version for unrestricted features.
 
