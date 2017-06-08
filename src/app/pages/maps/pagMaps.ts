@@ -60,6 +60,7 @@ template:`
       </style>
       <a href="${this.urlWebcam}" target="_blank"><img src="${this.urlWebcam}" class="popup-img" /></a>
       <div class="popup-footer">Realtime image</div>
+      <div class="popup-footer">(Spain timezone)</div>
     `; // end popup
 
     marker.bindPopup(popup).addTo(this.ngLMapDir.map);

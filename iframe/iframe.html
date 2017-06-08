@@ -1,254 +1,253 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
-<title>Material Light Demo - UI Framework for Angular 2</title>
-<link rel="shortcut icon" type="image/png" href="../favicon.ico">
+  <title>NG Dashboard. Mobile Simulator</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      border:0;}
+
+    body{background-color:#ececec;}
+
+    .main-frame{
+      background-color:#ffffff;
+      margin-left:auto;
+      margin-right:auto;
+      display:block;
+      position:relative;
+      z-index:1;}
+
+    .second-frame{
+      height:100%;
+      border:solid 20px #000;
+      border-radius:40px;
+      border-bottom:solid 80px #000;
+      border-top:solid 60px #000;
+      margin-left:auto;
+      margin-right:auto;
+      position:relative;
+      z-index:2;}
+
+    .third-frame{
+      height:100%;
+      background-color:#ccc;
+      padding:5px;
+      border-radius:45px;
+      margin-left:auto;
+      margin-right:auto;
+      margin-top:15px;}
+
+    .frame-scroll-correction{
+      position:absolute;
+      height:100%;
+      width:22px;
+      background-color:#000;
+      z-index:99;
+      right:-20px;}
+
+    .resolution-selecter-deploy em{
+      float:right;
+      padding-right:20px;
+      font-size:19px;
+      font-style:normal;}
+
+    .resolution-selecter-deploy{
+      width:200px;
+      height:50px;
+      background-color:#202428;
+      color:#efefef;
+      font-family:'Roboto', sans-serif;
+      text-decoration:none;
+      line-height:50px;
+      font-size:12px;
+      padding-left:20px;
+      padding-right:00px;
+      display:block;}
+
+    .resolution-selecter{
+      /*float: right;*/
+      position:absolute;
+      /*right:20px;*/
+      /*top:20px;*/
+      /*z-index:9999;*/
+    }
+
+    .resolutions{
+      height:0;
+      transition:all 500ms ease;
+      overflow:hidden;}
+
+    .resolutions a{
+      transition:all 200ms ease;}
+
+    .active-resolution{
+      background-color:rgba(39, 174, 96,1.0)!important;
+      transition:all 200ms ease;}
+
+    .show-resolutions{
+      min-height:300px!important;
+      transition:all 500ms ease;
+    }
+
+    .resolutions a{
+      font-family:'Roboto', sans-serif;
+      font-size:12px;
+      display:block;
+      margin-top:2px;
+      margin-bottom:2px;
+      background-color:#202428;
+      opacity:0.9;
+      height:40px;
+      line-height:40px;
+      color:#ffffff;
+      text-decoration:none;
+      padding-left:20px;}
+
+    .remove-border *{
+      position:absolute;
+      top:0;
+      left:0;
+      right:0;
+      bottom:0;
+      margin:0;
+      border:none!important;
+      width:100%!important;
+      height:100%!important;
+      background-color:transparent;
+      z-index:0;
+      transition:all 200ms ease;}
+
+    .mobiles-disabled{display:none;}
+
+    .tablets-disabled .inch-80{	display:none!important;	}
+
+  </style>
+  <link rel="shortcut icon" type="image/png" href="../favicon.ico">
 </head>
 
 <body>
 
-<div class="resolution-selecter tablets-enabled">
-  <a href="#" class="resolution-selecter-deploy">Seleccionar tamaño de pantalla... <em> &#x25BE </em></a>
-  <!--<div class="resolutions">-->
-  <div class="resolutions show-resolutions">
-    <a class="inch-35" href="#">3.5" Dispositivo Pequeño </a>
-    <a class="inch-40 active-resolution" href="#">4.0" Dispositivo Mediano </a>
-    <a class="inch-50" href="#">5.0" Dispositivo Grande </a>
-    <a class="inch-60" href="#">6.0" Phablet</a>
-    <a class="inch-70" href="#">7.0" Tableta Horizontal</a>
-    <a class="inch-80" href="#">7.0" Tableta Vertical</a>
+  <div class="resolution-selecter tablets-enabled">
+    <a href="#" class="resolution-selecter-deploy">Seleccionar tamaño de pantalla... <em> &#x25BE </em></a>
+    <!--<div class="resolutions">-->
+    <div class="resolutions show-resolutions">
+      <a class="inch-35" href="#">3.5" Dispositivo Pequeño </a>
+      <a class="inch-40 active-resolution" href="#">4.0" Dispositivo Mediano </a>
+      <a class="inch-50" href="#">5.0" Dispositivo Grande </a>
+      <a class="inch-60" href="#">6.0" Phablet</a>
+      <a class="inch-70" href="#">7.0" Tableta Horizontal</a>
+      <a class="inch-80" href="#">7.0" Tableta Vertical</a>
+    </div>
   </div>
-</div>
-<div class="third-frame">
-  <div class="second-frame">
-    <div class="frame-scroll-correction"></div>
-      <iframe class="main-frame" src="../dist"></iframe>
+
+  <div class="third-frame">
+    <div class="second-frame">
+      <div class="frame-scroll-correction"></div>
+        <iframe class="main-frame" src="../dist"></iframe>
+    </div>
   </div>
-</div>
 
-<p style="text-align: center;padding:40px;font-family: Roboto, Noto, Helvetica, Arial, sans-serif;">&larr; <a href ="https://github.com/YagoLopez/material-light"><b>Volver a GitHub</b></a></p>
+  <p style="text-align: center;padding:40px;font-family: Roboto, Noto, Helvetica, Arial, sans-serif;">
+    &larr; <a href ="https://github.com/YagoLopez/ng-dashboard"><b>Volver a GitHub</b></a>
+  </p>
 
-<script type="text/javascript">
-	$(document).ready(function(){
+  <script type="text/javascript">
+    $(document).ready(function(){
 
-		$('.resolution-selecter-deploy').click(function(){
-			$('.resolutions').toggleClass('show-resolutions');
-		});
+      $('.resolution-selecter-deploy').click(function(){
+        $('.resolutions').toggleClass('show-resolutions');
+      });
 
-		var inch35w = 320;	//3.5 Inch Screen Width
-		var inch35h = 520;	//3.5 Inch Screen Height
+      var inch35w = 320;	//3.5 Inch Screen Width
+      var inch35h = 520;	//3.5 Inch Screen Height
 
-		var inch40w = 340;  //4.0 Inch Screen Width
-		var inch40h = 568;  //4.0 Inch Screen Height
+      var inch40w = 340;  //4.0 Inch Screen Width
+      var inch40h = 568;  //4.0 Inch Screen Height
 
-		var inch50w = 360;  //5.0 Inch Screen Width
-		var inch50h = 580;  //5.0 Inch Screen Height
+      var inch50w = 360;  //5.0 Inch Screen Width
+      var inch50h = 580;  //5.0 Inch Screen Height
 
-		var inch60w = 400;  //6.0 Inch Screen Width
-		var inch60h = 600;  //6.0 Inch Screen Heeight
+      var inch60w = 400;  //6.0 Inch Screen Width
+      var inch60h = 600;  //6.0 Inch Screen Heeight
 
-		var inch70w = 1024;  //7.0 Inch Screen Width
-		var inch70h = 641;  //7.0 Inch Screen Heeight
+      var inch70w = 1024;  //7.0 Inch Screen Width
+      var inch70h = 641;  //7.0 Inch Screen Heeight
 
-		var inch80w = 768;  //8.0 Inch Screen Width
-		var inch80h = 641;  //8.0 Inch Screen Heeight
+      var inch80w = 768;  //8.0 Inch Screen Width
+      var inch80h = 641;  //8.0 Inch Screen Heeight
 
-		function initiate_homepage_slider(){
-			$('.main-frame')  .css({ width: inch60w + 00, height: inch60h	});
-			$('.second-frame').css({ width: inch60w + 00 });
-			$('.third-frame') .css({ width: inch60w + 40 });
-			$('.third-frame') .removeClass('remove-border');
-			$('.resolutions a').removeClass('active-resolution');
-			$(this).addClass('active-resolution');
+      function initiate_homepage_slider(){
+        $('.main-frame')  .css({ width: inch60w, height: inch60h	});
+        $('.second-frame').css({ width: inch60w });
+        $('.third-frame') .css({ width: inch60w + 40 });
+        $('.third-frame') .removeClass('remove-border');
+        $('.resolutions a').removeClass('active-resolution');
+        $(this).addClass('active-resolution');
 
-			$('.inch-35').click(function(){
-				$('.main-frame')  .animate({ width: inch35w + 00,	 height: inch35h	});
-				$('.second-frame').animate({ width: inch35w + 00 });
-				$('.third-frame') .animate({ width: inch35w + 40 });
-				$('.third-frame') .removeClass('remove-border');
-				$('.resolutions a').removeClass('active-resolution');
-				$(this).addClass('active-resolution');
-			});
+        $('.inch-35').click(function(){
+          $('.main-frame')  .animate({ width: inch35w,	 height: inch35h	});
+          $('.second-frame').animate({ width: inch35w });
+          $('.third-frame') .animate({ width: inch35w + 40 });
+          $('.third-frame') .removeClass('remove-border');
+          $('.resolutions a').removeClass('active-resolution');
+          $(this).addClass('active-resolution');
+        });
 
-			$('.inch-40').click(function(){
-				$('.main-frame')  .animate({ width: inch40w + 00, height: inch40h	});
-				$('.second-frame').animate({ width: inch40w + 00 });
-				$('.third-frame') .animate({ width: inch40w + 40 });
-				$('.third-frame') .removeClass('remove-border');
-				$('.resolutions a').removeClass('active-resolution');
-				$(this).addClass('active-resolution');
-			});
+        $('.inch-40').click(function(){
+          $('.main-frame')  .animate({ width: inch40w, height: inch40h	});
+          $('.second-frame').animate({ width: inch40w });
+          $('.third-frame') .animate({ width: inch40w + 40 });
+          $('.third-frame') .removeClass('remove-border');
+          $('.resolutions a').removeClass('active-resolution');
+          $(this).addClass('active-resolution');
+        });
 
-			$('.inch-50').click(function(){
-				$('.main-frame')  .animate({ width: inch50w + 00, height: inch50h	});
-				$('.second-frame').animate({ width: inch50w + 00 });
-				$('.third-frame') .animate({ width: inch50w + 40 });
-				$('.third-frame') .removeClass('remove-border');
-				$('.resolutions a').removeClass('active-resolution');
-				$(this).addClass('active-resolution');
-			});
+        $('.inch-50').click(function(){
+          $('.main-frame')  .animate({ width: inch50w, height: inch50h	});
+          $('.second-frame').animate({ width: inch50w });
+          $('.third-frame') .animate({ width: inch50w + 40 });
+          $('.third-frame') .removeClass('remove-border');
+          $('.resolutions a').removeClass('active-resolution');
+          $(this).addClass('active-resolution');
+        });
 
-			$('.inch-60').click(function(){
-				$('.main-frame')  .animate({ width: inch60w + 00, height: inch60h	});
-				$('.second-frame').animate({ width: inch60w + 00 });
-				$('.third-frame') .animate({ width: inch60w + 40 });
-				$('.third-frame') .removeClass('remove-border');
-				$('.resolutions a').removeClass('active-resolution');
-				$(this).addClass('active-resolution');
-			});
+        $('.inch-60').click(function(){
+          $('.main-frame')  .animate({ width: inch60w, height: inch60h	});
+          $('.second-frame').animate({ width: inch60w });
+          $('.third-frame') .animate({ width: inch60w + 40 });
+          $('.third-frame') .removeClass('remove-border');
+          $('.resolutions a').removeClass('active-resolution');
+          $(this).addClass('active-resolution');
+        });
 
-			$('.inch-70').click(function(){
-				$('.main-frame')  .animate({ width: inch70w + 00, height: inch70h	});
-				$('.second-frame').animate({ width: inch70w + 00 });
-				$('.third-frame') .animate({ width: inch70w + 40 });
-				$('.third-frame') .removeClass('remove-border');
-				$('.resolutions a').removeClass('active-resolution');
-				$(this).addClass('active-resolution');
-			});
+        $('.inch-70').click(function(){
+          $('.main-frame')  .animate({ width: inch70w, height: inch70h	});
+          $('.second-frame').animate({ width: inch70w });
+          $('.third-frame') .animate({ width: inch70w + 40 });
+          $('.third-frame') .removeClass('remove-border');
+          $('.resolutions a').removeClass('active-resolution');
+          $(this).addClass('active-resolution');
+        });
 
-			$('.inch-80').click(function(){
-				$('.main-frame')  .animate({ width: inch80w + 00, height: inch80h	});
-				$('.second-frame').animate({ width: inch80w + 00 });
-				$('.third-frame') .animate({ width: inch80w + 40 });
-				$('.third-frame') .removeClass('remove-border');
-				$('.resolutions a').removeClass('active-resolution');
-				$(this).addClass('active-resolution');
-			});
+        $('.inch-80').click(function(){
+          $('.main-frame')  .animate({ width: inch80w, height: inch80h	});
+          $('.second-frame').animate({ width: inch80w });
+          $('.third-frame') .animate({ width: inch80w + 40 });
+          $('.third-frame') .removeClass('remove-border');
+          $('.resolutions a').removeClass('active-resolution');
+          $(this).addClass('active-resolution');
+        });
 
-			$('.inch-00').click(function(){
-				$('.third-frame') .addClass('remove-border');
-			});
-		}
-		initiate_homepage_slider();
-	});
-</script>
-
-<style scoped>
-	*{
-		margin:0;
-		padding:0;
-		border:0;}
-
-	body{background-color:#ececec;}
-
-	.main-frame{
-		background-color:#ffffff;
-		margin-left:auto;
-		margin-right:auto;
-		display:block;
-		position:relative;
-		z-index:1;}
-
-	.second-frame{
-		height:100%;
-		border:solid 20px #000;
-		border-radius:40px;
-		border-bottom:solid 80px #000;
-		border-top:solid 60px #000;
-		margin-left:auto;
-		margin-right:auto;
-		position:relative;
-		z-index:2;}
-
-	.third-frame{
-		height:100%;
-		background-color:#ccc;
-		padding:5px;
-		border-radius:45px;
-		margin-left:auto;
-		margin-right:auto;
-		margin-top:15px;}
-
-	.frame-scroll-correction{
-		position:absolute;
-		height:100%;
-		width:22px;
-		background-color:#000;
-		z-index:99;
-		right:-20px;}
-
-	.resolution-selecter-deploy em{
-		float:right;
-		padding-right:20px;
-		font-size:19px;
-		font-style:normal;}
-
-	.resolution-selecter-deploy{
-		width:200px;
-		height:50px;
-		background-color:#202428;
-		color:#efefef;
-		font-family:'Roboto', sans-serif;
-		text-decoration:none;
-		line-height:50px;
-		font-size:12px;
-		padding-left:20px;
-		padding-right:00px;
-		display:block;}
-
-	.resolution-selecter{
-		/*float: right;*/
-		position:absolute;
-		/*right:20px;*/
-		/*top:20px;*/
-		/*z-index:9999;*/
-	}
-
-	.resolutions{
-		height:0;
-		transition:all 500ms ease;
-		overflow:hidden;}
-
-	.resolutions a{
-		transition:all 200ms ease;}
-
-	.active-resolution{
-		background-color:rgba(39, 174, 96,1.0)!important;
-		transition:all 200ms ease;}
-
-	.show-resolutions{
-		min-height:300px!important;
-		transition:all 500ms ease;
-	}
-
-	.resolutions a{
-		font-family:'Roboto', sans-serif;
-		font-size:12px;
-		display:block;
-		margin-top:2px;
-		margin-bottom:2px;
-		background-color:#202428;
-		opacity:0.9;
-		height:40px;
-		line-height:40px;
-		color:#ffffff;
-		text-decoration:none;
-		padding-left:20px;}
-
-	.remove-border *{
-		position:absolute;
-		top:0;
-		left:0;
-		right:0;
-		bottom:0;
-		margin:0;
-		border:none!important;
-		width:100%!important;
-		height:100%!important;
-		background-color:transparent;
-		z-index:0;
-		transition:all 200ms ease;}
-
-	.mobiles-disabled{display:none;}
-
-	.tablets-disabled .inch-80{	display:none!important;	}
-
-</style>
-
-
-
+        $('.inch-00').click(function(){
+          $('.third-frame') .addClass('remove-border');
+        });
+      }
+      initiate_homepage_slider();
+    });
+  </script>
 
 </body>
 </html>
