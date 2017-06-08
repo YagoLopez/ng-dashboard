@@ -10,4 +10,4 @@ before_script:
    - npm install -g @angular/cli
 
 script:
-  - ng build --prod --aot --output-hashing none
+  - ng build
