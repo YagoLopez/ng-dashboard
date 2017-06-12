@@ -95,6 +95,7 @@ export class MetricsGraphicsCmp {
   }
 
   ngOnChanges(){
+    console.log('on changes');
     if(this.config.data){
       this.draw_MG_Graphic(this.config);
     }

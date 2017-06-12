@@ -17,8 +17,8 @@ template:`
     </ml-card-text>
     <ml-card-actions>
       <ml-button aspect="raised" (click)="toggleTimer()" ripple>
-        <div *ngIf="!timerActive">Realtime Simulation</div>
-        <div *ngIf="timerActive">End Simulation</div>
+        <div *ngIf="timerActive; else timerInactive">End Simulation</div>
+        <ng-template #timerInactive>Realtime Simulation</ng-template>
       </ml-button>
       <div *ngIf="timerActive" class="rt-data-container">
         <div class="rt-data-title">REALTIME SIMULATION</div>
@@ -28,8 +28,8 @@ template:`
     <ml-card-menu>
       <ml-card-menu>
         <ml-menu position="top-right" class="menu-btn">
-          <ml-menu-item>item 1</ml-menu-item>
-          <ml-menu-item>item 2</ml-menu-item>
+          <ml-menu-item (click)="toggleFillArea()">Toggle Area</ml-menu-item>
+          <ml-menu-item (click)="toggleMarkers()">Toggle Markers</ml-menu-item>
         </ml-menu>
       </ml-card-menu>
     </ml-card-menu>
@@ -44,7 +44,7 @@ template:`
     <ml-card-menu>
       <ml-card-menu>
         <ml-menu position="top-right" class="menu-btn">
-          <ml-menu-item>item 1</ml-menu-item>
+          <!--<ml-menu-item (click)="test()">test</ml-menu-item>-->
           <ml-menu-item>item 2</ml-menu-item>
         </ml-menu>
       </ml-card-menu>
@@ -78,6 +78,10 @@ template:`
     y_accessor: 'value'
   };
 
+  ngOnInit(){
+    this.toggleMarkers();
+  }
+
   //todo: return data?
   /** Convert initial date format to an apropiate format for MetricsCharts */
   convertDateFn = ( data: any[]  ): void => {
@@ -85,6 +89,36 @@ template:`
       data[i] = MG.convert.date( data[i], 'date' );
     }
   };
+
+  toggleFillArea(){
+    if(this.config1.area){
+      this.config1 = {...this.config1, area: false};
+    } else {
+      this.config1 = {...this.config1, area: true};
+    }
+  }
+
+  toggleMarkers(){
+    if(this.config1.markers){
+      this.config1 = {...this.config1, markers: null}
+    } else {
+      const windowOptions = 'menubar=no,location=no,status=no,titlebar=no,height=400,width=600';
+      const showVid = () => {
+        window.open('https://www.youtube.com/watch?v=73h_s4SAAHs', '_blank', windowOptions);
+      };
+      const markers = [
+        {"year": "1960", "label": "Marker 1"},
+        {"year": "1980", "label": "CLICK ME!!", "click": showVid}];
+      this.config1 = {...this.config1, markers: markers}
+    }
+  }
+
+  test(){
+    debugger
+    const data = this.config2.data;
+    data[0] = [];
+    this.config2 = {...this.config2, data: data};
+  }
 
   /** Generates a random integer between "min" and "max" */
   getRandomInt(min: number, max: number): number {
@@ -106,7 +140,9 @@ template:`
       this.newData = {line_id: 1, sightings: sightings, year: year};
       this.config1.data[0].push( this.newData );
       this.config1.min_x = this.config1.min_x + 1;
-      this.config1 = Object.assign( [], this.config1 );
+      //todo: borrar
+      // this.config1 = Object.assign( [], this.config1 );
+      this.config1 = {...this.config1}
     }, 1500);
   }
 
@@ -114,7 +150,9 @@ template:`
     clearInterval(this.timer);
     this.timerActive = false;
     this.config1.data[0].length = 65;
-    this.config1 = Object.assign( [], this.config1 );
+    //todo: borrar
+    // this.config1 = Object.assign( [], this.config1 );
+    this.config1 = {...this.config1}
   }
 
   ngOnDestroy(){

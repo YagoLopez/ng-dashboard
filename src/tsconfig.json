@@ -2,7 +2,7 @@
 //  "compileOnSave": false,
   "compilerOptions": {
     "target": "es5",
-    "lib": ["es6", "dom"],
+    "lib": ["dom", "es6"],
     "skipDefaultLibCheck": true,
     "skipLibCheck": true,
     "strictNullChecks": true,
