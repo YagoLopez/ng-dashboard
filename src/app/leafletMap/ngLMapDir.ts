@@ -1,5 +1,6 @@
+//todo: gestionar mejor las capas
 import {Directive, Input, ElementRef} from "@angular/core";
-import L = require('./leaflet.js');
+import L = require('../../../node_modules/leaflet/dist/leaflet.js');
 
 interface ILeafletMapConfig {
   maxZoom?: number,
@@ -16,11 +17,11 @@ selector: '[l-map]',
   @Input('l-center') center: [number, number] = [51.505, -0.09];
   @Input('l-zoom') zoom: number = 13;
   @Input('l-options') options: Object;
+
   map: any;
-
   ACCESS_TOKEN = 'pk.eyJ1IjoieWFnb2xvcGV6IiwiYSI6ImNqMzdud2pidjAwczMzM3RsbmlzNm4ycGcifQ.fa75kDq4gqxpRLgT-zT9NA';
-
   urlTemplate = `https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=${this.ACCESS_TOKEN}`;
+
   config: ILeafletMapConfig = {
     maxZoom: 19,
     attribution: 'LMap, Angular Directive by <a href="https://yagolopez.github.io" target="_blank">Yago López</a>',
@@ -31,6 +32,7 @@ selector: '[l-map]',
   constructor(public host: ElementRef){}
 
   ngOnInit(){
+    this.config = {...this.config, ...this.options};
     this.map = L.map(this.host.nativeElement).setView(this.center, this.zoom);
     L.tileLayer(this.urlTemplate, this.config).addTo(this.map);
   }

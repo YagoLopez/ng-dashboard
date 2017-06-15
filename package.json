@@ -1,7 +1,7 @@
 {
   "name": "ng-dashboard",
   "description": "Dashboard for Angular (v 4+)",
-  "author": "Yago Lopez <yago.lopez@gmail.com> (https://yagolopez.github.io)",
+  "author": "Yago Lopez <yago.lopez@gmail.com> (https://yagolopez.js.org)",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/YagoLopez/ng-dashboard.git"
@@ -46,7 +46,9 @@
     "@angular/router": "^4.1.2",
     "core-js": "^2.4.1",
     "rxjs": "^5.4.0",
-    "zone.js": "^0.8.10"
+    "zone.js": "^0.8.10",
+    "metrics-graphics": "^2.11.0",
+    "leaflet": "^1.0.3"
   },
   "devDependencies": {
     "@angular/cli": "1.0.3",
@@ -58,7 +60,6 @@
     "systemjs": "^0.20.12",
     "ts-node": "~3.0.4",
     "tslint": "~5.2.0",
-    "typescript": "~2.3.2",
-    "leaflet": "^1.0.3"
+    "typescript": "~2.3.2"
   }
 }

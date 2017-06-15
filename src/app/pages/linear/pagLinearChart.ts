@@ -1,10 +1,10 @@
 import {Component} from "@angular/core";
-import {IMGConfig} from "../../mg/metricsGraphicsCmp";
+import {IMGConfig} from "../../mgChart/MgChartCmp";
 declare var MG: any;
 
 @Component({
 moduleId: module.id,
-styleUrls: ['../pag-styles.css'],
+styleUrls: ['../pagStyles.css'],
 template:`
 
 <div class="page-fade">
@@ -13,7 +13,7 @@ template:`
   <ml-card shadow="3">
     <ml-card-text>
       <div class="chart-title">Linear Chart with Area</div>
-      <mg-graphic [config]="config1" [urlData]="urlData1"></mg-graphic>
+      <mg-chart [config]="config1" [urlData]="urlData1"></mg-chart>
     </ml-card-text>
     <ml-card-actions>
       <ml-button aspect="raised" (click)="toggleTimer()" ripple>
@@ -39,7 +39,7 @@ template:`
   <ml-card shadow="3" class="margin-top">
     <ml-card-text>
       <div class="chart-title">Multi-linear Chart</div>
-      <mg-graphic [config]="config2" [urlData]="urlData2" [preprocess-fn]="convertDateFn"></mg-graphic>
+      <mg-chart [config]="config2" [urlData]="urlData2" [delay]="1000" [preprocess-fn]="convertDateFn"></mg-chart>
     </ml-card-text>
     <ml-card-menu>
       <ml-card-menu>
@@ -56,12 +56,11 @@ template:`
 `//template
 }) export class PagLinearChart {
 
-  urlData1 = 'assets/data/ufo-sightings.json';
-  urlData2 = 'assets/data/fake_users2.json';
   timer: Function | any;
   timerActive: boolean = false;
   newData: Object;
 
+  urlData1 = 'assets/data/ufo-sightings.json';
   config1: IMGConfig = {
     height: 180,
     x_accessor: 'year',
@@ -71,6 +70,7 @@ template:`
     buffer: 0
   };
 
+  urlData2 = 'assets/data/fake_users2.json';
   config2: IMGConfig = {
     height: 180,
     animate_on_load: true,
@@ -103,9 +103,7 @@ template:`
       this.config1 = {...this.config1, markers: null}
     } else {
       const windowOptions = 'menubar=no,location=no,status=no,titlebar=no,height=400,width=600';
-      const showVid = () => {
-        window.open('https://www.youtube.com/watch?v=73h_s4SAAHs', '_blank', windowOptions);
-      };
+      const showVid = () => { window.open('https://www.youtube.com/watch?v=73h_s4SAAHs', '_blank', windowOptions) };
       const markers = [
         {"year": "1960", "label": "Marker 1"},
         {"year": "1980", "label": "CLICK ME!!", "click": showVid}];
@@ -140,8 +138,6 @@ template:`
       this.newData = {line_id: 1, sightings: sightings, year: year};
       this.config1.data[0].push( this.newData );
       this.config1.min_x = this.config1.min_x + 1;
-      //todo: borrar
-      // this.config1 = Object.assign( [], this.config1 );
       this.config1 = {...this.config1}
     }, 1500);
   }
@@ -150,8 +146,6 @@ template:`
     clearInterval(this.timer);
     this.timerActive = false;
     this.config1.data[0].length = 65;
-    //todo: borrar
-    // this.config1 = Object.assign( [], this.config1 );
     this.config1 = {...this.config1}
   }
 

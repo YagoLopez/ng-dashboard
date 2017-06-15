@@ -8,9 +8,12 @@
 
 ## Features
 
-- MG Chart Component based on <a href="http://metricsgraphicsjs.org" target="_blank">Metrics Graphics JS</a>
-- LMap Directive based on <a href="http://leafletjs.com" target="_blank">Leaflet JS</a>
-- UI components based on <a href="https://github.com/YagoLopez/material-light" target="_blank">Material Light</a>
+- Carefully use of asynchrony for best responsiveness and maximum speed rendering. Costly operations like data calculations and
+  painting on screen are put in **asynchronous** and **sequential** code blocks. This frees the main thread for rendering the whole
+  user interface without blocking and fast TTI (Time To Interactive)
+- It includes MG Chart. An Angular component based on <a href="http://metricsgraphicsjs.org" target="_blank">Metrics Graphics JS</a>
+- It includes LMap. An Angular Directive based on <a href="http://leafletjs.com" target="_blank">Leaflet JS</a>
+- UI could be quickly assambled based on this component library: <a href="https://github.com/YagoLopez/material-light" target="_blank">Material Light</a>
 - ChartJS Component will be added soon. <a href="http://www.chartjs.org/" target="_blank">(ChartJS Website)</a>
 
 ## Demo
@@ -29,19 +32,19 @@ security reasons (i. e. alert dialogs). Run the full screen version for unrestri
 
 ## Insallation and Use
 
-1 - Using Node:
+1. Using Node:
 - Install: `npm install --save YagoLopez/ng-dashboard`
 - Go to project directory: `cd ng-dashboard`
 - Run: `npm install`
 - Run: `ng serve` from directory project
-- Metrics Graphics Chart Component is located in `mg` folder. If you want to use this component,
-copy this folder to your `app` folder and import `MetricsGraphicsMod` in your own module or import it directily from
-`/node_modules/ng-dashboard/src/app/mg/metricsGraphicsMod.ts`. IMPORTANT: `d3.js` must be in your root app directory. 
-This is where metricsgraphics.js search for this file. (Not due to this project design).
-- Leaflet Map Directive is located in `leaflet` folder. If you want to use this directive, copy this folder to your `app`
+- Metrics Graphics Chart Component is located in `mgChart` folder. If you want to use this component,
+copy this folder to your `app` folder and import `mgChartMod` in your own module or import it directily from
+`/node_modules/ng-dashboard/src/app/mgChart/mgChartMod.ts`. IMPORTANT: `d3.js` must be in your root app directory. 
+This dependency structure is harcoded in metricsgraphics.js. It doesn't depend on this project.
+- Leaflet Map Directive is located in `leafletMap` folder. If you want to use this directive, copy this folder to your `app`
 folder and import `NgLMapDir` in your own component.
 
-2 - Whitout node:
+2. Whitout node:
 - Clone or download the repository and follow the same steps as before
 
 ## MetricsGraphics Chart Component API

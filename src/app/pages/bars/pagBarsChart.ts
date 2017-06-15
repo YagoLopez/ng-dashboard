@@ -1,17 +1,17 @@
 import {Component} from "@angular/core";
-import {IMGConfig} from "../../mg/metricsGraphicsCmp";
+import {IMGConfig} from "../../mgChart/MgChartCmp";
 
 @Component({
 moduleId: module.id,
-styleUrls: ['../pag-styles.css'],
+styleUrls: ['../pagStyles.css'],
 template:`
 
 <div class="page-scaleUpDown">
   <h5>Bars Charts</h5>
-  <ml-card shadow="3">
+  <ml-card shadow="4">
     <ml-card-text>
       <div class="chart-title">Histogram</div>  
-      <mg-graphic [config]="config1" [urlData]="urlData1"></mg-graphic>
+      <mg-chart [config]="config1" [urlData]="urlData1"></mg-chart>
     </ml-card-text>
     <ml-card-menu>
       <ml-card-menu>
@@ -23,29 +23,46 @@ template:`
     </ml-card-menu>  
   </ml-card>
   <br>
+  <ml-card shadow="4">
+    <ml-card-text>
+      <div class="chart-title">Bars</div>  
+      <mg-chart [config]="config2" [urlData]="urlData2" delay="1000"></mg-chart>
+    </ml-card-text>
+    <ml-card-menu>
+      <ml-card-menu>
+        <ml-menu position="top-right" class="menu-btn">
+          <ml-menu-item>item 1</ml-menu-item>
+          <ml-menu-item>item 2</ml-menu-item>
+        </ml-menu>
+      </ml-card-menu>
+    </ml-card-menu>  
+  </ml-card>
 </div>
 
 `//template
 }) export class PagBarsChart {
 
-  urlData1 = 'assets/data/ufo-sightings-bars.json';
-  urlData2 = 'assets/data/fake_users1.json';
+  urlData1 = 'assets/data/ufo-sightings.json';
 
   config1: IMGConfig = {
     chart_type: 'histogram',
     x_accessor: 'year',
     y_accessor: 'sightings',
     x_label: 'years',
-    animate_on_load: true,
     buffer: 0,
     height: 200,
     binned: true,
   };
 
+  urlData2 = 'assets/data/ufo-sightings-bars.json';
+
   config2: IMGConfig = {
-    chart_type: 'histogram',
-    height: 180,
-    binned: true,
-  };
+    chart_type: 'bar',
+    x_accessor: 'year',
+    y_accessor: 'sightings',
+    buffer: 5,
+    height: 200,
+    binned: false,
+  }
 
 }

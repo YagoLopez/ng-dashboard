@@ -1,9 +1,5 @@
-//todo: cargar css de material icons en index.html
 //todo: mejorar el estado 'loading' chart en pagLinearChart
-//todo: optimizar tamaño de imagen en drawer logo
-//todo: hacer componente: menu compartir
 //todo: hacer una directiva para contenido responsivo
-//todo: loading image en leaflet popup
 //todo: hacer mas parecido a material design la pagina profile usando ml-controls
 
 import {NgModule} from "@angular/core";
@@ -16,7 +12,7 @@ import {MlMenuMod} from "./ml/components/menu/mlMenuMod";
 import {MlBadgeMod} from "./ml/components/badge/mlBadgeMod";
 import {MlTooltipMod} from "./ml/components/tooltip/mlTooltipMod";
 import {YagoFullscreenMod} from "./ml/lib/fullscreen/yagoFullscreenMod";
-import {NgDashboardApp} from "./ngDashboardApp";
+import {NgDashboardApp} from "./ngDashboardAppCmp";
 
 const getUrlParameter = (name: string) => {
   name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');

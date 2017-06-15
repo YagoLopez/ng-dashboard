@@ -7,7 +7,7 @@ import {IConfigSnackbar, MlSnackbar} from "../../ml/components/snackbar/mlSnackb
 
 @Component({
 moduleId: module.id,
-styleUrls: ['../pag-styles.css', './pagMailbox.css'],
+styleUrls: ['../pagStyles.css', './pagMailbox.css'],
 template: `
 
 <div class="page-scaleUpDown">
@@ -26,7 +26,7 @@ template: `
             </ml-item-title>
           </ml-item-content>
           <ml-item-action (click)="deleteMsg(index, $event)">
-            <ml-icon class="blue">delete</ml-icon>
+            <ml-icon class="blue" title="Delete message">delete</ml-icon>
           </ml-item-action>
         </ml-item>
       </ml-list>

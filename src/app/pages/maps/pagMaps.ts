@@ -1,9 +1,9 @@
 import {Component, ViewChild} from "@angular/core";
-import {NgLMapDir} from "../../leaflet/ngLMapDir";
+import {NgLMapDir} from "../../leafletMap/ngLMapDir";
 
 @Component({
 moduleId: module.id,
-styleUrls: ['../pag-styles.css'],
+styleUrls: ['../pagStyles.css'],
 template:`
 
 <style>
@@ -11,8 +11,16 @@ template:`
   :host /deep/ .mdl-textfield__input {background: aliceblue}
   :host /deep/ div.mdl-card__supporting-text {padding: 0; width: 100%}
   :host /deep/ ml-card h2.mdl-card__title-text {display: block; width: 100%; text-align: center}
+  :host /deep/ ml-icon {
+    z-index: 1000;
+    color: cornflowerblue;
+    background: white;
+    border-radius: 3px;
+    border: 1px solid cornflowerblue;
+    padding: 1px}
   .map-popup {width: 100%; height: 300px}
   .map-height {height: 350px}
+  .chart-title {padding: 25px}
 </style>
 
 <div class="page-scaleUpDown">
@@ -20,11 +28,9 @@ template:`
   <h5>Maps</h5>
   
   <ml-card shadow="3">
-    <ml-card-title class="chart-title">
-      Leaflet Map Directive  
-    </ml-card-title>
     <ml-card-text>
       <div l-map [l-center]="center" [l-zoom]="zoom" class="map-height map-popup"></div>
+      <div class="chart-title">Leaflet Map Directive</div>
     </ml-card-text>
     <ml-card-menu>
       <ml-card-menu>
@@ -42,8 +48,7 @@ template:`
 }) export class PagMaps {
 
   //todo: pasar objeto de configuracion 'options'
-  //todo: que pasa con el loader
-  @ViewChild(NgLMapDir) ngLMapDir: NgLMapDir; // Used to get reference to Leaflet Map
+  @ViewChild(NgLMapDir) LMapDir: NgLMapDir; // Used to get reference to Leaflet Map
   center = [43.43578958, -4.8247093] as [number, number];
   zoom = 15;
   urlWebcam = 'http://www.wewebcams.com/get_imagen_ws.php?id=64';
@@ -51,7 +56,7 @@ template:`
   mapLayer: Object;
 
   ngAfterViewInit() {
-    const marker = L.marker(this.center).addTo(this.ngLMapDir.map);
+    const marker = L.marker(this.center).addTo(this.LMapDir.map);
 
     const popup = `
       <style>
@@ -59,12 +64,10 @@ template:`
         .popup-footer {font-size: smaller; text-align: center; padding-top: 5px}
       </style>
       <a href="${this.urlWebcam}" target="_blank"><img src="${this.urlWebcam}" class="popup-img" /></a>
-      <div class="popup-footer">Realtime image</div>
-      <div class="popup-footer">(Spain timezone)</div>
+      <div class="popup-footer">Realtime image <br>Spain timezone</div>
     `; // end popup
 
-    marker.bindPopup(popup).addTo(this.ngLMapDir.map);
-
+    marker.bindPopup(popup).addTo(this.LMapDir.map);
     this.mapLayer = this.createLayerStreets()
   }
 
@@ -74,11 +77,11 @@ template:`
   }
 
   addMapLayer(): void {
-    this.ngLMapDir.map.addLayer(this.mapLayer);
+    this.LMapDir.map.addLayer(this.mapLayer);
   }
 
   removeMapLayer(): void {
-    this.ngLMapDir.map.removeLayer(this.mapLayer);
+    this.LMapDir.map.removeLayer(this.mapLayer);
   }
 
 }

@@ -2,7 +2,7 @@ import {Component} from "@angular/core";
 
 @Component({
 moduleId: module.id,
-styleUrls: ['../pag-styles.css'],
+styleUrls: ['../pagStyles.css'],
 template: `
 
 <style>

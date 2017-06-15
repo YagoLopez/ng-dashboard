@@ -1,10 +1,10 @@
 import {Component} from "@angular/core";
-import {IMGConfig} from "../../mg/metricsGraphicsCmp";
+import {IMGConfig} from "../../mgChart/MgChartCmp";
 declare var MG: any;
 
 @Component({
 moduleId: module.id,
-styleUrls: ['../pag-styles.css'],
+styleUrls: ['../pagStyles.css'],
 template:`
 
 <div class="page-scaleUpDown">
@@ -14,7 +14,7 @@ template:`
   <ml-card shadow="3">
     <ml-card-text>
       <div class="chart-title">Simple scatter plot</div>  
-      <mg-graphic [config]="config1" [urlData]="urlData1"></mg-graphic>
+      <mg-chart [config]="config1" [urlData]="urlData1"></mg-chart>
     </ml-card-text>
     <ml-card-menu>
       <ml-card-menu>
@@ -31,7 +31,7 @@ template:`
   <ml-card shadow="3" class="margin-top">
     <ml-card-text>
       <div class="chart-title">Line of the best fit</div>  
-      <mg-graphic [config]="config2" [urlData]="urlData2" [preprocess-fn]="convertDateFn"></mg-graphic>
+      <mg-chart [config]="config2" [urlData]="urlData2" [delay]="500" [preprocess-fn]="convertDateFn"></mg-chart>
     </ml-card-text>
     <ml-card-menu>
       <ml-card-menu>

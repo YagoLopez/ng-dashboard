@@ -1,3 +1,4 @@
+//todo: use loader indicator for secondary charts
 //todo: usar mobx para probar a ver cambios en tiempo real
 //todo: arreglar lo de cargar d3.js desde el directorio /src/
 //todo: intentar que funcione this.data con observables para que se actualicen los valores automaticamente
@@ -7,7 +8,7 @@
 
 import {Component, ViewChild, ElementRef, ViewEncapsulation, HostListener, Input, NgZone} from "@angular/core";
 import {Http, RequestOptionsArgs} from "@angular/http";
-import MG = require("./metricsgraphics.js");
+import MG = require("../../../node_modules/metrics-graphics/dist/metricsgraphics.js");
 
 export interface IMGConfig {
   title?: string,
@@ -23,9 +24,9 @@ export interface IMGConfig {
 }
 
 @Component({
-selector: 'mg-graphic',
+selector: 'mg-chart',
 moduleId: module.id,
-styleUrls: ['metricsgraphics.css'],
+styleUrls: ['mgChart.css'],
 encapsulation: ViewEncapsulation.None,
 template: `
 
@@ -50,13 +51,15 @@ template: `
 
 `// template
 })
-export class MetricsGraphicsCmp {
+export class MgChartCmp {
 
   @ViewChild('chartContainer') chartContainer: ElementRef;
   @Input() urlData: string;
   @Input() config: IMGConfig;
   @Input('preprocess-fn') preprocessFn: Function;
   @Input('request-options') reqOptions: RequestOptionsArgs;
+  @Input() delay: number = 0; // Amount of time the painting of the chart is delayed (see below)
+
   isLoading: boolean = false;
   data: any;
 
@@ -65,7 +68,7 @@ export class MetricsGraphicsCmp {
     this.isLoading = true;
       setTimeout( () => {
         this.isLoading = false;
-        this.draw_MG_Graphic(this.config);
+        this.drawMGChart(this.config, 0);
       }, 1);
   }
 
@@ -74,10 +77,14 @@ export class MetricsGraphicsCmp {
   /**
    * Run MetricGraphics outside Angular Change Detection System to avoid
    * unnecesary calculation and re-rendering when mouseover graphic
+    *
+   * When there are several charts on same page, it is convenient to delay the painting of others charts in same page,
+   * instead of painting all charts at the same time at the beginning.
+   * @Input().delay offers this option (Units in miliseconds. A good delay is 1000 ms)
    */
-  draw_MG_Graphic(config: IMGConfig){
+  drawMGChart(config: IMGConfig, delay: number){
     this.zone.runOutsideAngular( () => {
-      MG.data_graphic(config);
+      setTimeout( () => MG.data_graphic(config), delay)
     })
   }
 
@@ -89,15 +96,15 @@ export class MetricsGraphicsCmp {
         this.config.data = this.data;
         this.config.width = this.chartContainer.nativeElement.clientWidth;
         this.config.target = this.chartContainer.nativeElement;
-        this.draw_MG_Graphic(this.config);
+        this.drawMGChart(this.config, this.delay);
       });
     }
   }
 
   ngOnChanges(){
-    console.log('on changes');
+    // console.log('on changes');
     if(this.config.data){
-      this.draw_MG_Graphic(this.config);
+      this.drawMGChart(this.config, 0);
     }
   }
 }
