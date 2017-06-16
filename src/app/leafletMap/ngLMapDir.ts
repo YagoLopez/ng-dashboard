@@ -1,6 +1,7 @@
 //todo: gestionar mejor las capas
 import {Directive, Input, ElementRef} from "@angular/core";
-import L = require('../../../node_modules/leaflet/dist/leaflet.js');
+require('../../../node_modules/leaflet/dist/leaflet.js');
+declare var L: any;
 
 interface ILeafletMapConfig {
   maxZoom?: number,
@@ -17,21 +18,20 @@ selector: '[l-map]',
   @Input('l-center') center: [number, number] = [51.505, -0.09];
   @Input('l-zoom') zoom: number = 13;
   @Input('l-options') options: Object;
-
+  @Input('l-token') accessToken: string;
   map: any;
-  ACCESS_TOKEN = 'pk.eyJ1IjoieWFnb2xvcGV6IiwiYSI6ImNqMzdud2pidjAwczMzM3RsbmlzNm4ycGcifQ.fa75kDq4gqxpRLgT-zT9NA';
-  urlTemplate = `https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=${this.ACCESS_TOKEN}`;
-
+  urlTemplate = 'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png';
   config: ILeafletMapConfig = {
     maxZoom: 19,
     attribution: 'LMap, Angular Directive by <a href="https://yagolopez.github.io" target="_blank">Yago López</a>',
     id: 'mapbox.satellite',
-    accessToken: 'pk.eyJ1IjoieWFnb2xvcGV6IiwiYSI6ImNqMzdud2pidjAwczMzM3RsbmlzNm4ycGcifQ.fa75kDq4gqxpRLgT-zT9NA'
+    accessToken: this.accessToken
   };
 
   constructor(public host: ElementRef){}
 
   ngOnInit(){
+    this.urlTemplate += `?access_token=${this.accessToken}`;
     this.config = {...this.config, ...this.options};
     this.map = L.map(this.host.nativeElement).setView(this.center, this.zoom);
     L.tileLayer(this.urlTemplate, this.config).addTo(this.map);

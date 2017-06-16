@@ -40,9 +40,10 @@ security reasons (i. e. alert dialogs). Run the full screen version for unrestri
 - Metrics Graphics Chart Component is located in `mgChart` folder. If you want to use this component,
 copy this folder to your `app` folder and import `mgChartMod` in your own module or import it directily from
 `/node_modules/ng-dashboard/src/app/mgChart/mgChartMod.ts`. IMPORTANT: `d3.js` must be in your root app directory. 
-This dependency structure is harcoded in metricsgraphics.js. It doesn't depend on this project.
+This requirement is harcoded in `metricsgraphics.js`. It doesn't depend on this project.
 - Leaflet Map Directive is located in `leafletMap` folder. If you want to use this directive, copy this folder to your `app`
-folder and import `NgLMapDir` in your own component.
+folder and import `NgLMapDir` in your own component or import it directily from 
+`/node_modules/ng-dashboard/src/app/leafletMap/ngLMapDir.ts`.
 
 2. Whitout node:
 - Clone or download the repository and follow the same steps as before
@@ -50,24 +51,31 @@ folder and import `NgLMapDir` in your own component.
 ## MetricsGraphics Chart Component API
 
 ```HTML5
-<mg-graphic [urlData]="urlDataString" [config]="configObject [preprocess-fn]="preprocessFn"></mg-graphic>
+<mg-chart [urlData]="urlDataString" [request-options]="requestOptions" 
+  [config]="configObject [preprocess-fn]="preprocessFn" [delay]="delay"></mg-chart>
 ```
 
-- <b>urlData:</b> ulr pointing to a local/remote json file with data (pay attention to CORS restrictions)
+- <b>urlData:</b> Ulr pointing to a local/remote json file with data (pay attention to CORS restrictions)
+- <b>request Options:</b> Request options object of type: 
+  <a href="https://angular.io/api/http/RequestOptions" target="_blank">RequestOptions</a>
 - <b>config:</b> Javascript object with configuration values for MetricsGraphics. 
-(Check their <a href="https://github.com/mozilla/metrics-graphics/wiki/List-of-Options" target="_blank">webpage</a> for more information)
-- <b>preprocess-Fn:</b> Applies Javascript transformations to incoming data (for example format dates, etc.)
-- For using MetricsGraphics global object in your component class use `declare var MG: any`
+(Check <a href="https://github.com/mozilla/metrics-graphics/wiki/List-of-Options" target="_blank">MG Options</a> for more information)
+- <b>preprocess-Fn:</b> Applies Javascript transformations to input data (for example format dates, etc.)
+- <b>delay</b> Delay the creation and painting of the chart. It could be useful when having serveral charts in same page
+- For using MetricsGraphics global object in your component class you can use `declare var MG: any`
 
 ## Leaflet Map Directive API
 
 ```HTML5
-<div l-map [l-center]="center" [l-zoom]="zoom" [l-options]="options"></div>
+<div l-map [l-token]="token" [l-center]="center" [l-zoom]="zoom" [l-options]="options"></div>
 ```
 
+- <b>l-token:</b> String with access token (Get a token in Leaflet website).
 - <b>l-center:</b> Tuple with type `[number, number]` with the coordinates of the map center (latitude and longitude)
 - <b>l-zoom:</b> Number with initial zoom
-- <b>l-options:</b> (Optional) Javascript object with other configuration options. Check Leaflet documentation for more information on map options
+- <b>l-options:</b> (Optional) Javascript object with additional configuration options. Check 
+<a href="http://leafletjs.com/reference-1.0.3.html" target="_blank">Leaflet documentation</a> 
+for more information on map options
 
 ## Testing
 

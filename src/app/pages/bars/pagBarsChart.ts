@@ -26,7 +26,7 @@ template:`
   <ml-card shadow="4">
     <ml-card-text>
       <div class="chart-title">Bars</div>  
-      <mg-chart [config]="config2" [urlData]="urlData2" delay="1000"></mg-chart>
+      <mg-chart [config]="config2" [urlData]="urlData2" delay="500"></mg-chart>
     </ml-card-text>
     <ml-card-menu>
       <ml-card-menu>
@@ -37,6 +37,7 @@ template:`
       </ml-card-menu>
     </ml-card-menu>  
   </ml-card>
+  <br>
 </div>
 
 `//template
@@ -49,7 +50,7 @@ template:`
     x_accessor: 'year',
     y_accessor: 'sightings',
     x_label: 'years',
-    buffer: 0,
+    buffer: 5,
     height: 200,
     binned: true,
   };
@@ -60,9 +61,9 @@ template:`
     chart_type: 'bar',
     x_accessor: 'year',
     y_accessor: 'sightings',
-    buffer: 5,
+    buffer: 10,
     height: 200,
+    rotate_x_labels: 90,
     binned: false,
   }
-
 }

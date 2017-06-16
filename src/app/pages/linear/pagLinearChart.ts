@@ -44,8 +44,7 @@ template:`
     <ml-card-menu>
       <ml-card-menu>
         <ml-menu position="top-right" class="menu-btn">
-          <!--<ml-menu-item (click)="test()">test</ml-menu-item>-->
-          <ml-menu-item>item 2</ml-menu-item>
+          <ml-menu-item>item 1</ml-menu-item>
         </ml-menu>
       </ml-card-menu>
     </ml-card-menu>
@@ -56,9 +55,11 @@ template:`
 `//template
 }) export class PagLinearChart {
 
-  timer: Function | any;
+  timer: NodeJS.Timer;
   timerActive: boolean = false;
   newData: Object;
+  markers = [{"year": "1960", "label": "Marker 1"},
+    {"year": "1980", "label": "CLICK ME!!", "click": this.showVid}];
 
   urlData1 = 'assets/data/ufo-sightings.json';
   config1: IMGConfig = {
@@ -90,6 +91,11 @@ template:`
     }
   };
 
+  showVid(){
+    const windowOptions = 'menubar=no,location=no,status=no,titlebar=no,height=400,width=600';
+    window.open('https://www.youtube.com/watch?v=73h_s4SAAHs', '_blank', windowOptions)
+  }
+
   toggleFillArea(){
     if(this.config1.area){
       this.config1 = {...this.config1, area: false};
@@ -102,20 +108,8 @@ template:`
     if(this.config1.markers){
       this.config1 = {...this.config1, markers: null}
     } else {
-      const windowOptions = 'menubar=no,location=no,status=no,titlebar=no,height=400,width=600';
-      const showVid = () => { window.open('https://www.youtube.com/watch?v=73h_s4SAAHs', '_blank', windowOptions) };
-      const markers = [
-        {"year": "1960", "label": "Marker 1"},
-        {"year": "1980", "label": "CLICK ME!!", "click": showVid}];
-      this.config1 = {...this.config1, markers: markers}
+      this.config1 = {...this.config1, markers: this.markers}
     }
-  }
-
-  test(){
-    debugger
-    const data = this.config2.data;
-    data[0] = [];
-    this.config2 = {...this.config2, data: data};
   }
 
   /** Generates a random integer between "min" and "max" */
@@ -131,6 +125,7 @@ template:`
     let sightings = 3000;
     let year = 2012;
     this.config1.min_x = 1945;
+    this.config1.markers = null;
     this.timerActive = true;
     this.timer = setInterval( () => {
       sightings = this.getRandomInt(1500, 5000);
@@ -145,7 +140,9 @@ template:`
   endTimer(){
     clearInterval(this.timer);
     this.timerActive = false;
+    this.config1.min_x = 1945;
     this.config1.data[0].length = 65;
+    this.config1.markers = this.markers;
     this.config1 = {...this.config1}
   }
 

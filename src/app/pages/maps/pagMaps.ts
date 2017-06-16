@@ -15,7 +15,7 @@ template:`
     z-index: 1000;
     color: cornflowerblue;
     background: white;
-    border-radius: 3px;
+    border-radius: 2px;
     border: 1px solid cornflowerblue;
     padding: 1px}
   .map-popup {width: 100%; height: 300px}
@@ -29,7 +29,7 @@ template:`
   
   <ml-card shadow="3">
     <ml-card-text>
-      <div l-map [l-center]="center" [l-zoom]="zoom" class="map-height map-popup"></div>
+      <div l-map [l-token]="accessToken" [l-center]="center" [l-zoom]="zoom" class="map-height map-popup"></div>
       <div class="chart-title">Leaflet Map Directive</div>
     </ml-card-text>
     <ml-card-menu>
@@ -49,10 +49,10 @@ template:`
 
   //todo: pasar objeto de configuracion 'options'
   @ViewChild(NgLMapDir) LMapDir: NgLMapDir; // Used to get reference to Leaflet Map
+  accessToken = 'pk.eyJ1IjoieWFnb2xvcGV6IiwiYSI6ImNqMzdud2pidjAwczMzM3RsbmlzNm4ycGcifQ.fa75kDq4gqxpRLgT-zT9NA';
   center = [43.43578958, -4.8247093] as [number, number];
   zoom = 15;
   urlWebcam = 'http://www.wewebcams.com/get_imagen_ws.php?id=64';
-  mapboxId = 'pk.eyJ1IjoieWFnb2xvcGV6IiwiYSI6ImNqMzdud2pidjAwczMzM3RsbmlzNm4ycGcifQ.fa75kDq4gqxpRLgT-zT9NA';
   mapLayer: Object;
 
   ngAfterViewInit() {
@@ -72,7 +72,7 @@ template:`
   }
 
   createLayerStreets(): Object {
-    const urlLayerStreets = `https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=${this.mapboxId}`;
+    const urlLayerStreets = `https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=${this.accessToken}`;
     return L.tileLayer(urlLayerStreets, {id: 'mapbox.streets', attribution: ''});
   }
 

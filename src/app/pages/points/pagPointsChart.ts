@@ -51,7 +51,6 @@ template:`
 }) export class PagPointsChart {
 
   urlData1 = 'assets/data/points1.json';
-  urlData2 = 'assets/data/fake_users1.json';
 
   config1: IMGConfig = {
     chart_type: 'point',
@@ -63,6 +62,8 @@ template:`
     x_label: 'years',
     buffer: 0
   };
+
+  urlData2 = 'assets/data/fake_users1.json';
 
   config2: IMGConfig = {
     chart_type: 'point',

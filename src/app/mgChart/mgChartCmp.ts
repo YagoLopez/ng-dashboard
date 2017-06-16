@@ -8,7 +8,8 @@
 
 import {Component, ViewChild, ElementRef, ViewEncapsulation, HostListener, Input, NgZone} from "@angular/core";
 import {Http, RequestOptionsArgs} from "@angular/http";
-import MG = require("../../../node_modules/metrics-graphics/dist/metricsgraphics.js");
+import "../../../node_modules/metrics-graphics/dist/metricsgraphics";
+declare var MG: any;
 
 export interface IMGConfig {
   title?: string,
@@ -47,45 +48,44 @@ template: `
 </style>
 
 <div *ngIf="isLoading" class="loader">Loading</div>
-<div #chartContainer style="width: 100%"></div>
+<div #chartContainer></div>
 
 `// template
 })
 export class MgChartCmp {
 
   @ViewChild('chartContainer') chartContainer: ElementRef;
+  @ViewChild('chartWrapper') chartWrapper: ElementRef;
   @Input() urlData: string;
   @Input() config: IMGConfig;
   @Input('preprocess-fn') preprocessFn: Function;
   @Input('request-options') reqOptions: RequestOptionsArgs;
-  @Input() delay: number = 0; // Amount of time the painting of the chart is delayed (see below)
+  @Input() delay: number = 0; // Amount of time the painting of the chart is delayed (ms) see below
 
   isLoading: boolean = false;
+  timer: NodeJS.Timer;
   data: any;
 
   @HostListener('window:resize') onWindowsResize() {
-    this.config.width = this.chartContainer.nativeElement.clientWidth;
     this.isLoading = true;
-      setTimeout( () => {
-        this.isLoading = false;
-        this.drawMGChart(this.config, 0);
-      }, 1);
+    this.config.width = this.chartContainer.nativeElement.clientWidth;
+    this.drawMGChart(this.config, 0);
   }
 
   constructor(private http: Http, private zone: NgZone){}
 
   /**
-   * Run MetricGraphics outside Angular Change Detection System to avoid
-   * unnecesary calculation and re-rendering when mouseover graphic
-    *
-   * When there are several charts on same page, it is convenient to delay the painting of others charts in same page,
+   * When there are several charts on same page, it is convenient to delay the painting of others charts
    * instead of painting all charts at the same time at the beginning.
    * @Input().delay offers this option (Units in miliseconds. A good delay is 1000 ms)
+   *
+   * Chart drawing is run outside Angular Change Detector to avoid unnecesary operations and re-rendering
    */
   drawMGChart(config: IMGConfig, delay: number){
-    this.zone.runOutsideAngular( () => {
-      setTimeout( () => MG.data_graphic(config), delay)
-    })
+    this.timer = setTimeout( () => {
+      this.zone.runOutsideAngular( () => MG.data_graphic(config) );
+      this.isLoading = false;
+    }, delay)
   }
 
   ngOnInit(){
@@ -94,7 +94,7 @@ export class MgChartCmp {
         this.data = response.json();
         this.preprocessFn && this.preprocessFn(this.data);
         this.config.data = this.data;
-        this.config.width = this.chartContainer.nativeElement.clientWidth;
+        !this.config.width && (this.config.width = this.chartContainer.nativeElement.clientWidth);
         this.config.target = this.chartContainer.nativeElement;
         this.drawMGChart(this.config, this.delay);
       });
@@ -106,5 +106,9 @@ export class MgChartCmp {
     if(this.config.data){
       this.drawMGChart(this.config, 0);
     }
+  }
+
+  ngOnDestroy(){
+    clearTimeout(this.timer);
   }
 }
