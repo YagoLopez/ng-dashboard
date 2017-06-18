@@ -23,7 +23,7 @@ selector: '[l-map]',
   urlTemplate = 'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png';
   config: ILeafletMapConfig = {
     maxZoom: 19,
-    attribution: 'LMap, Angular Directive by <a href="https://yagolopez.github.io" target="_blank">Yago López</a>',
+    attribution: 'LMap, Angular Directive by <a href="https://yagolopez.js.org" target="_blank">Yago López</a>',
     id: 'mapbox.satellite',
     accessToken: this.accessToken
   };

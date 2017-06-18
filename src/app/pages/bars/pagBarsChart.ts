@@ -11,7 +11,7 @@ template:`
   <ml-card shadow="4">
     <ml-card-text>
       <div class="chart-title">Histogram</div>  
-      <mg-chart [config]="config1" [urlData]="urlData1"></mg-chart>
+      <mg-chart [config]="config1" [urlData]="urlData1" [delay]="500"></mg-chart>
     </ml-card-text>
     <ml-card-menu>
       <ml-card-menu>
@@ -26,7 +26,7 @@ template:`
   <ml-card shadow="4">
     <ml-card-text>
       <div class="chart-title">Bars</div>  
-      <mg-chart [config]="config2" [urlData]="urlData2" delay="500"></mg-chart>
+      <mg-chart [config]="config2" [urlData]="urlData2" delay="1000"></mg-chart>
     </ml-card-text>
     <ml-card-menu>
       <ml-card-menu>

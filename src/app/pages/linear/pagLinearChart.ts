@@ -13,7 +13,7 @@ template:`
   <ml-card shadow="3">
     <ml-card-text>
       <div class="chart-title">Linear Chart with Area</div>
-      <mg-chart [config]="config1" [urlData]="urlData1"></mg-chart>
+      <mg-chart [config]="config1" [urlData]="urlData1" [delay]="100"></mg-chart>
     </ml-card-text>
     <ml-card-actions>
       <ml-button aspect="raised" (click)="toggleTimer()" ripple>

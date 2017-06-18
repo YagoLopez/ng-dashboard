@@ -14,7 +14,7 @@ template:`
   <ml-card shadow="3">
     <ml-card-text>
       <div class="chart-title">Simple scatter plot</div>  
-      <mg-chart [config]="config1" [urlData]="urlData1"></mg-chart>
+      <mg-chart [config]="config1" [urlData]="urlData1" [delay]="500"></mg-chart>
     </ml-card-text>
     <ml-card-menu>
       <ml-card-menu>
@@ -31,7 +31,7 @@ template:`
   <ml-card shadow="3" class="margin-top">
     <ml-card-text>
       <div class="chart-title">Line of the best fit</div>  
-      <mg-chart [config]="config2" [urlData]="urlData2" [delay]="500" [preprocess-fn]="convertDateFn"></mg-chart>
+      <mg-chart [config]="config2" [urlData]="urlData2" [delay]="1000" [preprocess-fn]="convertDateFn"></mg-chart>
     </ml-card-text>
     <ml-card-menu>
       <ml-card-menu>

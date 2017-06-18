@@ -8,7 +8,7 @@
 
 import {Component, ViewChild, ElementRef, ViewEncapsulation, HostListener, Input, NgZone} from "@angular/core";
 import {Http, RequestOptionsArgs} from "@angular/http";
-import "../../../node_modules/metrics-graphics/dist/metricsgraphics";
+import "../../../node_modules/metrics-graphics/dist/metricsgraphics.js";
 declare var MG: any;
 
 export interface IMGConfig {
