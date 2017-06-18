@@ -32,7 +32,9 @@ selector: '[l-map]',
 
   ngOnInit(){
     this.urlTemplate += `?access_token=${this.accessToken}`;
-    this.config = {...this.config, ...this.options};
+    // debugger
+    // this.config = {...this.config, ...this.options};
+    this.config = Object.assign({}, this.config, this.options);
     this.map = L.map(this.host.nativeElement).setView(this.center, this.zoom);
     L.tileLayer(this.urlTemplate, this.config).addTo(this.map);
   }

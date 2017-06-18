@@ -98,17 +98,17 @@ template:`
 
   toggleFillArea(){
     if(this.config1.area){
-      this.config1 = {...this.config1, area: false};
+      this.config1 = Object.assign({}, this.config1, {area: false});
     } else {
-      this.config1 = {...this.config1, area: true};
+      this.config1 = Object.assign({}, this.config1, {area: true})
     }
   }
 
   toggleMarkers(){
     if(this.config1.markers){
-      this.config1 = {...this.config1, markers: null}
+      this.config1 = Object.assign({}, this.config1, {markers: null});
     } else {
-      this.config1 = {...this.config1, markers: this.markers}
+      this.config1 = Object.assign({}, this.config1, {markers: this.markers});
     }
   }
 
@@ -133,7 +133,7 @@ template:`
       this.newData = {line_id: 1, sightings: sightings, year: year};
       this.config1.data[0].push( this.newData );
       this.config1.min_x = this.config1.min_x + 1;
-      this.config1 = {...this.config1}
+      this.config1 = Object.assign({}, this.config1);
     }, 1500);
   }
 
@@ -143,7 +143,7 @@ template:`
     this.config1.min_x = 1945;
     this.config1.data[0].length = 65;
     this.config1.markers = this.markers;
-    this.config1 = {...this.config1}
+    this.config1 = Object.assign({}, this.config1)
   }
 
   ngOnDestroy(){
