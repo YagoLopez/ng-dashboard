@@ -18,7 +18,7 @@ template: `
     <ml-card-text style="color: grey">
       <p style="color: black">
          Developed by Yago López <ml-icon style="vertical-align: middle; color: grey">laptop_chromebook</ml-icon>&nbsp;
-        <a href="https://yagolopez.github.io" target="_blank">Website</a>
+        <a href="https://yagolopez.js.org" target="_blank">Website</a>
       </p>
       <div>• MG Chart component based on 
         <a class="small-font"href="http://metricsgraphicsjs.org" target="_blank">MetricsGraphics</a></div>
