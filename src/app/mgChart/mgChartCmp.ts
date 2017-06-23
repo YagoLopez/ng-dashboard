@@ -8,21 +8,10 @@
 
 import {Component, ViewChild, ElementRef, ViewEncapsulation, HostListener, Input, NgZone} from "@angular/core";
 import {Http, RequestOptionsArgs} from "@angular/http";
+import {IMGConfig} from "./mgConfig";
 import "../../../node_modules/metrics-graphics/dist/metricsgraphics.js";
 declare var MG: any;
 
-export interface IMGConfig {
-  title?: string,
-  data_type?: string,
-  data?: any,
-  x_accessor?: string,
-  y_accessor?: string,
-  width?: number,
-  height?: number
-  target?: HTMLElement,
-  animate_on_load?: boolean,
-  [otherArgs: string]: any
-}
 
 @Component({
 selector: 'mg-chart',
@@ -60,55 +49,56 @@ export class MgChartCmp {
   @Input() config: IMGConfig;
   @Input('preprocess-fn') preprocessFn: Function;
   @Input('request-options') reqOptions: RequestOptionsArgs;
-  @Input() delay: number = 0; // Amount of time the painting of the chart is delayed (ms) see below
+  @Input() delay: number = 0; // Amount of time the data of the chart is delayed (ms) see below
 
   isLoading: boolean = false;
-  timer: NodeJS.Timer;
+  timerLoadData: NodeJS.Timer;
   data: any;
 
   @HostListener('window:resize') onWindowsResize() {
     this.isLoading = true;
-    this.config.width = this.chartContainer.nativeElement.clientWidth;
-    this.drawMGChart(this.config, 0);
+    setTimeout( () => {
+      this.config.width = this.chartContainer.nativeElement.clientWidth;
+      this.drawMGChart(this.config);
+    }, 0)
   }
 
   constructor(private http: Http, private zone: NgZone){}
 
-  /**
-   * When there are several charts on same page, it is convenient to delay the painting of others charts
-   * instead of painting all charts at the same time at the beginning.
-   * @Input().delay offers this option (Units in miliseconds. A good delay is 1000 ms)
-   *
-   * Chart drawing is run outside Angular Change Detector to avoid unnecesary operations and re-rendering
-   */
-  drawMGChart(config: IMGConfig, delay: number){
-    this.timer = setTimeout( () => {
-      this.zone.runOutsideAngular( () => MG.data_graphic(config) );
-      this.isLoading = false;
-    }, delay)
+  /** Chart drawing is run outside Angular Change Detector to avoid unnecesary operations and re-renderings */
+  drawMGChart(config: IMGConfig){
+    this.zone.runOutsideAngular( () => MG.data_graphic(config) );
+    this.isLoading = false;
   }
 
+  /**
+   * When there are several charts on same page, could be convenient to delay the loading of data sequentially
+   * (first one, then another, etc.)
+   * @Input().delay offers this option (Units in miliseconds)
+   */
   ngOnInit(){
     if(this.urlData){
-      this.http.get(this.urlData, this.reqOptions).subscribe( response => {
-        this.data = response.json();
-        this.preprocessFn && this.preprocessFn(this.data);
-        this.config.data = this.data;
-        !this.config.width && (this.config.width = this.chartContainer.nativeElement.clientWidth);
-        this.config.target = this.chartContainer.nativeElement;
-        this.drawMGChart(this.config, this.delay);
-      });
+      this.timerLoadData = setTimeout( () => {
+        this.http.get(this.urlData, this.reqOptions).subscribe( response => {
+          this.data = response.json();
+          this.preprocessFn && this.preprocessFn(this.data);
+          this.config.data = this.data;
+          !this.config.width && (this.config.width = this.chartContainer.nativeElement.clientWidth);
+          this.config.target = this.chartContainer.nativeElement;
+          this.drawMGChart(this.config);
+        });
+      }, this.delay);
     }
   }
 
   ngOnChanges(){
     // console.log('on changes');
     if(this.config.data){
-      this.drawMGChart(this.config, 0);
+      this.drawMGChart(this.config);
     }
   }
 
   ngOnDestroy(){
-    clearTimeout(this.timer);
+    clearTimeout(this.timerLoadData);
   }
 }

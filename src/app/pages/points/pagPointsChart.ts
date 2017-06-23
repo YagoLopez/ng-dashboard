@@ -1,5 +1,5 @@
 import {Component} from "@angular/core";
-import {IMGConfig} from "../../mgChart/MgChartCmp";
+import {IMGConfig} from "../../mgChart/mgConfig";
 declare var MG: any;
 
 @Component({

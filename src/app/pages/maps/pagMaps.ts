@@ -15,7 +15,7 @@ template:`
     z-index: 1000;
     color: cornflowerblue;
     background: white;
-    border-radius: 2px;
+    /*border-radius: 2px;*/
     border: 1px solid cornflowerblue;
     padding: 1px}
   .map-popup {width: 100%; height: 300px}

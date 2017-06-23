@@ -1,5 +1,5 @@
 import {Component} from "@angular/core";
-import {IMGConfig} from "../../mgChart/MgChartCmp";
+import {IMGConfig} from "../../mgChart/mgConfig";
 declare var MG: any;
 
 @Component({
@@ -13,7 +13,7 @@ template:`
   <ml-card shadow="3">
     <ml-card-text>
       <div class="chart-title">Linear Chart with Area</div>
-      <mg-chart [config]="config1" [urlData]="urlData1" [delay]="100"></mg-chart>
+      <mg-chart [config]="config1" [urlData]="urlData1" [delay]="500"></mg-chart>
     </ml-card-text>
     <ml-card-actions>
       <ml-button aspect="raised" (click)="toggleTimer()" ripple>
@@ -58,7 +58,8 @@ template:`
   timer: NodeJS.Timer;
   timerActive: boolean = false;
   newData: Object;
-  markers = [{"year": "1960", "label": "Marker 1"},
+  markers = [
+    {"year": "1960", "label": "Marker 1"},
     {"year": "1980", "label": "CLICK ME!!", "click": this.showVid}];
 
   urlData1 = 'assets/data/ufo-sightings.json';
