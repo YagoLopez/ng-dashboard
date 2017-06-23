@@ -87,7 +87,7 @@ template: `
     liElement.style.background = 'lightgrey';
     if (this.messages && this.messages.length) {
       setTimeout( () => {
-        if ( window.confirm(`Confirm delete message from ${this.messages[index].from}`) ){
+        if ( window.confirm(`Confirm: delete message from ${this.messages[index].from}`) ){
           this.messages.splice(index, 1);
           this.setBadgeCounter(this.messages.length);
           this.snackBar.show();
