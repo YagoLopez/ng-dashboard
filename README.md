@@ -61,7 +61,7 @@ folder and import `NgLMapDir` in your own component or import it directily from
 - <b>config:</b> Javascript object with configuration values for MetricsGraphics. 
 (Check <a href="https://github.com/mozilla/metrics-graphics/wiki/List-of-Options" target="_blank">MG Options</a> for more information)
 - <b>preprocess-Fn:</b> Applies Javascript transformations to input data (for example format dates, etc.)
-- <b>delay</b> Delay the loading of data. It could be useful when having serveral charts in same page
+- <b>delay</b> Delay the loading of data (ms). It could be useful when having serveral charts in same page
 - For using MetricsGraphics global object in your component class you can use `declare var MG: any`
 
 ## Leaflet Map Directive API

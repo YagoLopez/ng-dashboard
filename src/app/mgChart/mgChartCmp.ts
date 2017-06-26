@@ -12,7 +12,6 @@ import {IMGConfig} from "./mgConfig";
 import "../../../node_modules/metrics-graphics/dist/metricsgraphics.js";
 declare var MG: any;
 
-
 @Component({
 selector: 'mg-chart',
 moduleId: module.id,
@@ -22,17 +21,8 @@ template: `
 
 <style>
   .loader {
-    position: relative;
-    top: 100px;
-    display: block;
-    width: 100px;
-    margin: auto;
-    background-color: aliceblue;
-    color: dodgerblue;
-    padding: 5px;
-    border: 1px solid;
-    border-radius: 2px;
-    text-align: center;
+    position: relative; top: 100px; display: block; width: 100px; margin: auto; background-color: aliceblue;
+    color: dodgerblue; padding: 5px; border: 1px solid; border-radius: 2px; text-align: center;
   }
 </style>
 
@@ -44,7 +34,6 @@ template: `
 export class MgChartCmp {
 
   @ViewChild('chartContainer') chartContainer: ElementRef;
-  @ViewChild('chartWrapper') chartWrapper: ElementRef;
   @Input() urlData: string;
   @Input() config: IMGConfig;
   @Input('preprocess-fn') preprocessFn: Function;
@@ -57,17 +46,18 @@ export class MgChartCmp {
 
   @HostListener('window:resize') onWindowsResize() {
     this.isLoading = true;
-    setTimeout( () => {
+    // setTimeout( () => {
       this.config.width = this.chartContainer.nativeElement.clientWidth;
       this.drawMGChart(this.config);
-    }, 0)
+    // }, 0)
   }
 
   constructor(private http: Http, private zone: NgZone){}
 
   /** Chart drawing is run outside Angular Change Detector to avoid unnecesary operations and re-renderings */
   drawMGChart(config: IMGConfig){
-    this.zone.runOutsideAngular( () => MG.data_graphic(config) );
+    // this.zone.runOutsideAngular( () => MG.data_graphic(config) );
+    MG.data_graphic(config);
     this.isLoading = false;
   }
 

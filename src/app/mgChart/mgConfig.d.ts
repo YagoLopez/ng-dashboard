@@ -1,5 +1,5 @@
 // These are basic defaults values. For a full list of options see:
-// https://https://github.com/mozilla/metrics-graphics/wiki/List-of-Options
+// https://github.com/mozilla/metrics-graphics/wiki/List-of-Options
 
 export interface IMGConfig {
   title?: string,
