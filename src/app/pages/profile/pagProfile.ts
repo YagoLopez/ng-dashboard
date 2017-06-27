@@ -1,3 +1,4 @@
+//todo: exit fullscreen when input data. In fullscreen there isnt option to scroll when input data
 import {Component} from "@angular/core";
 
 @Component({

@@ -6,8 +6,7 @@
 //todo: poder ejecutar funciones arbitrarias para filtrar y arreglar los datos (de forma menos restrictiva que la actual)
 //todo: hacer otro grafico de tipo barras con colores
 
-import {Component, ViewChild, ElementRef, ViewEncapsulation, HostListener, Input, NgZone, ChangeDetectionStrategy}
-  from "@angular/core";
+import {Component, ViewChild, ElementRef, ViewEncapsulation, HostListener, Input, NgZone} from "@angular/core";
 import {Http, RequestOptionsArgs} from "@angular/http";
 import {IMGConfig} from "./mgConfig";
 import "../../../node_modules/metrics-graphics/dist/metricsgraphics.js";
@@ -18,13 +17,12 @@ selector: 'mg-chart',
 moduleId: module.id,
 styleUrls: ['mgChart.css'],
 encapsulation: ViewEncapsulation.None,
-changeDetection: ChangeDetectionStrategy.OnPush,
 template: `
 
 <style>
   .chart-loader {
     position: relative; top: 100px; display: block; width: 100px; margin: auto; background-color: aliceblue;
-    color: dodgerblue; padding: 5px; border: 1px solid; border-radius: 1px; text-align: center;
+    color: dodgerblue; padding: 5px; border: 1px solid; text-align: center;
   }
 </style>
 
@@ -38,10 +36,9 @@ export class MgChartCmp {
   @ViewChild('chartContainer') chartContainer: ElementRef;
   @Input() urlData: string;
   @Input() config: IMGConfig;
-  // @Input('preprocess-fn') preprocessFn: Function;
   @Input('preprocess-fn') preprocessFn: (data: any[]) => void;
   @Input('request-options') reqOptions: RequestOptionsArgs;
-  @Input() delay: number = 0; // Amount of time the data of the chart is delayed (ms) see below
+  @Input() delay: number = 0; // Amount of time before fetching data from source (ms) see below
 
   isLoading: boolean = false;
   timerLoadData: NodeJS.Timer;
@@ -49,10 +46,10 @@ export class MgChartCmp {
 
   @HostListener('window:resize') onWindowsResize() {
     this.isLoading = true;
-    // setTimeout( () => {
+    setTimeout( () => {
       this.config.width = this.chartContainer.nativeElement.clientWidth;
       this.drawMGChart(this.config);
-    // }, 0)
+    }, 0)
   }
 
   constructor(private http: Http, private zone: NgZone){}
@@ -65,7 +62,7 @@ export class MgChartCmp {
 
   /**
    * When there are several charts on same page, could be convenient to delay the loading of data sequentially
-   * (first one, then another, etc.)
+   * (first load one, then load another, etc.)
    * @Input().delay offers this option (Units in miliseconds)
    */
   ngOnInit(){
