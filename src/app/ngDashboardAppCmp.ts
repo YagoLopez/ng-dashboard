@@ -18,9 +18,8 @@ template:`
   .drawer-logo {font-size: 52px; color: white; position: relative; top: 40px}
   .header-ico {vertical-align: text-top; color: white}
   .header-ico-menu {vertical-align: sub; padding-right: 6px}
-  .drawer-menu-item-icon {padding-right: 5px}
+  .drawer-item-ico {padding-right: 5px}
   .pad-right {padding-right:10px}
-  /*:host /deep/ .my-theme {background: cornflowerblue; color: darkblue}*/
 </style>
 
 <ml-layout> 
@@ -56,17 +55,17 @@ template:`
     </div>
     <ml-nav>
       <a nav-item routerLink="about" routerLinkActive="active-route">
-        <i class="material-icons drawer-menu-item-icon">info_outline</i> About</a>
+        <i class="material-icons drawer-item-ico">info_outline</i> About</a>
       <a nav-item routerLink="linear" routerLinkActive="active-route">
-        <i class="material-icons drawer-menu-item-icon">swap_calls</i> Linear Chart</a>
+        <i class="material-icons drawer-item-ico">swap_calls</i> Linear Chart</a>
       <a nav-item routerLink="points" routerLinkActive="active-route">
-        <i class="material-icons drawer-menu-item-icon">blur_off</i> Points Chart</a>
+        <i class="material-icons drawer-item-ico">blur_off</i> Points Chart</a>
       <a nav-item routerLink="bars" routerLinkActive="active-route">
-        <i class="material-icons drawer-menu-item-icon">equalizer</i> Bars Chart</a>
+        <i class="material-icons drawer-item-ico">equalizer</i> Bars Chart</a>
       <a nav-item routerLink="maps" routerLinkActive="active-route">
-        <i class="material-icons drawer-menu-item-icon">pin_drop</i> Maps</a>
+        <i class="material-icons drawer-item-ico">pin_drop</i> Maps</a>
       <a nav-item routerLink="profile" routerLinkActive="active-route">
-        <i class="material-icons drawer-menu-item-icon">account_box</i> User Profile</a>
+        <i class="material-icons drawer-item-ico">account_box</i> User Profile</a>
     </ml-nav>
   </ml-drawer>
   
@@ -82,11 +81,11 @@ template:`
 </ml-layout>
 
 `//template
-}) export class NgDashboardApp {
+}) export class NgDashboardAppCmp {
 
   isLoading = false;
 
-  onLoading($event): void {
+  onLoading($event: boolean): void {
     this.isLoading = $event;
   }
 

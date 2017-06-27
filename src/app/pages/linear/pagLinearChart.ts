@@ -17,7 +17,7 @@ template:`
     </ml-card-text>
     <ml-card-actions>
       <ml-button aspect="raised" (click)="toggleTimer()" ripple>
-        <div *ngIf="timerActive; else timerInactive">End Simulation</div>
+        <div *ngIf="timerActive; else timerInactive">END SIMULATION</div>
         <ng-template #timerInactive>Realtime Simulation</ng-template>
       </ml-button>
       <div *ngIf="timerActive" class="rt-data-container">
@@ -84,9 +84,12 @@ template:`
     this.toggleMarkers();
   }
 
-  //todo: return data?
-  /** Convert initial date format to an apropiate format for MetricsCharts */
+  /**
+   * Convert initial date format in data array to an apropiate format for chart representation
+   * It uses MetricsGraphics date() function
+   */
   convertDateFn = ( data: any[]  ): void => {
+    //todo: return data?
     for (let i = 0; i < data.length; i++){
       data[i] = MG.convert.date( data[i], 'date' );
     }
@@ -97,6 +100,7 @@ template:`
     window.open('https://www.youtube.com/watch?v=73h_s4SAAHs', '_blank', windowOptions)
   }
 
+  // Note: it seems Object.assign() is faster than spread operator in typescript
   toggleFillArea(){
     if(this.config1.area){
       this.config1 = Object.assign({}, this.config1, {area: false});
@@ -113,7 +117,7 @@ template:`
     }
   }
 
-  /** Generates a random integer between "min" and "max" */
+  /** Generates a random integer between "min" and "max". (For realtime simulation) */
   getRandomInt(min: number, max: number): number {
     return Math.floor(Math.random() * (max - min + 1) + min);
   }
@@ -126,7 +130,7 @@ template:`
     let sightings = 3000;
     let year = 2012;
     this.config1.min_x = 1945;
-    this.config1.markers = null;
+    this.config1.markers = null; // No markers during realime simulation for better performance
     this.timerActive = true;
     this.timer = setInterval( () => {
       sightings = this.getRandomInt(1500, 5000);

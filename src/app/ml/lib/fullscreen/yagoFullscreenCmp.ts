@@ -4,18 +4,17 @@ import {Component} from '@angular/core';
 @Component({
 selector: 'yago-fullscreen',
 template: `
+<!--
 <style>
-  .cyan {color: cyan}
-  /*
-  html:-moz-full-screen {background: navy}
-  html:-webkit-full-screen {background: navy}
-  html:-ms-fullscreen {background: navy; width: 100% !* needed to center contents in IE *! }
-  html:fullscreen {background: navy}
-  */
+html:-moz-full-screen {background: navy}
+html:-webkit-full-screen {background: navy}
+html:-ms-fullscreen {background: navy; width: 100% !* needed to center contents in IE *! }
+html:fullscreen {background: navy}
 </style>
+-->
 <i (click)="toggleFullScreen()" class="material-icons" style="vertical-align: text-top; cursor: pointer">settings_overscan</i>
 `//template
-}) export class YagoFullscreenCmp {
+}) export class YagoFullScreenCmp {
 
   goFullScreen(): void {
     if(!this.isFullScreenAvailable()){

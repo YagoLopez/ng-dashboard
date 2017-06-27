@@ -1,5 +1,5 @@
 //todo: gestionar mejor las capas
-import {Directive, Input, ElementRef} from "@angular/core";
+import {Directive, Input, ElementRef, NgZone} from "@angular/core";
 import {ILeafletMapConfig} from './ngLMapConfig';
 import '../../../node_modules/leaflet/dist/leaflet.js';
 declare var L: any;
@@ -21,12 +21,14 @@ selector: '[l-map]',
     id: 'mapbox.satellite',
     accessToken: this.accessToken
   };
-  constructor(public host: ElementRef){}
+  constructor(private host: ElementRef, private zone: NgZone){}
 
   ngOnInit(){
-    this.urlTemplate += `?access_token=${this.accessToken}`;
-    this.config = Object.assign({}, this.config, this.options);
-    this.map = L.map(this.host.nativeElement).setView(this.center, this.zoom);
-    L.tileLayer(this.urlTemplate, this.config).addTo(this.map);
+    this.zone.runOutsideAngular( () => {
+      this.urlTemplate += `?access_token=${this.accessToken}`;
+      this.config = Object.assign({}, this.config, this.options);
+      this.map = L.map(this.host.nativeElement).setView(this.center, this.zoom);
+      L.tileLayer(this.urlTemplate, this.config).addTo(this.map);
+    });
   }
 }

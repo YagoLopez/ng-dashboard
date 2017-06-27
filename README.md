@@ -8,12 +8,12 @@
 
 ## Features
 
-- Carefully use of asynchrony for best responsiveness and maximum speed rendering. Costly operations like data calculations and
+- Use of asynchrony for best responsiveness and maximum speed rendering. Expensive operations like data calculations and
   painting on screen are put in **asynchronous** and **sequential** code blocks. This frees the main thread for rendering the whole
-  user interface without blocking and fast TTI (Time To Interactive)
-- It includes MG Chart. An Angular component based on <a href="http://metricsgraphicsjs.org" target="_blank">Metrics Graphics JS</a>
-- It includes LMap. An Angular Directive based on <a href="http://leafletjs.com" target="_blank">Leaflet JS</a>
-- UI could be quickly assambled based on this component library: <a href="https://github.com/YagoLopez/material-light" target="_blank">Material Light</a>
+  user interface without blocking and allows fast TTI (Time To Interactive)
+- Includes MG Chart. An Angular component based on <a href="http://metricsgraphicsjs.org" target="_blank">Metrics Graphics JS</a>
+- Includes LMap. An Angular Directive based on <a href="http://leafletjs.com" target="_blank">Leaflet JS</a>
+- UI was quickly assambled based on this component library: <a href="https://github.com/YagoLopez/material-light" target="_blank">Material Light</a>
 - ChartJS Component will be added soon. <a href="http://www.chartjs.org/" target="_blank">(ChartJS Website)</a>
 
 ## Demo
@@ -27,7 +27,7 @@ security reasons (i. e. alert dialogs). Run the full screen version for unrestri
 
 ## Requierements
 
-- Latest versions of node and npm (or yarn)
+- Latest versions of node and npm or yarn
 - Latest versions of Angular-CLI
 
 ## Insallation and Use
@@ -37,13 +37,15 @@ security reasons (i. e. alert dialogs). Run the full screen version for unrestri
 - Go to project directory: `cd ng-dashboard`
 - Run: `npm install`
 - Run: `ng serve` from directory project
-- Metrics Graphics Chart Component is located in `mgChart` folder. If you want to use this component,
-copy this folder to your `app` folder and import `mgChartMod` in your own module or import it directily from
-`/node_modules/ng-dashboard/src/app/mgChart/mgChartMod.ts`. IMPORTANT: `d3.js` must be in your root app directory. 
-This requirement is harcoded in `metricsgraphics.js`. It doesn't depend on this project.
-- Leaflet Map Directive is located in `leafletMap` folder. If you want to use this directive, copy this folder to your `app`
-folder and import `NgLMapDir` in your own component or import it directily from 
-`/node_modules/ng-dashboard/src/app/leafletMap/ngLMapDir.ts`.
+- Metrics Graphics Chart Component is located in `mgChart` folder.
+  1.1. If you want to use this component, you can copy this folder to your `app` folder and import `mgChartMod` 
+  in your own module or 
+  1.2. Import it directily from `/node_modules/ng-dashboard/src/app/mgChart/mgChartMod.ts`. 
+  IMPORTANT: `d3.js` must be in your root app directory. This requirement is harcoded in `metricsgraphics.js`. 
+  It doesn't depend on this project.
+- Leaflet Map Directive is located in `leafletMap` folder. If you want to use this directive:
+  2.1. Copy this folder to your `app` folder and import `NgLMapDir` in your own component or 
+  2.2. Import it directily from `/node_modules/ng-dashboard/src/app/leafletMap/ngLMapDir.ts`.
 
 2. Whitout node:
 - Clone or download the repository and follow the same steps as before
@@ -55,7 +57,7 @@ folder and import `NgLMapDir` in your own component or import it directily from
   [config]="configObject [preprocess-fn]="preprocessFn" [delay]="delay"></mg-chart>
 ```
 
-- <b>urlData:</b> Ulr pointing to a local/remote json file with data (pay attention to CORS restrictions)
+- <b>urlData:</b> Ulr pointing to a local/remote json file with data (Remote data could have CORS restrictions)
 - <b>request Options:</b> Request options object of type: 
   <a href="https://angular.io/api/http/RequestOptions" target="_blank">RequestOptions</a>
 - <b>config:</b> Javascript object with configuration values for MetricsGraphics. 

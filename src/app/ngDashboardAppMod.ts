@@ -1,6 +1,5 @@
 //todo: mejorar el estado 'loading' chart en pagLinearChart
 //todo: hacer una directiva para contenido responsivo
-//todo: hacer mas parecido a material design la pagina profile usando ml-controls
 
 import {NgModule} from "@angular/core";
 import {BrowserModule} from "@angular/platform-browser";
@@ -12,7 +11,7 @@ import {MlMenuMod} from "./ml/components/menu/mlMenuMod";
 import {MlBadgeMod} from "./ml/components/badge/mlBadgeMod";
 import {MlTooltipMod} from "./ml/components/tooltip/mlTooltipMod";
 import {YagoFullscreenMod} from "./ml/lib/fullscreen/yagoFullscreenMod";
-import {NgDashboardApp} from "./ngDashboardAppCmp";
+import {NgDashboardAppCmp} from "./ngDashboardAppCmp";
 
 const getUrlParameter = (name: string) => {
   name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
@@ -44,6 +43,6 @@ const APP_ROUTES: Routes = [
 @NgModule({
   imports: [BrowserModule, HttpModule, MlPageLoaderMod, MlLayoutMod, MlMenuMod, MlBadgeMod, MlTooltipMod,
     YagoFullscreenMod, RouterModule.forRoot(APP_ROUTES, {enableTracing: false,  useHash: true})],
-  declarations: [NgDashboardApp], bootstrap: [NgDashboardApp]
+  declarations: [NgDashboardAppCmp], bootstrap: [NgDashboardAppCmp]
 })
 export class NgDashboardMod {}

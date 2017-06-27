@@ -6,7 +6,8 @@
 //todo: poder ejecutar funciones arbitrarias para filtrar y arreglar los datos (de forma menos restrictiva que la actual)
 //todo: hacer otro grafico de tipo barras con colores
 
-import {Component, ViewChild, ElementRef, ViewEncapsulation, HostListener, Input, NgZone} from "@angular/core";
+import {Component, ViewChild, ElementRef, ViewEncapsulation, HostListener, Input, NgZone, ChangeDetectionStrategy}
+  from "@angular/core";
 import {Http, RequestOptionsArgs} from "@angular/http";
 import {IMGConfig} from "./mgConfig";
 import "../../../node_modules/metrics-graphics/dist/metricsgraphics.js";
@@ -17,16 +18,17 @@ selector: 'mg-chart',
 moduleId: module.id,
 styleUrls: ['mgChart.css'],
 encapsulation: ViewEncapsulation.None,
+changeDetection: ChangeDetectionStrategy.OnPush,
 template: `
 
 <style>
-  .loader {
+  .chart-loader {
     position: relative; top: 100px; display: block; width: 100px; margin: auto; background-color: aliceblue;
-    color: dodgerblue; padding: 5px; border: 1px solid; border-radius: 2px; text-align: center;
+    color: dodgerblue; padding: 5px; border: 1px solid; border-radius: 1px; text-align: center;
   }
 </style>
 
-<div *ngIf="isLoading" class="loader">Loading</div>
+<div *ngIf="isLoading" class="chart-loader">Loading</div>
 <div #chartContainer></div>
 
 `// template
@@ -36,7 +38,8 @@ export class MgChartCmp {
   @ViewChild('chartContainer') chartContainer: ElementRef;
   @Input() urlData: string;
   @Input() config: IMGConfig;
-  @Input('preprocess-fn') preprocessFn: Function;
+  // @Input('preprocess-fn') preprocessFn: Function;
+  @Input('preprocess-fn') preprocessFn: (data: any[]) => void;
   @Input('request-options') reqOptions: RequestOptionsArgs;
   @Input() delay: number = 0; // Amount of time the data of the chart is delayed (ms) see below
 
@@ -56,8 +59,7 @@ export class MgChartCmp {
 
   /** Chart drawing is run outside Angular Change Detector to avoid unnecesary operations and re-renderings */
   drawMGChart(config: IMGConfig){
-    // this.zone.runOutsideAngular( () => MG.data_graphic(config) );
-    MG.data_graphic(config);
+    this.zone.runOutsideAngular( () => MG.data_graphic(config) );
     this.isLoading = false;
   }
 
