@@ -13,7 +13,7 @@
   user interface without blocking and allows fast TTI (Time To Interactive)
 - Includes MG Chart. An Angular component based on <a href="http://metricsgraphicsjs.org" target="_blank">Metrics Graphics JS</a>
 - Includes LMap. An Angular Directive based on <a href="http://leafletjs.com" target="_blank">Leaflet JS</a>
-- UI was quickly assambled based on this component library: <a href="https://github.com/YagoLopez/material-light" target="_blank">Material Light</a>
+- UI was quickly assembled based on this component library: <a href="https://github.com/YagoLopez/material-light" target="_blank">Material Light</a>
 - ChartJS Component will be added soon. <a href="http://www.chartjs.org/" target="_blank">(ChartJS Website)</a>
 
 ## Demo

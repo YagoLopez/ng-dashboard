@@ -88,6 +88,8 @@ export class MgChartCmp {
   }
 
   ngOnDestroy(){
+    this.data = null;
+    this.config = {};
     clearTimeout(this.timerLoadData);
   }
 }
