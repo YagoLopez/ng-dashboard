@@ -58,7 +58,7 @@ security reasons (i. e. alert dialogs). Run the full screen version for unrestri
   [config]="configObject [preprocess-fn]="preprocessFn" [delay]="delay"></mg-chart>
 ```
 
-- <b>[urlData]:</b> Ulr pointing to a local/remote json file with data (Remote data could have CORS restrictions)
+- <b>[urlData]:</b> Url pointing to a local/remote json file with data (Remote data could have CORS restrictions)
 - <b>[request-options]:</b> javascript object of type: 
   <a href="https://angular.io/api/http/RequestOptions" target="_blank">RequestOptions</a>
 - <b>[config]:</b> Javascript object implementing `IMGConfig` interface (defined in `mgConfig.d.ts`). 
