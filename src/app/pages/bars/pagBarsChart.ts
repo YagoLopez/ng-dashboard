@@ -65,5 +65,5 @@ template:`
     height: 200,
     rotate_x_labels: 90,
     binned: false,
-  }
+  };
 }

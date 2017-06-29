@@ -9,11 +9,11 @@
 
 ## Features
 
-- Use of asynchrony for high responsiveness and maximum speed rendering. Expensive operations like data calculations and
+- Use of asynchrony for high responsiveness and speed rendering. Expensive operations like data calculations and
   painting on screen are put in **asynchronous** and **sequential** code blocks. This frees the main thread for rendering the whole
   user interface without blocking, and allows fast TTI (Time To Interactive)
-- Includes MG Chart. An Angular component based on <a href="http://metricsgraphicsjs.org" target="_blank">Metrics Graphics JS</a>
-- Includes LMap. An Angular Directive based on <a href="http://leafletjs.com" target="_blank">Leaflet JS</a>
+- Includes **MG Chart**. An Angular component based on <a href="http://metricsgraphicsjs.org" target="_blank">Metrics Graphics JS</a>
+- Includes **LMap**. An Angular Directive based on <a href="http://leafletjs.com" target="_blank">Leaflet JS</a>
 - UI was quickly assembled based on this component library: <a href="https://github.com/YagoLopez/material-light" target="_blank">Material Light</a>
 - ChartJS Component will be added soon. <a href="http://www.chartjs.org/" target="_blank">(ChartJS Website)</a>
 
@@ -42,7 +42,7 @@ security reasons (i. e. alert dialogs). Run the full screen version for unrestri
   - If you want to use this component, you can copy this folder to your `app` folder and import `mgChartMod` 
   in your own module or 
   - Import it directily from `/node_modules/ng-dashboard/src/app/mgChart/mgChartMod.ts`. 
-  IMPORTANT: `d3.js` must be in your root app directory. This requirement is harcoded in `metricsgraphics.js`. 
+  IMPORTANT: `d3.js` must be in your root `/src` directory. This requirement is harcoded in `metricsgraphics.js`. 
   It doesn't depend on this project.
 - Leaflet Map Directive is located in `leafletMap` folder. If you want to use this directive:
   - Copy this folder to your `app` folder and import `NgLMapDir` in your own component or 
@@ -58,14 +58,14 @@ security reasons (i. e. alert dialogs). Run the full screen version for unrestri
   [config]="configObject [preprocess-fn]="preprocessFn" [delay]="delay"></mg-chart>
 ```
 
-- <b>[urlData]:</b> Url pointing to a local/remote json file with data (Remote data could have CORS restrictions)
+- <b>[urlData]:</b> Url pointing to a local/remote json file with data (Remote data might have CORS restrictions)
 - <b>[request-options]:</b> javascript object of type: 
-  <a href="https://angular.io/api/http/RequestOptions" target="_blank">RequestOptions</a>
+  <a href="https://angular.io/api/http/RequestOptions" target="_blank">RequestOptions</a> Used for customized headers, etc.
 - <b>[config]:</b> Javascript object implementing `IMGConfig` interface (defined in `mgConfig.d.ts`). 
   It has configuration values for MetricsGraphics charts. 
   (Check <a href="https://github.com/mozilla/metrics-graphics/wiki/List-of-Options" target="_blank">MG Options</a> for more information)
 - <b>[preprocess-Fn]:</b> Applies Javascript transformations to input data (for example format dates, etc.)
-- <b>[delay]</b> Delay the loading of data (ms). It could be useful when having serveral charts in same page
+- <b>[delay]:</b> Delay the loading of data (ms). It could be useful when having serveral charts in same page
 - For using MetricsGraphics global object in your component class you can use `declare var MG: any`
 
 ## Leaflet Map Directive API
@@ -75,7 +75,7 @@ security reasons (i. e. alert dialogs). Run the full screen version for unrestri
 ```
 
 - <b>[l-token]:</b> String with access token (Get a token in Leaflet website).
-- <b>[l-center]:</b> Tuple with type `[number, number]` with the coordinates of the map center (latitude and longitude)
+- <b>[l-center]:</b> Tuple of type `[number, number]` with the coordinates of the map center (latitude and longitude)
 - <b>[l-zoom]:</b> Number with initial zoom
 - <b>[l-options]:</b> (Optional) Javascript object with additional configuration options. Check 
 <a href="http://leafletjs.com/reference-1.0.3.html" target="_blank">Leaflet documentation</a> 

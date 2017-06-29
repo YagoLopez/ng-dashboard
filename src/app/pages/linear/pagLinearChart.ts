@@ -18,10 +18,10 @@ template:`
     <ml-card-actions>
       <ml-button aspect="raised" (click)="toggleTimer()" ripple>
         <div *ngIf="timerActive; else timerInactive">END SIMULATION</div>
-        <ng-template #timerInactive>Realtime Simulation</ng-template>
+        <ng-template #timerInactive>REALTIME SIMULATION</ng-template>
       </ml-button>
       <div *ngIf="timerActive" class="rt-data-container">
-        <div class="rt-data-title">REALTIME SIMULATION</div>
+        <div class="rt-data-title">Realtime Simulation</div>
         <div class="rt-data">X-value: {{ this.newData?.year }}, Y-value: {{ this.newData?.sightings }}</div>
       </div>
     </ml-card-actions>
@@ -57,7 +57,7 @@ template:`
 
   timer: NodeJS.Timer;
   timerActive: boolean = false;
-  newData: Object;
+  newData: {};
   markers = [
     {"year": "1960", "label": "Marker 1"},
     {"year": "1980", "label": "CLICK ME!!", "click": this.showVid}];
@@ -151,7 +151,7 @@ template:`
     this.config1 = Object.assign({}, this.config1)
   }
 
-  ngOnDestroy(){
-    this.endTimer();
-  }
+  // ngOnDestroy(){
+  //   this.endTimer();
+  // }
 }
