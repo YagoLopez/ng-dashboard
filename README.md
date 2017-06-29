@@ -58,13 +58,14 @@ security reasons (i. e. alert dialogs). Run the full screen version for unrestri
   [config]="configObject [preprocess-fn]="preprocessFn" [delay]="delay"></mg-chart>
 ```
 
-- <b>urlData:</b> Ulr pointing to a local/remote json file with data (Remote data could have CORS restrictions)
-- <b>request Options:</b> Request options object of type: 
+- <b>[urlData]:</b> Ulr pointing to a local/remote json file with data (Remote data could have CORS restrictions)
+- <b>[request-options]:</b> javascript object of type: 
   <a href="https://angular.io/api/http/RequestOptions" target="_blank">RequestOptions</a>
-- <b>config:</b> Javascript object with configuration values for MetricsGraphics. 
-(Check <a href="https://github.com/mozilla/metrics-graphics/wiki/List-of-Options" target="_blank">MG Options</a> for more information)
-- <b>preprocess-Fn:</b> Applies Javascript transformations to input data (for example format dates, etc.)
-- <b>delay</b> Delay the loading of data (ms). It could be useful when having serveral charts in same page
+- <b>[config]:</b> Javascript object implementing `IMGConfig` interface (defined in `mgConfig.d.ts`). 
+  It has configuration values for MetricsGraphics charts. 
+  (Check <a href="https://github.com/mozilla/metrics-graphics/wiki/List-of-Options" target="_blank">MG Options</a> for more information)
+- <b>[preprocess-Fn]:</b> Applies Javascript transformations to input data (for example format dates, etc.)
+- <b>[delay]</b> Delay the loading of data (ms). It could be useful when having serveral charts in same page
 - For using MetricsGraphics global object in your component class you can use `declare var MG: any`
 
 ## Leaflet Map Directive API
@@ -73,10 +74,10 @@ security reasons (i. e. alert dialogs). Run the full screen version for unrestri
 <div l-map [l-token]="token" [l-center]="center" [l-zoom]="zoom" [l-options]="options"></div>
 ```
 
-- <b>l-token:</b> String with access token (Get a token in Leaflet website).
-- <b>l-center:</b> Tuple with type `[number, number]` with the coordinates of the map center (latitude and longitude)
-- <b>l-zoom:</b> Number with initial zoom
-- <b>l-options:</b> (Optional) Javascript object with additional configuration options. Check 
+- <b>[l-token]:</b> String with access token (Get a token in Leaflet website).
+- <b>[l-center]:</b> Tuple with type `[number, number]` with the coordinates of the map center (latitude and longitude)
+- <b>[l-zoom]:</b> Number with initial zoom
+- <b>[l-options]:</b> (Optional) Javascript object with additional configuration options. Check 
 <a href="http://leafletjs.com/reference-1.0.3.html" target="_blank">Leaflet documentation</a> 
 for more information on map options
 
