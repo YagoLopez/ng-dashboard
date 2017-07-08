@@ -4,7 +4,7 @@ import * as ml from "../../lib/mlLib";
 @Component({
 selector: 'ml-card',
 moduleId: module.id,
-styleUrls: ['mlCard.css'],
+styleUrls: ['./mlCard.css'],
 encapsulation: ViewEncapsulation.None,
 host: {class: 'mdl-card'},
 template:`
@@ -27,11 +27,11 @@ template:`
 `//template
 }) export class MlCard{
 
-  @Input() shadow: string;
-  @Input() img: string;
   @ViewChild('cardTitle') cardTitle: ElementRef;
   @ViewChild('cardTitleHeader') cardTitleHeader: ElementRef;
   @ViewChild('cardActions') cardActions: ElementRef;
+  @Input() shadow: string;
+  @Input() img: string;
   constructor(private host: ElementRef, private ren: Renderer2){}
 
   ngOnInit(){
@@ -55,7 +55,7 @@ template:`
       }
       this.shadow = `mdl-shadow--${this.shadow}dp`;
       ml.setClass(this.host, this.shadow, this.ren);
-   }
+    }
   }
 }
 @Directive({selector: 'ml-card-title'}) export class MlCardTitle{}

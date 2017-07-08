@@ -1,7 +1,6 @@
 //todo: poder usar una ml-header distinta en cada pagina (como en ionic)
-//todo: poder definir colores, temas, fuentes, etc. Consultar colores en mlLayout.css
 //todo: hacer de ml un modulo en vez de un namespace para poder importar funciones individuales
-//todo: implementar MlLayout usando slots
+
 import {Component, ElementRef, Renderer2, ViewEncapsulation, Input, Directive, ChangeDetectionStrategy}
   from "@angular/core";
 import MdlLayout from "./mdlLayoutClass";
@@ -9,7 +8,7 @@ import * as ml from "../../lib/mlLib";
 
 @Component({
 selector: 'ml-layout',
-// changeDetection: ChangeDetectionStrategy.OnPush,
+changeDetection: ChangeDetectionStrategy.OnPush,
 styleUrls: ['mlLayout.css', '../ripple/mlRipple.css'],
 host: {class: 'mdl-layout mdl-layout__container'},
 encapsulation: ViewEncapsulation.None,
@@ -18,15 +17,9 @@ moduleId: module.id,
 })
 export class MlLayout {
 
-  @Input() tabs: string;
   @Input() background: string;
   mdlLayout: MdlLayout;
-  constructor(private host: ElementRef, private ren: Renderer2){}
-
-  hideDrawer(){
-    this.mdlLayout.drawer_.classList.remove('is-visible');
-    this.mdlLayout.obfuscator_.classList.remove('is-visible');
-  }
+  constructor(private host: ElementRef){}
 
   ngAfterViewInit() {
     if(ml.isDefined(this.background)){
@@ -97,7 +90,7 @@ export class MlLargeScreenOnly{}
 // ---------------------------------------------------------------------------------------------------------------------
 @Directive({
 selector: '[small-screen-only]',
-host: {class: 'mdl-layout--small-screen-ongly'}})
+host: {class: 'mdl-layout--small-screen-only'}})
 export class MlSmallScreenOnly{}
 // ---------------------------------------------------------------------------------------------------------------------
 @Directive({
@@ -120,7 +113,7 @@ export class MlDrawer {
       mlLayout.classList.add('mdl-layout--fixed-drawer');
     }
 
-   // Hides drawer and obfuscator when clicking item menu on drawer
+   // Hides drawer and obfuscator when clicking item-menu on drawer
    this.ren.listen(this.host.nativeElement, 'click', () => {
      this.host.nativeElement.classList.remove('is-visible');
      const obfuscator = document.querySelector('div.mdl-layout__obfuscator.is-visible');
@@ -140,7 +133,7 @@ export class MlContent {
   constructor(private host: ElementRef, private ren: Renderer2){}
 
   isHeaderScrollable(): boolean {
-    return document.querySelector('ml-header[waterfall]') !== null;
+    return document.querySelector('ml-header[waterfall]') != null;
   }
 
   isIE(): boolean {
@@ -148,8 +141,8 @@ export class MlContent {
   }
 
   ngAfterViewInit(){
-    // If the header has tabs and is scrollable, and the navigator is IE, it is needed to repaint it
-    // This hack is due to IE repaints bad the left header-tab button after scrolling
+    // If the header has tabs and is scrollable and the navigator is IE, it is needed to repaint the header
+    // This hack is due to IE repaints bad the left header-tab chevron button after scrolling
     const mlHeaderTabs: HTMLElement = document.querySelector('ml-header-tabs') as HTMLElement;
     if(this.isHeaderScrollable() && this.isIE()){
       console.log('isIE');
@@ -186,7 +179,7 @@ export class MlHeaderTab {
 }
 // ---------------------------------------------------------------------------------------------------------------------
 @Component({
-selector: 'ml-content-tabheader',
+selector: 'ml-header-tab-content',
 host: {class: 'mdl-layout__tab-panel'},
 template: '<ng-content></ng-content>'})
 export class MlHeaderTabContent {}
@@ -195,5 +188,3 @@ export class MlHeaderTabContent {}
 selector: '[active]',
 host: {class: 'is-active'}})
 export class MlHeaderTabActive {}
-// ---------------------------------------------------------------------------------------------------------------------
-

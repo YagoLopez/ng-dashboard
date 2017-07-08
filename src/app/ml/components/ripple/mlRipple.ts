@@ -3,7 +3,7 @@ import {Directive, ElementRef, Renderer2} from "@angular/core";
 import MdlRipple from "./mdlRippleClass";
 
 // Internal note: in complex elements where is not enough to use one "ripple" attribute,
-// a "<label>" container is used
+// a "<label>" container is used in the template
 @Directive({selector: '[ripple]'})
 export class MlRipple{
 
