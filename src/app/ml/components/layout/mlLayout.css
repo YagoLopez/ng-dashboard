@@ -830,10 +830,6 @@ body{
 /* RESPONSIVE MAIN CONTENT ----------------------------------------------------------- */
 
 @media (min-width: 700px){
-  ml-content{
-    padding-top: 50px;
-    padding-bottom: 50px;
-    background-color: ghostwhite;}
   ml-header-tab-content{
     background-color: white;
     margin: auto;
