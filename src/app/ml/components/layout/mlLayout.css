@@ -317,7 +317,7 @@ address {
 
 ul, ol {font-size: 14px; font-weight: 400; line-height: 24px; letter-spacing: 0}
 
-/* ANIMATIONS --------------------------------------------------------------------- */
+/* MDL ANIMATIONS ----------------------------------------------------------------- */
 .mdl-animation--default { transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) }
 
 .mdl-animation--fast-out-slow-in { transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) }
@@ -434,9 +434,7 @@ ul, ol {font-size: 14px; font-weight: 400; line-height: 24px; letter-spacing: 0}
         -ms-flex-align: stretch;
                 -ms-grid-row-align: stretch;
             align-items: stretch;
-    /* modificaciones */
     /* padding-top: 16px; */
-    /* fin modificaciones */
   }
     .mdl-layout__drawer .mdl-navigation .mdl-navigation__link {
       display: block;
@@ -821,45 +819,23 @@ body{
   scrollbar-shadow-color: #C0C0C0;
   scrollbar-dark-shadow-color: #C0C0C0;
 }
-::-webkit-scrollbar {width: 5px; height: 3px;}
-::-webkit-scrollbar-button {background-color: darkgrey;}
-::-webkit-scrollbar-track {background-color: lightgrey;}
-::-webkit-scrollbar-track-piece {background-color: lightgrey;}
-::-webkit-scrollbar-thumb {height: 50px; background-color: darkgrey; border-radius: 3px;}
-::-webkit-scrollbar-corner {background-color: #999;}
-::-webkit-resizer {background-color: #666;}
+::-webkit-scrollbar {width: 5px; height: 3px}
+::-webkit-scrollbar-button {background-color: darkgrey}
+::-webkit-scrollbar-track {background-color: lightgrey}
+::-webkit-scrollbar-track-piece {background-color: lightgrey}
+::-webkit-scrollbar-thumb {height: 50px; background-color: darkgrey; border-radius: 3px}
+::-webkit-scrollbar-corner {background-color: #999}
+::-webkit-resizer {background-color: #666}
 
-/* HIDES CHROME ANDROID ADDRESS BAR ----------------------------------------------------- */
+/* RESPONSIVE MAIN CONTENT ----------------------------------------------------------- */
 
-/*todo: revisar si usar o no*/
-/*.mdl-layout {
-  overflow: visible;
+@media (min-width: 700px){
+  ml-header-tab-content{
+    background-color: white;
+    margin: auto;
+    width: 60%;
+    padding: 25px 50px 50px;
+    border: 1px solid lightgrey;
+    box-shadow: 1px 1px 5px lightgrey;
+  }
 }
-.mdl-layout__drawer {
-  position: fixed;
-}
-.mdl-layout__content {
-  display: block;
-  overflow: visible;
-  margin-top: 64px;
-}
-.is-small-screen .mdl-layout__content {
-  margin-top: 56px;
-}
-.mdl-layout__header {
-  position: fixed;
-}
-.mdl-layout__obfuscator {
-  position: fixed;
-}*/
-
-/* ---- */
-
-/*html, body {
-  overflow-y: auto;
-  min-height: 100%;
-}
-
-mdl-layout {
-  min-height: 100%;
-}*/

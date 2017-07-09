@@ -1,6 +1,7 @@
 //todo: crear un servicio para los mensajes
 //todo: directiva ellipsis, sacar de ml-list y exponer
 //todo: cambiar nombre de css animations
+
 import {Component, ViewChild, ElementRef} from "@angular/core";
 import {Http} from "@angular/http";
 import {IConfigSnackbar, MlSnackbar} from "../../ml/components/snackbar/mlSnackbar";
@@ -30,13 +31,13 @@ template: `
           </ml-item-action>
         </ml-item>
       </ml-list>
-      <div *ngIf="messages?.length == 0">Mailbox is empty</div>
+      <div *ngIf="messages?.length === 0" class="mbox-empty">Mailbox is empty</div>
     </ml-card-text>
   </ml-card>
   
   <div #modal class="w3-modal modal-container">
     <div class="w3-modal-content page-scaleUpDown w3-card-4">
-      <header class="w3-container w3-indigo" style="padding-top: 15px; padding-bottom: 15px;"> 
+      <header class="w3-container w3-indigo modal-header"> 
         <span (click)="closeModal()" class="w3-button w3-display-topright"><ml-icon>highlight_off</ml-icon></span>
         <div>&bull; From: {{ message?.from }}</div>
         <div>&bull; Subject: {{ message?.subject }}</div>
@@ -48,7 +49,7 @@ template: `
   
   <p class="centered footer">Operations on data are not persistent</p>
   
-  <ml-snackbar #snackBar [config]="config" style="color: white"></ml-snackbar>
+  <ml-snackbar #snackBar [config]="configSnackBar" class="snackbar"></ml-snackbar>
 
 </div>
 
@@ -61,7 +62,7 @@ template: `
   messages: any[];
   message: any;
   mlBadge: HTMLElement = document.querySelector('ml-badge') as HTMLElement;
-  config: IConfigSnackbar = {
+  configSnackBar: IConfigSnackbar = {
     message: 'Message Deleted',
     actionText: 'Close',
     timeout: 1500
@@ -73,23 +74,23 @@ template: `
     if(!this.messages){
       this.http.get('assets/data/mail-messages.json').subscribe( (response) => {
         this.messages = response.json();
-        this.setBadgeCounter(this.messages.length);
+        this.setBadgeValue(this.messages.length);
       });
     }
   }
 
-  findMessageById(index: number){
+  findMessageById(index: number): Object {
     return this.messages.indexOf(index, 0);
   }
 
-  deleteMsg(index: number, event: Event | any){
+  deleteMsg(index: number, event: Event | any): void {
     const liElement: HTMLElement = event.target.parentElement.parentElement;
     liElement.style.background = 'lightgrey';
     if (this.messages && this.messages.length) {
       setTimeout( () => {
         if ( window.confirm(`Confirm: delete message from ${this.messages[index].from}`) ){
           this.messages.splice(index, 1);
-          this.setBadgeCounter(this.messages.length);
+          this.setBadgeValue(this.messages.length);
           this.snackBar.show();
         } else {
           liElement.style.background = 'white';
@@ -98,20 +99,20 @@ template: `
     }
   }
 
-  getBadgeCounter(): string | null {
+  getBadgeValue(): string | null {
     return this.mlBadge && this.mlBadge.getAttribute('value');
   }
 
-  setBadgeCounter(value: any): void {
+  setBadgeValue(value: any): void {
     this.mlBadge && this.mlBadge.setAttribute('data-badge', value);
   }
 
-  openModal(message: any){
+  openModal(message: any): void {
     this.modal.nativeElement.style.display = 'block';
     this.message = message;
   }
 
-  closeModal(){
+  closeModal(): void {
     this.modal.nativeElement.style.display = 'none';
   }
 }

@@ -1,6 +1,6 @@
 //todo: repensar lo de los atributos sin valor especifico de cara al comportamiento de angular en data-binding:
 //todo: [attributo]="valor". Si no hay valor puede que haya problemas
-import {Component, ElementRef, Input, Renderer2, ViewEncapsulation, ChangeDetectionStrategy} from "@angular/core";
+import {Component, ElementRef, Input, Renderer2, ViewEncapsulation, ChangeDetectionStrategy}  from "@angular/core";
 import MdlSpinner from "./mdlSpinnerClass";
 import * as ml from "../../lib/mlLib";
 

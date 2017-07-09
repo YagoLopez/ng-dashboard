@@ -11,13 +11,7 @@ template:`
   :host /deep/ .mdl-textfield__input {background: aliceblue}
   :host /deep/ div.mdl-card__supporting-text {padding: 0; width: 100%}
   :host /deep/ ml-card h2.mdl-card__title-text {display: block; width: 100%; text-align: center}
-  :host /deep/ ml-icon {
-    z-index: 1000;
-    color: cornflowerblue;
-    background: white;
-    /*border-radius: 2px;*/
-    border: 1px solid cornflowerblue;
-    padding: 1px}
+  :host /deep/ ml-icon {z-index: 1000; color: white}
   .map-popup {width: 100%; height: 300px}
   .map-height {height: 350px}
   .chart-title {padding: 25px}
@@ -34,7 +28,7 @@ template:`
     </ml-card-text>
     <ml-card-menu>
       <ml-card-menu>
-        <ml-menu icon="layers" position="top-right" class="menu-btn">
+        <ml-menu icon="reorder" position="top-right" class="menu-btn">
           <ml-menu-item (click)="addMapLayer()">Street Layer</ml-menu-item>
           <ml-menu-item (click)="removeMapLayer()">Satellite Layer</ml-menu-item>
         </ml-menu>

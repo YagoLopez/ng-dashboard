@@ -61,7 +61,7 @@ security reasons (i. e. alert dialogs). Run the full screen version for unrestri
 - <b>[urlData]:</b> Url pointing to a local/remote json file with data (Remote data might have CORS restrictions)
 - <b>[request-options]:</b> javascript object of type: 
   <a href="https://angular.io/api/http/RequestOptions" target="_blank">RequestOptions</a> Used for customized headers, etc.
-- <b>[config]:</b> Javascript object implementing `IMGConfig` interface (defined in `mgConfig.d.ts`). 
+- <b>[config]:</b> Javascript object implementing `IMGConfig` interface (defined in `mgConfigInterface.ts`). 
   It has configuration values for MetricsGraphics charts. 
   (Check <a href="https://github.com/mozilla/metrics-graphics/wiki/List-of-Options" target="_blank">MG Options</a> for more information)
 - <b>[preprocess-Fn]:</b> Applies Javascript transformations to input data (for example format dates, etc.)

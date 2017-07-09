@@ -65,10 +65,6 @@
 .mdl-card__subtitle-text { font-size: 14px; color: rgba(0,0,0, 0.54); margin: 0 }
 
 .mdl-card__supporting-text {
-  /* modificaciones */
-  display: block;
-  margin: auto;
-  /* /modificaciones */
   color: rgba(0,0,0, 0.54);
   font-size: 1rem;
   line-height: 18px;

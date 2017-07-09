@@ -12,22 +12,22 @@ template: `
   .marg-bottom {margin-bottom: 50px}
   .min-height {min-height: 0}
   .title {margin-top: 22px; font-size: large; color: black; font-weight: 500; position: absolute; margin-left: 86px}
-  .height-70 {height: 70px}
+  #img-profile {height: 70px}
   ml-card {margin-top: 30px}
-  ml-textfield {margin: auto; display: block; width: 400px}
+  ml-textfield {margin: auto; display: block; width: 400px; padding-top: 25px}
   ml-textfield-label {color: black}
 </style>
 
 <div class="page-scaleUpDown">
 
-  <ml-card shadow="4" class="marg-top min-height">
+  <ml-card shadow="3" class="marg-top min-height">
     <ml-card-text>
       <div class="title">User Profile</div>
-      <img src="assets/img/userprofile.png" class="height-70" />
+      <img id="img-profile" src="assets/img/userprofile.png"/>
     </ml-card-text>
   </ml-card>
   
-  <ml-card shadow="4" class="marg-top marg-bottom">
+  <ml-card shadow="3" class="marg-top marg-bottom">
     <ml-card-text>
       <ml-textfield floating-label>
         <ml-textfield-label><ml-icon class="ico-field">perm_identity</ml-icon>User Name</ml-textfield-label>

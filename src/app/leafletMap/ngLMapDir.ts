@@ -1,6 +1,6 @@
 //todo: gestionar mejor las capas
 import {Directive, Input, ElementRef, NgZone} from "@angular/core";
-import {ILeafletMapConfig} from './ngLMapConfig';
+import {ILeafletMapConfig} from './ngLMapConfigInterface';
 import '../../../node_modules/leaflet/dist/leaflet.js';
 declare var L: any;
 

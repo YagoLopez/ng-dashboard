@@ -48,7 +48,7 @@ template:`
 
   constructor(private ren: Renderer2, private host: ElementRef){}
 
-  onItemSelected($event){
+  onItemSelected($event: any){
     if(!this.formControl){
       return;
     }

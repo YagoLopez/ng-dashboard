@@ -90,12 +90,12 @@ template:`
   }
 
   appName = `NG Dashboard for Angular`;
-  msgShare = `Link of interest shared from ${this.appName}: `;
+  msgShare = `Link shared from ${this.appName}: `;
   urlApp = 'https://github.com/YagoLopez/ng-dashboard';
   shareTwitter = `http://twitter.com/share?url=${this.urlApp}&text=${this.msgShare}`;
   shareFB = `http://www.facebook.com/sharer/sharer.php?u=${this.urlApp}`;
   shareGPlus= `https://plus.google.com/share?url=${this.urlApp}`;
   shareLinkedIn= `http://www.linkedin.com/shareArticle?
     mini=true&url=${this.urlApp}&title=${this.msgShare}&source=${this.appName}`;
-  shareEmail = `mailto:?subject=Shared link&body=${this.msgShare} ${this.urlApp}`;
+  shareEmail = `mailto:?subject=NG Dashboard&body=${this.msgShare} ${this.urlApp}`;
 }

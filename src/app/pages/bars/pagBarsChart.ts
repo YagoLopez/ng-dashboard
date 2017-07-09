@@ -1,5 +1,5 @@
 import {Component} from "@angular/core";
-import {IMGConfig} from "../../mgChart/mgConfig";
+import {IMGConfig} from "../../mgChart/mgConfigInterface";
 
 @Component({
 moduleId: module.id,

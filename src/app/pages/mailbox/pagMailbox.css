@@ -1,10 +1,14 @@
-.blue {color: cornflowerblue; cursor: pointer; padding-left: 5px}
-.item-subtitle {color: grey; font-size: small}
-.footer {padding: 20px; color: grey}
-.msg-body {padding: 10px 10px 30px}
 :host /deep/ ml-item > li {border-bottom: 1px solid lightgrey}
 :host /deep/ ml-item > li:hover {background: lightgrey}
+:host /deep/ ml-card .mdl-card__supporting-text {display: block; margin: auto; padding: 0}
 ml-item-title {cursor: pointer}
+.item-subtitle {color: grey; font-size: small}
+.blue {color: cornflowerblue; cursor: pointer; padding-left: 5px}
+.footer {padding: 20px; color: grey}
+.msg-body {padding: 10px 10px 30px}
+.mbox-empty {text-align: center}
+.modal-header {padding-top: 15px !important; padding-bottom: 15px !important}
+.snackbar {color: white}
 
 .w3-card-4,.w3-hover-shadow:hover{box-shadow:0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19)}
 .w3-container:after,.w3-container:before,.w3-panel:after,.w3-panel:before,.w3-row:after,.w3-row:before,.w3-row-padding:after,.w3-row-padding:before,

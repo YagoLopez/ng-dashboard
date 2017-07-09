@@ -80,5 +80,5 @@ template: '<span class="mdl-list__item-text-body"><ng-content></ng-content></spa
 export class MlItemDesc {}
 // ---------------------------------------------------------------------------------------------------------------------
 @Directive({selector: '[ellipsis]',
-host: {style: 'white-space: nowrap; overflow: hidden; text-overflow: ellipsis'}
+  host: {style: 'white-space: nowrap; overflow: hidden; text-overflow: ellipsis'}
 }) export class MlEllipsis {}

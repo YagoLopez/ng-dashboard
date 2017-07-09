@@ -1,5 +1,6 @@
+//todo: añadir @inpupt opacity y background para asignar estos estilos al contenedor del loader
 //todo: hacer componente MlLoaderProgressbar
-//todo: posibilidad de sustituir ml-content-loader por gif animado para mas rendimiento
+//todo: posibilidad de sustituir ml-content-loader por gif animado para mejor rendimiento
 import {Component, Output, EventEmitter, ViewChild, ElementRef, Input} from "@angular/core";
 import {Router, NavigationStart, NavigationEnd, NavigationCancel, NavigationError} from "@angular/router";
 
@@ -31,7 +32,10 @@ template:`
 
   public ngOnInit() {
     this.router.events.subscribe(event => {
+
       if (event instanceof NavigationStart){
+        const mlContent = document.querySelector('ml-content') as HTMLElement;
+        mlContent && (mlContent.scrollTop = 0);
         this.isLoading = true;
         this.onLoading.emit(this.isLoading);
       }
@@ -46,7 +50,7 @@ template:`
       if (event instanceof NavigationError){
         this.divLoader.nativeElement.parentNode.removeChild(this.divLoader.nativeElement);
         window.alert(`Navigation error. Couldn't load route: ${event.url}`);
-        throw Error(`MlContentLoader > Navigation Error > ${event.error}`);
+        throw new Error(`MlContentLoader > Navigation Error > ${event.error}`);
       }
     })
   }

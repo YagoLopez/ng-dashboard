@@ -11,12 +11,8 @@ template:`
 
 <label #label [attr.for]="id+'mdl'" class="mdl-radio is-upgraded" [ngClass]="{'is-checked': isChecked()}" [attr.ripple]>
   <input #input type="radio" class="mdl-radio__button"
-    [attr.id]="id+'mdl'" 
-    [attr.disabled] 
-    [name]="formControlName"
-    [value]="value"
-    [checked]="checked"
-    (click)="onClick($event)">
+    [attr.id]="id+'mdl'" [attr.disabled] [name]="formControlName" [value]="value"
+    [checked]="checked" (click)="onClick($event)">
   <span class="mdl-radio__label"><ng-content></ng-content></span>
   <span class="mdl-radio__outer-circle"></span>
   <span class="mdl-radio__inner-circle"></span>
@@ -42,9 +38,13 @@ template:`
       this.input.nativeElement.disabled= 'true';
       this.label.nativeElement.classList.add('is-disabled');
     }
+    if(ml.isDefined(this.checked)){
+      this.input.nativeElement.checked = 'true';
+      this.label.nativeElement.classList.add('is-checked');
+    }
   }
 
-  onClick($event) { this.onChanged($event.target.value) }
+  onClick($event: any) { this.onChanged($event.target.value) }
 
   isChecked(): boolean { return this.input.nativeElement.checked }
 

@@ -1,6 +1,6 @@
 @media(min-width: 700px){
   h5 {width: 80%; display: block; margin: 25px auto !important;}
-  ml-card {display: block; margin: auto; width: 80%; align-items: center}
+  ml-card {display: block; margin: auto; width: 80%; align-items: center !important;}
 }
 @media(max-width: 700px){
   h5 {width: 95%; display: block; margin: 15px auto !important;}

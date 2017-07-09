@@ -1,5 +1,6 @@
 //todo: mejorar el estado 'loading' chart en pagLinearChart
 //todo: hacer una directiva para contenido responsivo
+//todo: gestionar cuando una peticion http a un fichero de datos json da error/cancelar
 
 import {NgModule} from "@angular/core";
 import {BrowserModule} from "@angular/platform-browser";

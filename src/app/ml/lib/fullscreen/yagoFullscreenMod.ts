@@ -1,3 +1,5 @@
 import {NgModule} from '@angular/core';
-import {YagoFullScreenCmp} from "./yagoFullscreenCmp";
-@NgModule({declarations: [YagoFullScreenCmp], exports: [YagoFullScreenCmp]}) export class YagoFullscreenMod { }
+import {CommonModule} from "@angular/common";
+import {YagoFullscreenCmp} from "./yagoFullscreenCmp";
+@NgModule({imports: [CommonModule], declarations: [YagoFullscreenCmp], exports: [YagoFullscreenCmp]})
+export class YagoFullscreenMod {}
