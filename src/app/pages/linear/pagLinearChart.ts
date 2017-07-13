@@ -85,8 +85,8 @@ template:`
   }
 
   /**
-   * Convert initial date format in data array to an apropiate format for chart representation
-   * It uses MetricsGraphics date() function
+   * Convert initial date format into an apropiate format for chart drawing
+   * It uses MetricsGraphics MG.date() function
    */
   convertDateFn = ( data: any[]  ): void => {
     //todo: return data?
@@ -122,11 +122,11 @@ template:`
     return Math.floor(Math.random() * (max - min + 1) + min);
   }
 
-  toggleTimer(){
+  toggleTimer(): void {
     this.timerActive ? this.endTimer() : this.startTimer();
   }
 
-  startTimer(){
+  startTimer(): void {
     let sightings = 3000;
     let year = 2012;
     this.config1.min_x = 1945;
@@ -142,7 +142,7 @@ template:`
     }, 1500);
   }
 
-  endTimer(){
+  endTimer(): void {
     clearInterval(this.timer);
     this.timerActive = false;
     this.config1.min_x = 1945;
@@ -151,7 +151,7 @@ template:`
     this.config1 = Object.assign({}, this.config1)
   }
 
-  // ngOnDestroy(){
-  //   this.endTimer();
-  // }
+  ngOnDestroy(){
+    this.endTimer();
+  }
 }

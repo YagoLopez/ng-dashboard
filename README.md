@@ -53,7 +53,7 @@ security reasons (i. e. alert dialogs). Run the full screen version for unrestri
 
 ## MetricsGraphics Chart Component API
 
-```HTML5
+```html
 <mg-chart [urlData]="urlDataString" [request-options]="requestOptions" 
   [config]="configObject [preprocess-fn]="preprocessFn" [delay]="delay"></mg-chart>
 ```
@@ -70,7 +70,7 @@ security reasons (i. e. alert dialogs). Run the full screen version for unrestri
 
 ## Leaflet Map Directive API
 
-```HTML5
+```html
 <div l-map [l-token]="token" [l-center]="center" [l-zoom]="zoom" [l-options]="options"></div>
 ```
 

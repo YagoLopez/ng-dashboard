@@ -6,9 +6,9 @@
 //todo: poder ejecutar funciones arbitrarias para filtrar y arreglar los datos (de forma menos restrictiva que la actual)
 //todo: hacer otro grafico de tipo barras con colores
 
-import {IMGConfig} from "./mgConfigInterface";
 import {Component, ViewChild, ElementRef, ViewEncapsulation, HostListener, Input, NgZone} from "@angular/core";
 import {Http, RequestOptionsArgs} from "@angular/http";
+import {IMGConfig} from "./mgConfigInterface";
 import "../../../node_modules/metrics-graphics/dist/metricsgraphics.js";
 declare var MG: any;
 
