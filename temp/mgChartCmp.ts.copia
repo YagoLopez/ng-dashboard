@@ -35,7 +35,6 @@ export class MgChartCmp {
 
   @ViewChild('chartContainer') chartContainer: ElementRef;
   @Input() urlData: string;
-  @Input() data: object[];
   @Input() config: IMGConfig;
   @Input('preprocess-fn') preprocessFn: (data: any[]) => void;
   @Input('request-options') reqOptions: RequestOptionsArgs;
@@ -43,6 +42,7 @@ export class MgChartCmp {
 
   isLoading: boolean = false;
   timerLoadData: NodeJS.Timer;
+  data: any;
 
   @HostListener('window:resize') onWindowsResize() {
     this.isLoading = true;
@@ -66,8 +66,6 @@ export class MgChartCmp {
    * @Input().delay offers this option (Units in miliseconds)
    */
   ngOnInit(){
-
-    // Load remote json data from url
     if(this.urlData){
       this.timerLoadData = setTimeout( () => {
         this.http.get(this.urlData, this.reqOptions).subscribe( response => {
@@ -79,31 +77,18 @@ export class MgChartCmp {
           this.drawMGChart(this.config);
         });
       }, this.delay);
-    // Load data from code
-    } else if(this.data){
-      this.timerLoadData = setTimeout( () => {
-        this.preprocessFn && this.preprocessFn(this.data);
-        this.config.data = this.data;
-        !this.config.width && (this.config.width = this.chartContainer.nativeElement.clientWidth);
-        this.config.target = this.chartContainer.nativeElement;
-        this.drawMGChart(this.config);
-      }, this.delay);
-    } else {
-      throw new Error('No data to draw')
     }
-
-
-
   }
 
   ngOnChanges(){
-    if(this.config.data && this.config.target){
+    // console.log('on changes');
+    if(this.config.data){
       this.drawMGChart(this.config);
     }
   }
 
   ngOnDestroy(){
-    this.data = [];
+    this.data = null;
     this.config = {};
     clearTimeout(this.timerLoadData);
   }

@@ -2,23 +2,11 @@
   "name": "ng-dashboard",
   "description": "Dashboard for Angular (v 4+)",
   "author": "Yago Lopez <yago.lopez@gmail.com> (https://yagolopez.js.org)",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/YagoLopez/ng-dashboard.git"
-  },
+  "repository": {"type": "git", "url": "git+https://github.com/YagoLopez/ng-dashboard.git"},
   "main": "/src/main.ts",
   "version": "1.0.0",
   "license": "MIT",
-  "keywords": [
-    "dashboard",
-    "angular",
-    "angular 2",
-    "angular components",
-    "chart",
-    "charts",
-    "angular charts",
-    "angular 4"
-  ],
+  "keywords": ["dashboard", "angular", "angular 2", "angular components", "chart", "charts", "angular charts", "angular 4"],
   "angular-cli": {},
   "scripts": {
     "ng_serve": "ng serve --open",
@@ -31,8 +19,7 @@
     "ng_build_prod": "ng build --prod",
     "ng_build_prod_no_hashes": "ng build --prod --output-hashing none",
     "ng_build_prod_aot": "ng build --prod --aot",
-    "ng_build_prod_aot_no_hashes": "ng build --prod --aot --output-hashing none",
-    "lint": "tslint \"src/**/*.ts\""
+    "ng_build_prod_aot_no_hashes": "ng build --prod --aot --output-hashing none"
   },
   "private": true,
   "dependencies": {
@@ -45,13 +32,13 @@
     "@angular/platform-browser-dynamic": "^4.2.6",
     "@angular/router": "^4.2.6",
     "core-js": "^2.4.1",
-    "rxjs": "^5.4.2",
-    "zone.js": "^0.8.12",
+    "leaflet": "^1.0.3",
     "metrics-graphics": "^2.11.0",
-    "leaflet": "^1.0.3"
+    "rxjs": "^5.4.2",
+    "zone.js": "^0.8.12"
   },
   "devDependencies": {
-    "@angular/cli": "1.0.3",
+    "@angular/cli": "^1.2.0",
     "@angular/compiler-cli": "^4.2.6",
     "@types/node": "~7.0.18",
     "@types/geojson": "latest",
@@ -59,7 +46,6 @@
     "d3": "^4.9.1",
     "systemjs": "^0.20.14",
     "ts-node": "~3.0.6",
-    "tslint": "~5.2.0",
     "typescript": "~2.3.4"
   }
 }

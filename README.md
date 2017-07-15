@@ -9,9 +9,9 @@
 
 ## Features
 
-- Use of asynchrony for high responsiveness and speed rendering. Expensive operations like data calculations and
-  painting on screen are put in **asynchronous** and **sequential** code blocks. This frees the main thread for rendering the whole
-  user interface without blocking, and allows fast TTI (Time To Interactive)
+- Use of asynchrony for responsiveness and fast rendering. Data loading are put 
+  in **asynchronous** and **sequential** code blocks. This frees the main thread for rendering the whole
+  user interface without blocking it, and allows fast TTI (Time To Interactive)
 - Includes **MG Chart**. An Angular component based on <a href="http://metricsgraphicsjs.org" target="_blank">Metrics Graphics JS</a>
 - Includes **LMap**. An Angular Directive based on <a href="http://leafletjs.com" target="_blank">Leaflet JS</a>
 - UI was quickly assembled based on this component library: <a href="https://github.com/YagoLopez/material-light" target="_blank">Material Light</a>
@@ -28,7 +28,7 @@ security reasons (i. e. alert dialogs). Run the full screen version for unrestri
 
 ## Requierements
 
-- Latest versions of node and npm or yarn
+- Latest versions of node, npm/yarn
 - Latest versions of Angular-CLI
 
 ## Insallation and Use
@@ -54,11 +54,13 @@ security reasons (i. e. alert dialogs). Run the full screen version for unrestri
 ## MetricsGraphics Chart Component API
 
 ```html
-<mg-chart [urlData]="urlDataString" [request-options]="requestOptions" 
+<mg-chart [urlData]="urlDataString" [data]="data" [request-options]="requestOptions" 
   [config]="configObject [preprocess-fn]="preprocessFn" [delay]="delay"></mg-chart>
 ```
 
-- <b>[urlData]:</b> Url pointing to a local/remote json file with data (Remote data might have CORS restrictions)
+- There are two ways to pass data into a chart and both are mutually exclusive
+1. <b>[urlData]:</b> Url pointing to a local/remote json file with data (Remote data might have CORS restrictions)
+2. <b>[data]:</b> Array of javascript objects with X and Y coordinates, typically coming from a service.
 - <b>[request-options]:</b> javascript object of type: 
   <a href="https://angular.io/api/http/RequestOptions" target="_blank">RequestOptions</a> Used for customized headers, etc.
 - <b>[config]:</b> Javascript object implementing `IMGConfig` interface (defined in `mgConfigInterface.ts`). 

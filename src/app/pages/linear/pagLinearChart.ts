@@ -21,7 +21,7 @@ template:`
         <ng-template #timerInactive>REALTIME SIMULATION</ng-template>
       </ml-button>
       <div *ngIf="timerActive" class="rt-data-container">
-        <div class="rt-data-title">Realtime Simulation</div>
+        <div class="rt-data-title">REALTIME SIMULATION</div>
         <div class="rt-data">X-value: {{ this.newData?.year }}, Y-value: {{ this.newData?.sightings }}</div>
       </div>
     </ml-card-actions>
@@ -86,9 +86,9 @@ template:`
 
   /**
    * Convert initial date format into an apropiate format for chart drawing
-   * It uses MetricsGraphics MG.date() function
+   * It uses MetricsGraphics MG.convert.date() function
    */
-  convertDateFn = ( data: any[]  ): void => {
+  convertDateFn = ( data: any[] ): void => {
     //todo: return data?
     for (let i = 0; i < data.length; i++){
       data[i] = MG.convert.date( data[i], 'date' );
