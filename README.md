@@ -54,8 +54,8 @@ security reasons (i. e. alert dialogs). Run the full screen version for unrestri
 ## MetricsGraphics Chart Component API
 
 ```html
-<mg-chart [urlData]="urlDataString" [data]="data" [request-options]="requestOptions" 
-  [config]="configObject [preprocess-fn]="preprocessFn" [delay]="delay"></mg-chart>
+<mg-chart [urlData]="urlDataString" [data]="dataObject" [request-options]="requestOptions" 
+  [config]="configObject" [preprocess-fn]="preprocessFn" [delay]="delayNumber"></mg-chart>
 ```
 
 - There are two ways to pass data into a chart and both are mutually exclusive
@@ -68,7 +68,7 @@ security reasons (i. e. alert dialogs). Run the full screen version for unrestri
   (Check <a href="https://github.com/mozilla/metrics-graphics/wiki/List-of-Options" target="_blank">MG Options</a> for more information)
 - <b>[preprocess-Fn]:</b> Applies Javascript transformations to input data (for example format dates, etc.)
 - <b>[delay]:</b> Delay the loading of data (ms). It could be useful when having serveral charts in same page
-- For using MetricsGraphics global object in your component class you can use `declare var MG: any`
+- To use MetricsGraphics global object in your component class: `declare var MG: any`
 
 ## Leaflet Map Directive API
 

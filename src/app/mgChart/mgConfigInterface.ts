@@ -11,5 +11,5 @@ export interface IMGConfig {
   height?: number
   target?: HTMLElement,
   animate_on_load?: boolean,
-  [otherArgs: string]: any
+  [otherValues: string]: any
 }

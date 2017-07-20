@@ -6,7 +6,7 @@
   "main": "/src/main.ts",
   "version": "1.0.0",
   "license": "MIT",
-  "keywords": ["dashboard", "angular", "angular 2", "angular components", "chart", "charts", "angular charts", "angular 4"],
+  "keywords": ["dashboard", "angular", "angular 2", "chart", "charts", "angular components", "angular charts", "angular 4"],
   "angular-cli": {},
   "scripts": {
     "ng_serve": "ng serve --open",

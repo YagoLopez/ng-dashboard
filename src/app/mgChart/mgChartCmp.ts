@@ -55,7 +55,7 @@ export class MgChartCmp {
   constructor(private http: Http, private zone: NgZone){}
 
   /** Chart drawing is run outside Angular Change Detector to avoid unnecesary operations and re-renderings */
-  drawMGChart(config: IMGConfig){
+  drawMGChart(config: IMGConfig): void {
     this.zone.runOutsideAngular( () => MG.data_graphic(config) );
     this.isLoading = false;
   }
@@ -67,7 +67,7 @@ export class MgChartCmp {
    */
   ngOnInit(){
 
-    // Load remote json data from url
+    // Load json data from url
     if(this.urlData){
       this.timerLoadData = setTimeout( () => {
         this.http.get(this.urlData, this.reqOptions).subscribe( response => {
@@ -79,7 +79,7 @@ export class MgChartCmp {
           this.drawMGChart(this.config);
         });
       }, this.delay);
-    // Load data from code
+    // Load json data from code
     } else if(this.data){
       this.timerLoadData = setTimeout( () => {
         this.preprocessFn && this.preprocessFn(this.data);
@@ -91,9 +91,6 @@ export class MgChartCmp {
     } else {
       throw new Error('No data to draw')
     }
-
-
-
   }
 
   ngOnChanges(){
