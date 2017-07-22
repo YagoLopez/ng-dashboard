@@ -37,15 +37,15 @@ security reasons (i. e. alert dialogs). Run the full screen version for unrestri
 - Install: `npm install --save YagoLopez/ng-dashboard`
 - Go to project directory: `cd ng-dashboard`
 - Run: `npm install`
-- *IMPORTANT*: Adjust the `basePath` in 
-  `<a href="https://github.com/YagoLopez/ng-dashboard/blob/master/src/app/ngDashboardAppMod.ts#L25" target="_blank">
+- <b>IMPORTANT</b>: Adjust the `basePath` in 
+  <a href="https://github.com/YagoLopez/ng-dashboard/blob/master/src/app/ngDashboardAppMod.ts#L25" target="_blank">
   ngDashboardAppMod.ts</a> to your environment
 - Run: `ng serve` from directory project
 - Metrics Graphics Chart Component is located in `mgChart` folder.
   - If you want to use this component, you can copy this folder to your `app` folder and import `mgChartMod` 
   in your own module or 
   - Import it directily from `/node_modules/ng-dashboard/src/app/mgChart/mgChartMod.ts`. 
-  *IMPORTANT*: `d3.js` must be in your root `/src` directory. This requirement is harcoded in `metricsgraphics.js`. 
+  <b>IMPORTANT</b>: `d3.js` must be in your root `/src` directory. This requirement is harcoded in `metricsgraphics.js`. 
   It doesn't depend on this project.
 - Leaflet Map Directive is located in `leafletMap` folder. If you want to use this directive:
   - Copy this folder to your `app` folder and import `NgLMapDir` in your own component or 
