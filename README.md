@@ -37,12 +37,15 @@ security reasons (i. e. alert dialogs). Run the full screen version for unrestri
 - Install: `npm install --save YagoLopez/ng-dashboard`
 - Go to project directory: `cd ng-dashboard`
 - Run: `npm install`
+- *IMPORTANT*: Adjust the `basePath` in 
+  `<a href="https://github.com/YagoLopez/ng-dashboard/blob/master/src/app/ngDashboardAppMod.ts#L25" target="_blank">
+  ngDashboardAppMod.ts</a> to your environment
 - Run: `ng serve` from directory project
 - Metrics Graphics Chart Component is located in `mgChart` folder.
   - If you want to use this component, you can copy this folder to your `app` folder and import `mgChartMod` 
   in your own module or 
   - Import it directily from `/node_modules/ng-dashboard/src/app/mgChart/mgChartMod.ts`. 
-  IMPORTANT: `d3.js` must be in your root `/src` directory. This requirement is harcoded in `metricsgraphics.js`. 
+  *IMPORTANT*: `d3.js` must be in your root `/src` directory. This requirement is harcoded in `metricsgraphics.js`. 
   It doesn't depend on this project.
 - Leaflet Map Directive is located in `leafletMap` folder. If you want to use this directive:
   - Copy this folder to your `app` folder and import `NgLMapDir` in your own component or 
@@ -54,17 +57,18 @@ security reasons (i. e. alert dialogs). Run the full screen version for unrestri
 ## MetricsGraphics Chart Component API
 
 ```html
-<mg-chart [urlData]="urlDataString" [data]="dataObject" [request-options]="requestOptions" 
+<mg-chart [urlData]="urlDataString" [data]="dataObject" [request-options]="requestOptionsObject" 
   [config]="configObject" [preprocess-fn]="preprocessFn" [delay]="delayNumber"></mg-chart>
 ```
 
 - There are two ways to pass data into a chart and both are mutually exclusive
-1. <b>[urlData]:</b> Url pointing to a local/remote json file with data (Remote data might have CORS restrictions)
-2. <b>[data]:</b> Array of javascript objects with X and Y coordinates, typically coming from a service.
+  1. <b>[urlData]:</b> Url pointing to a local/remote json file with data (Remote data might have CORS restrictions)
+  2. <b>[data]:</b> Array of javascript objects with X and Y coordinates, typically coming from a service.
 - <b>[request-options]:</b> javascript object of type: 
   <a href="https://angular.io/api/http/RequestOptions" target="_blank">RequestOptions</a> Used for customized headers, etc.
-- <b>[config]:</b> Javascript object implementing `IMGConfig` interface (defined in `mgConfigInterface.ts`). 
-  It has configuration values for MetricsGraphics charts. 
+- <b>[config]:</b> Javascript object implementing 
+  <a href="https://github.com/YagoLopez/ng-dashboard/blob/master/src/app/mgChart/mgConfigInterface.ts" target="_blank">
+  IMGConfig interface</a>. It has configuration values for MetricsGraphics charts. 
   (Check <a href="https://github.com/mozilla/metrics-graphics/wiki/List-of-Options" target="_blank">MG Options</a> for more information)
 - <b>[preprocess-Fn]:</b> Applies Javascript transformations to input data (for example format dates, etc.)
 - <b>[delay]:</b> Delay the loading of data (ms). It could be useful when having serveral charts in same page
@@ -73,7 +77,7 @@ security reasons (i. e. alert dialogs). Run the full screen version for unrestri
 ## Leaflet Map Directive API
 
 ```html
-<div l-map [l-token]="token" [l-center]="center" [l-zoom]="zoom" [l-options]="options"></div>
+<div l-map [l-token]="tokenString" [l-center]="centerTuple" [l-zoom]="zoomNumber" [l-options]="optionsObject"></div>
 ```
 
 - <b>[l-token]:</b> String with access token (Get a token in Leaflet website).
