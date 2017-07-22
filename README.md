@@ -69,7 +69,7 @@ security reasons (i. e. alert dialogs). Run the full screen version for unrestri
 - <b>[config]:</b> Javascript object implementing 
   <a href="https://github.com/YagoLopez/ng-dashboard/blob/master/src/app/mgChart/mgConfigInterface.ts" target="_blank">
   IMGConfig interface</a>. It has configuration values for MetricsGraphics charts. 
-  (Check <a href="https://github.com/mozilla/metrics-graphics/wiki/List-of-Options" target="_blank">MG Options</a> for more information)
+  (<a href="https://github.com/mozilla/metrics-graphics/wiki/List-of-Options" target="_blank">Full list of MG Chart Options</a>)
 - <b>[preprocess-Fn]:</b> Applies Javascript transformations to input data (for example format dates, etc.)
 - <b>[delay]:</b> Delay the loading of data (ms). It could be useful when having serveral charts in same page
 - To use MetricsGraphics global object in your component class: `declare var MG: any`
