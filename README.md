@@ -34,9 +34,16 @@ security reasons (i. e. alert dialogs). Run the full screen version for unrestri
 ## Insallation and Use
 
 1. Using Node:
+<!--
 - Install: `npm install --save YagoLopez/ng-dashboard`
 - Go to project directory: `cd ng-dashboard`
 - Run: `npm install`
+-->
+```shell
+npm install --save YagoLopez/ng-dashboard
+cd ng-dashboard
+npm install
+```
 - <b>IMPORTANT</b>: Adjust the `basePath` in 
   <a href="https://github.com/YagoLopez/ng-dashboard/blob/master/src/app/ngDashboardAppMod.ts#L25" target="_blank">
   ngDashboardAppMod.ts</a> to your environment
