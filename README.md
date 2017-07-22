@@ -34,11 +34,7 @@ security reasons (i. e. alert dialogs). Run the full screen version for unrestri
 ## Insallation and Use
 
 1. Using Node:
-<!--
-- Install: `npm install --save YagoLopez/ng-dashboard`
-- Go to project directory: `cd ng-dashboard`
-- Run: `npm install`
--->
+
 ```shell
 npm install --save YagoLopez/ng-dashboard
 cd ng-dashboard
