@@ -40,7 +40,7 @@ security reasons (i. e. alert dialogs). Run the full screen version for unrestri
 - <b>IMPORTANT</b>: Adjust the `basePath` in 
   <a href="https://github.com/YagoLopez/ng-dashboard/blob/master/src/app/ngDashboardAppMod.ts#L25" target="_blank">
   ngDashboardAppMod.ts</a> to your environment
-- Run: `ng serve` from directory project
+- Run: `ng serve` from project directory
 - Metrics Graphics Chart Component is located in `mgChart` folder.
   - If you want to use this component, you can copy this folder to your `app` folder and import `mgChartMod` 
   in your own module or 
