@@ -60,7 +60,7 @@ npm install
 ## MetricsGraphics Chart Component API
 
 ```html
-<mg-chart [urlData]="urlDataString" [data]="dataObject" [request-options]="requestOptionsObject" 
+<mg-chart [urlData]="urlDataString" [data]="dataArray" [request-options]="requestOptionsObject" 
   [config]="configObject" [preprocess-fn]="preprocessFn" [delay]="delayNumber"></mg-chart>
 ```
 
@@ -71,7 +71,7 @@ npm install
   <a href="https://angular.io/api/http/RequestOptions" target="_blank">RequestOptions</a> Used for customized headers, etc.
 - <b>[config]:</b> Javascript object implementing 
   <a href="https://github.com/YagoLopez/ng-dashboard/blob/master/src/app/mgChart/mgConfigInterface.ts" target="_blank">
-  IMGConfig interface</a>. It has configuration values for MetricsGraphics charts. 
+  IMGConfig interface</a>. It contains configuration values for MetricsGraphics charts. 
   (<a href="https://github.com/mozilla/metrics-graphics/wiki/List-of-Options" target="_blank">Full list of MG Chart Options</a>)
 - <b>[preprocess-Fn]:</b> Applies Javascript transformations to input data (for example format dates, etc.)
 - <b>[delay]:</b> Delay the loading of data (ms). It could be useful when having serveral charts in same page
