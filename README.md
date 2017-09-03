@@ -33,13 +33,9 @@ security reasons (i. e. alert dialogs). Run the full screen version for unrestri
 
 ## Insallation and Use
 
-1. Using Node:
-
-```shell
-npm install --save YagoLopez/ng-dashboard
-cd ng-dashboard
-npm install
-```
+- To install in a existing project generated with Angular-CLI, run: `npm install YagoLopez/ng-dashboard --save`
+- To copy and run this project: Clone or fork the repository
+- Install dependencies running `npm install`
 - <b>IMPORTANT</b>: Adjust the `basePath` in 
   <a href="https://github.com/YagoLopez/ng-dashboard/blob/master/src/app/ngDashboardAppMod.ts#L25" target="_blank">
   ngDashboardAppMod.ts</a> to your environment
@@ -53,9 +49,6 @@ npm install
 - Leaflet Map Directive is located in `leafletMap` folder. If you want to use this directive:
   - Copy this folder to your `app` folder and import `NgLMapDir` in your own component or 
   - Import it directily from `/node_modules/ng-dashboard/src/app/leafletMap/ngLMapDir.ts`.
-
-2. Whitout node:
-- Clone or download the repository and follow the same steps as before
 
 ## MetricsGraphics Chart Component API
 
