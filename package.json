@@ -2,11 +2,23 @@
   "name": "ng-dashboard",
   "description": "Dashboard for Angular (v 4+)",
   "author": "Yago Lopez <yago.lopez@gmail.com> (https://yagolopez.js.org)",
-  "repository": {"type": "git", "url": "git+https://github.com/YagoLopez/ng-dashboard.git"},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YagoLopez/ng-dashboard.git"
+  },
   "main": "/src/main.ts",
   "version": "1.0.0",
   "license": "MIT",
-  "keywords": ["dashboard", "angular", "angular 2", "chart", "charts", "angular components", "angular charts", "angular 4"],
+  "keywords": [
+    "dashboard",
+    "angular",
+    "angular 2",
+    "chart",
+    "charts",
+    "angular components",
+    "angular charts",
+    "angular 4"
+  ],
   "angular-cli": {},
   "scripts": {
     "ng_serve": "ng serve --open",
@@ -40,10 +52,9 @@
   "devDependencies": {
     "@angular/cli": "^1.2.0",
     "@angular/compiler-cli": "^4.2.6",
-    "@types/node": "~7.0.18",
     "@types/geojson": "latest",
     "@types/leaflet": "latest",
-    "d3": "^4.9.1",
+    "@types/node": "~7.0.18",
     "systemjs": "^0.20.14",
     "ts-node": "~3.0.6",
     "typescript": "~2.3.4"
