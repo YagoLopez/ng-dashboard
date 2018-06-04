@@ -26,7 +26,7 @@
 security reasons (i. e. alert dialogs). Run the full screen version for unrestricted features.
 
 
-## Requierements
+## Requirements
 
 - Latest versions of node, npm/yarn
 - Latest versions of Angular-CLI
