@@ -31,7 +31,7 @@ security reasons (i. e. alert dialogs). Run the full screen version for unrestri
 - Latest versions of node, npm/yarn
 - Latest versions of Angular-CLI
 
-## Insallation and Use
+## Installation and Use
 
 - To install in a existing project generated with Angular-CLI, run: `npm install YagoLopez/ng-dashboard --save`
 - To copy and run this project: Clone or fork the repository
